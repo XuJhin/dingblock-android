@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="@color/white"
+    android:paddingStart="24dp">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="@string/circle_deal_character"
+        android:textColor="@color/common_txt_color1"
+        android:textSize="16sp" />
+
+
+    <TextView
+        android:id="@+id/circle_view_deal_colour_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/circle_view_deal_colour_next_icon"
+        android:text="请选择"
+        android:textColor="#C2C7CC"
+        android:textSize="15sp" />
+
+    <cool.dingstock.appbase.widget.IconTextView
+        android:id="@+id/circle_view_deal_colour_next_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:text="@string/icon_more" />
+
+</RelativeLayout>

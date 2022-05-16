@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#1D1D1D</color>
+    <color name="color_ding_theme">#CCFFFFFF</color>
+    <color name="color_ding_theme_enable">#79FE6C6C</color>
+    <color name="color_title_gray">#9BA8B9</color>
+    <color name="color_theme_dc">#ff3d3e45</color>
+    <color name="color_ding_theme_1">#E6FFFFFF</color>
+
+</resources>

@@ -1,0 +1,513 @@
+{
+  "monitor": [
+    {
+      "channels": [
+        {
+          "iconUrl": "",
+          "id": "subscribed",
+          "name": "已订阅的频道",
+          "restricted": true,
+          "selected": false
+        }
+      ],
+      "en": "Subscribed",
+      "fixed": true,
+      "iconUrl": "https://dingstock.obs.cn-east-2.myhuaweicloud.com/test/BIAO.jpg",
+      "id": "aieASc1ULj",
+      "name": "总览"
+    },
+    {
+      "channels": [
+        {
+          "iconUrl": "https://dingstock.obs.cn-east-2.myhuaweicloud.com/brands/150x150/snkrs_new.jpg",
+          "id": "snkrs_cn",
+          "name": "SNKRS 上新",
+          "restricted": false,
+          "selected": false
+        },
+        {
+          "iconUrl": "https://dingstock.obs.cn-east-2.myhuaweicloud.com/brands/150x150/snkrs_filltered.jpg",
+          "id": "snkrs_restock_cn",
+          "name": "SNKRS 精选补货",
+          "restricted": true,
+          "selected": false
+        },
+        {
+          "iconUrl": "https://dingstock.obs.cn-east-2.myhuaweicloud.com/brands/150x150/snkrs_unfillered.jpg",
+          "id": "snkrs_restock_cn_all",
+          "name": "SNKRS 无过滤补货",
+          "restricted": true,
+          "selected": false
+        },
+        {
+          "iconUrl": "https://dingstock.obs.cn-east-2.myhuaweicloud.com/brands/150x150/Tmall.jpg",
+          "id": "tmall",
+          "name": "天猫补货",
+          "restricted": true,
+          "selected": false
+        },
+        {
+          "iconUrl": "https://dingstock.obs.cn-east-2.myhuaweicloud.com/brands/150x150/Juice.jpg",
+          "id": "juicestore",
+          "name": "JuiceStore",
+          "restricted": true,
+          "selected": false
+        },
+        {
+          "iconUrl": "https://dingstock.obs.cn-east-2.myhuaweicloud.com/brands/150x150/topsports.jpg",
+          "id": "topsports",
+          "name": "滔博线下",
+          "restricted": true,
+          "selected": false
+        },
+        {
+          "iconUrl": "https://dingstock.obs.cn-east-2.myhuaweicloud.com/brands/150x150/nike.jpg",
+          "id": "nike_hk",
+          "name": "Nike香港 Beta",
+          "restricted": true,
+          "selected": false
+        },
+        {
+          "iconUrl": "https://dingstock.obs.cn-east-2.myhuaweicloud.com/brands/150x150/nike.jpg",
+          "id": "nike_mp",
+          "name": "耐克小程序",
+          "restricted": true,
+          "selected": false
+        },
+        {
+          "iconUrl": "https://dingstock.obs.cn-east-2.myhuaweicloud.com/brands/150x150/uniqlo.jpg",
+          "id": "uniqlo_cn",
+          "name": "Uniqlo",
+          "restricted": true,
+          "selected": false
+        },
+        {
+          "iconUrl": "https://dingstock.obs.cn-east-2.myhuaweicloud.com/brands/150x150/taobo.jpg",
+          "id": "xiuyixiu",
+          "name": "滔博秀e秀 Beta",
+          "restricted": true,
+          "selected": false
+        },
+        {
+          "iconUrl": "https://dingstock.obs.cn-east-2.myhuaweicloud.com/brands/150x150/nike.jpg",
+          "id": "nike_cn",
+          "name": "NIKE官网",
+          "restricted": true,
+          "selected": false
+        },
+        {
+          "iconUrl": "https://dingstock.obs.cn-east-2.myhuaweicloud.com/brands/150x150/converse.jpg",
+          "id": "converse",
+          "name": "匡威",
+          "restricted": true,
+          "selected": false
+        }
+      ],
+      "en": "China",
+      "fixed": false,
+      "iconUrl": "https://dingstock.obs.cn-east-2.myhuaweicloud.com/Country/CN.png",
+      "id": "cn",
+      "name": "中国"
+    },
+    {
+      "channels": [
+        {
+          "iconUrl": "https://dingstock.obs.cn-east-2.myhuaweicloud.com/brands/150x150/champs.png",
+          "id": "champs",
+          "name": "Champs",
+          "restricted": true,
+          "selected": false
+        },
+        {
+          "iconUrl": "https://dingstock.obs.cn-east-2.myhuaweicloud.com/brands/150x150/eastbay.png",
+          "id": "eastbay",
+          "name": "Eastbay",
+          "restricted": true,
+          "selected": false
+        },
+        {
+          "iconUrl": "https://dingstock.obs.cn-east-2.myhuaweicloud.com/brands/150x150/footaction.jpg",
+          "id": "footaction",
+          "name": "Footaction",
+          "restricted": true,
+          "selected": false
+        },
+        {
+          "iconUrl": "https://dingstock.obs.cn-east-2.myhuaweicloud.com/brands/150x150/footlocker.jpeg",
+          "id": "footlocker",
+          "name": "Footlocker",
+          "restricted": true,
+          "selected": false
+        },
+        {
+          "iconUrl": "https://dingstock.obs.cn-east-2.myhuaweicloud.com/brands/150x150/footlockerkids.jpg",
+          "id": "footlocker_ca_kids",
+          "name": "Footlocker-Kids",
+          "restricted": true,
+          "selected": false
+        }
+      ],
+      "fixed": false,
+      "iconUrl": "https://dingstock.obs.cn-east-2.myhuaweicloud.com/brands/150x150/footsite.jpg",
+      "id": "FVZsva4fKk",
+      "name": "Footsite"
+    },
+    {
+      "channels": [
+        {
+          "iconUrl": "https://dingstock.obs.cn-east-2.myhuaweicloud.com/brands/150x150/suede.jpg",
+          "id": "suedestore",
+          "name": "SuedeStore",
+          "restricted": true,
+          "selected": false
+        },
+        {
+          "iconUrl": "https://dingstock.obs.cn-east-2.myhuaweicloud.com/brands/150x150/renarts.jpg",
+          "id": "renarts",
+          "name": "Renarts",
+          "restricted": true,
+          "selected": false
+        },
+        {
+          "iconUrl": "https://dingstock.obs.cn-east-2.myhuaweicloud.com/brands/150x150/socialstatus.jpg",
+          "id": "socialstatus",
+          "name": "SocialStatus",
+          "restricted": true,
+          "selected": false
+        },
+        {
+          "iconUrl": "https://dingstock.obs.cn-east-2.myhuaweicloud.com/brands/150x150/shopifypassword.jpg",
+          "id": "shopify_passwords",
+          "name": "Shopify密码",
+          "restricted": true,
+          "selected": false
+        },
+        {
+          "iconUrl": "https://dingstock.obs.cn-east-2.myhuaweicloud.com/brands/150x150/shopifyfiltered.jpg",
+          "id": "shopify_filtered",
+          "name": "Shopify精选",
+          "restricted": true,
+          "selected": false
+        },
+        {
+          "iconUrl": "https://dingstock.obs.cn-east-2.myhuaweicloud.com/brands/150x150/Bodega.jpg",
+          "id": "bodega",
+          "name": "Bodega",
+          "restricted": true,
+          "selected": false
+        },
+        {
+          "iconUrl": "https://dingstock.obs.cn-east-2.myhuaweicloud.com/brands/150x150/havenshop.jpg",
+          "id": "haven",
+          "name": "Haven",
+          "restricted": true,
+          "selected": false
+        }
+      ],
+      "fixed": false,
+      "iconUrl": "https://dingstock.obs.cn-east-2.myhuaweicloud.com/brands/150x150/shopify.jpg",
+      "id": "jUuBB1kmRo",
+      "name": "Shopify"
+    },
+    {
+      "channels": [
+        {
+          "iconUrl": "https://dingstock.obs.cn-east-2.myhuaweicloud.com/brands/150x150/snkrs_new.jpg",
+          "id": "snkrs_us",
+          "name": "SNKRS 上新",
+          "restricted": false,
+          "selected": false
+        },
+        {
+          "iconUrl": "https://dingstock.obs.cn-east-2.myhuaweicloud.com/brands/150x150/snkrs_filltered.jpg",
+          "id": "snkrs_restock_us",
+          "name": "SNKRS 精选补货",
+          "restricted": true,
+          "selected": false
+        },
+        {
+          "iconUrl": "https://dingstock.obs.cn-east-2.myhuaweicloud.com/brands/150x150/snkrs_unfillered.jpg",
+          "id": "snkrs_restock_us_all",
+          "name": "SNKRS 无过滤补货",
+          "restricted": true,
+          "selected": false
+        },
+        {
+          "iconUrl": "https://dingstock.obs.cn-east-2.myhuaweicloud.com/brands/150x150/supreme%20logo.jpg",
+          "id": "supreme_us",
+          "name": "Supreme",
+          "restricted": true,
+          "selected": false
+        },
+        {
+          "iconUrl": "https://dingstock.obs.cn-east-2.myhuaweicloud.com/brands/150x150/WISH.png",
+          "id": "wishatl",
+          "name": "WISHATL",
+          "restricted": true,
+          "selected": false
+        },
+        {
+          "iconUrl": "https://dingstock.obs.cn-east-2.myhuaweicloud.com/brands/150x150/PACKER.png",
+          "id": "packer",
+          "name": "PACKER",
+          "restricted": true,
+          "selected": false
+        },
+        {
+          "iconUrl": "https://dingstock.obs.cn-east-2.myhuaweicloud.com/brands/150x150/EXTRA%20BUTTER.png",
+          "id": "extrabutter",
+          "name": "EXTRA BUTTER",
+          "restricted": true,
+          "selected": false
+        },
+        {
+          "iconUrl": "https://dingstock.obs.cn-east-2.myhuaweicloud.com/brands/150x150/YEEZY.png",
+          "id": "yeezysupply",
+          "name": "YeezySupply",
+          "restricted": true,
+          "selected": false
+        },
+        {
+          "iconUrl": "https://dingstock.obs.cn-east-2.myhuaweicloud.com/brands/150x150/nike.jpg",
+          "id": "nike_us",
+          "name": "NIKE官网",
+          "restricted": true,
+          "selected": false
+        },
+        {
+          "iconUrl": "https://dingstock.obs.cn-east-2.myhuaweicloud.com/brands/150x150/KITH.png",
+          "id": "kith",
+          "name": "KITH",
+          "restricted": true,
+          "selected": false
+        },
+        {
+          "iconUrl": "https://dingstock.obs.cn-east-2.myhuaweicloud.com/brands/150x150/BAPE.png",
+          "id": "bape_us",
+          "name": "Bape",
+          "restricted": true,
+          "selected": false
+        },
+        {
+          "iconUrl": "https://dingstock.obs.cn-east-2.myhuaweicloud.com/brands/150x150/PALACE.png",
+          "id": "palace_us",
+          "name": "Palace",
+          "restricted": true,
+          "selected": false
+        },
+        {
+          "iconUrl": "https://dingstock.obs.cn-east-2.myhuaweicloud.com/brands/150x150/OVO.png",
+          "id": "ovo_us",
+          "name": "OVO",
+          "restricted": true,
+          "selected": false
+        },
+        {
+          "iconUrl": "https://dingstock.obs.cn-east-2.myhuaweicloud.com/brands/150x150/FRENZY.png",
+          "id": "frenzy",
+          "name": "Frenzy",
+          "restricted": true,
+          "selected": false
+        },
+        {
+          "iconUrl": "https://dingstock.obs.cn-east-2.myhuaweicloud.com/brands/150x150/OFF-WHITE.png",
+          "id": "offwhite",
+          "name": "OFF WHITE",
+          "restricted": true,
+          "selected": false
+        },
+        {
+          "iconUrl": "https://dingstock.obs.cn-east-2.myhuaweicloud.com/brands/150x150/CONCEPTS.png",
+          "id": "CNCPTS",
+          "name": "CONCEPTS",
+          "restricted": true,
+          "selected": false
+        },
+        {
+          "iconUrl": "https://dingstock.obs.cn-east-2.myhuaweicloud.com/brands/150x150/UNDERFEATED.png",
+          "id": "undefeated",
+          "name": "UNDEFEATED",
+          "restricted": true,
+          "selected": false
+        },
+        {
+          "iconUrl": "https://dingstock.obs.cn-east-2.myhuaweicloud.com/brands/150x150/XHIBITION.png",
+          "id": "xhibition",
+          "name": "XHIBITION",
+          "restricted": true,
+          "selected": false
+        }
+      ],
+      "en": "America",
+      "fixed": false,
+      "iconUrl": "https://dingstock.obs.cn-east-2.myhuaweicloud.com/Country/US.png",
+      "id": "us",
+      "name": "美国"
+    },
+    {
+      "channels": [
+        {
+          "iconUrl": "https://dingstock.obs.cn-east-2.myhuaweicloud.com/brands/150x150/snkrs_new.jpg",
+          "id": "snkrs_uk",
+          "name": "SNKRS 上新",
+          "restricted": false,
+          "selected": false
+        },
+        {
+          "iconUrl": "https://dingstock.obs.cn-east-2.myhuaweicloud.com/brands/150x150/snkrs_filltered.jpg",
+          "id": "snkrs_restock_uk",
+          "name": "SNKRS 精选补货",
+          "restricted": true,
+          "selected": false
+        },
+        {
+          "iconUrl": "https://dingstock.obs.cn-east-2.myhuaweicloud.com/brands/150x150/snkrs_unfillered.jpg",
+          "id": "snkrs_restock_uk_all",
+          "name": "SNKRS 无过滤补货",
+          "restricted": true,
+          "selected": false
+        },
+        {
+          "iconUrl": "https://dingstock.obs.cn-east-2.myhuaweicloud.com/brands/150x150/supreme%20logo.jpg",
+          "id": "supreme_eu",
+          "name": "Supreme",
+          "restricted": true,
+          "selected": false
+        },
+        {
+          "iconUrl": "https://dingstock.obs.cn-east-2.myhuaweicloud.com/brands/150x150/sneakersnstuff.jpg",
+          "id": "sns",
+          "name": "SNS",
+          "restricted": true,
+          "selected": false
+        },
+        {
+          "iconUrl": "https://dingstock.obs.cn-east-2.myhuaweicloud.com/brands/150x150/bstn.jpg",
+          "id": "bstn",
+          "name": "BSTN",
+          "restricted": true,
+          "selected": false
+        },
+        {
+          "iconUrl": "https://dingstock.obs.cn-east-2.myhuaweicloud.com/brands/150x150/naked.jpg",
+          "id": "naked",
+          "name": "Naked",
+          "restricted": true,
+          "selected": false
+        },
+        {
+          "iconUrl": "https://dingstock.obs.cn-east-2.myhuaweicloud.com/brands/150x150/solebox.png",
+          "id": "solebox",
+          "name": "Solebox",
+          "restricted": true,
+          "selected": false
+        }
+      ],
+      "en": "Europe",
+      "fixed": false,
+      "iconUrl": "https://dingstock.obs.cn-east-2.myhuaweicloud.com/Country/EU.png",
+      "id": "eu",
+      "name": "欧洲"
+    },
+    {
+      "channels": [
+        {
+          "iconUrl": "https://dingstock.obs.cn-east-2.myhuaweicloud.com/brands/150x150/snkrs_new.jpg",
+          "id": "snkrs_jp",
+          "name": "SNKRS 上新",
+          "restricted": false,
+          "selected": false
+        },
+        {
+          "iconUrl": "https://dingstock.obs.cn-east-2.myhuaweicloud.com/brands/150x150/snkrs_filltered.jpg",
+          "id": "snkrs_restock_jp",
+          "name": "SNKRS 精选补货",
+          "restricted": true,
+          "selected": false
+        },
+        {
+          "iconUrl": "https://dingstock.obs.cn-east-2.myhuaweicloud.com/brands/150x150/snkrs_unfillered.jpg",
+          "id": "snkrs_restock_jp_all",
+          "name": "SNKRS 无过滤补货",
+          "restricted": true,
+          "selected": false
+        },
+        {
+          "iconUrl": "https://dingstock.obs.cn-east-2.myhuaweicloud.com/brands/150x150/supreme%20logo.jpg",
+          "id": "supreme_jp",
+          "name": "Supreme",
+          "restricted": true,
+          "selected": false
+        },
+        {
+          "iconUrl": "https://dingstock.obs.cn-east-2.myhuaweicloud.com/brands/150x150/DSM.png",
+          "id": "dsm_jp",
+          "name": "DSM",
+          "restricted": true,
+          "selected": false
+        }
+      ],
+      "en": "Japan",
+      "fixed": false,
+      "iconUrl": "https://dingstock.obs.cn-east-2.myhuaweicloud.com/Country/JP.png",
+      "id": "jp",
+      "name": "日本"
+    },
+    {
+      "channels": [
+        {
+          "iconUrl": "https://dingstock.obs.cn-east-2.myhuaweicloud.com/brands/150x150/exclucity.jpg",
+          "id": "exclucity",
+          "name": "Exclucity",
+          "restricted": true,
+          "selected": false
+        },
+        {
+          "iconUrl": "https://dingstock.obs.cn-east-2.myhuaweicloud.com/brands/150x150/nrml.jpg",
+          "id": "nrml",
+          "name": "NRML",
+          "restricted": true,
+          "selected": false
+        },
+        {
+          "iconUrl": "https://dingstock.obs.cn-east-2.myhuaweicloud.com/brands/150x150/theclosetinc.jpeg",
+          "id": "theclosetinc",
+          "name": "Closet",
+          "restricted": true,
+          "selected": false
+        },
+        {
+          "iconUrl": "https://dingstock.obs.cn-east-2.myhuaweicloud.com/brands/150x150/footlocker.jpeg",
+          "id": "footlocker_ca",
+          "name": "Footlocker",
+          "restricted": true,
+          "selected": false
+        }
+      ],
+      "en": "Canada",
+      "fixed": false,
+      "iconUrl": "https://dingstock.obs.cn-east-2.myhuaweicloud.com/Country/CA.jpg",
+      "id": "MHvnYIIwNT",
+      "name": "加拿大"
+    }
+  ],
+  "splash": {
+    "duration": 5,
+    "endTime": 1571683526,
+    "link": "https://app.dingstock.net/miniProgram/open?username\u003dgh_b1205cc7b0c9\u0026path\u003dpages%2Fevent%2Findex%3Fsource%3Ddingchao_oa%26medium%3Darticle",
+    "mediaUrl": "https://dsapp.obs.cn-east-2.myhuaweicloud.com/splash/goat.png",
+    "showInterval": 0,
+    "startTime": 1571503726,
+    "type": "image",
+    "vipInterval": 600
+  },
+  "version": {
+    "androidForceUpdate": true,
+    "androidUpdateLink": "https://a.app.qq.com/o/simple.jsp?pkgname\u003dcool.dingstock.mobile\u0026fromcase\u003d40003",
+    "androidUpdateTip": "",
+    "androidVersion": "1.3.7",
+    "iOSForceUpdate": false,
+    "iOSUpdateLink": "https://a.app.qq.com/o/simple.jsp?pkgname\u003dcool.dingstock.mobile\u0026fromcase\u003d40003",
+    "iOSVersion": "1.2.0"
+  }
+}

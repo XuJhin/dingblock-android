@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="60dp">
+
+    <cool.dingstock.imagepicker.views.roundImageView.RoundImageView
+        android:id="@+id/setting_shield_user_avatar"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:view_type="type_circle" />
+
+    <cool.dingstock.imagepicker.views.roundImageView.RoundImageView
+        android:id="@+id/iv_flag_is_verified"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:src="@drawable/post_renzheng"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/setting_shield_user_avatar"
+        app:layout_constraintEnd_toEndOf="@+id/setting_shield_user_avatar"
+        app:view_type="type_circle" />
+
+    <TextView
+        android:id="@+id/setting_shield_user_nickname"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/color_text_black1"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/setting_shield_user_avatar"
+        app:layout_constraintEnd_toStartOf="@+id/setting_shield_state"
+        app:layout_constraintStart_toEndOf="@+id/setting_shield_user_avatar"
+        app:layout_constraintTop_toTopOf="@+id/setting_shield_user_avatar"
+        tools:text="盯链小能手" />
+
+
+    <TextView
+        android:id="@+id/setting_shield_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/follow_btn_sel"
+        android:gravity="center"
+        android:paddingStart="10dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="5dp"
+        android:text="取消屏蔽"
+        android:textColor="@color/color_text_black1"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <cool.dingstock.imagepicker.views.AvatarView
+        android:id="@+id/group_item_dynamic_user_head_iv"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        app:ava_src="@drawable/default_avatar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/group_item_dynamic_user_verified"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_alignEnd="@id/group_item_dynamic_user_head_iv"
+        android:layout_alignBottom="@id/group_item_dynamic_user_head_iv"
+        android:src="@drawable/user_verified"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/group_item_dynamic_user_head_iv" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/group_item_dynamic_user_head_iv"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/group_item_dynamic_user_head_iv"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/group_item_dynamic_user_name_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:textColor="@color/user_is_vip_post_name_color"
+                    android:textSize="@dimen/text_size5"
+                    app:layout_constrainedWidth="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/userIsVerified"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="盯链盯链小能手盯链小能" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/userIsVerified"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginTop="1dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/post_renzheng"
+                    app:layout_constraintBottom_toBottomOf="@+id/group_item_dynamic_user_name_txt"
+                    app:layout_constraintEnd_toStartOf="@+id/iv_medal"
+                    app:layout_constraintStart_toEndOf="@+id/group_item_dynamic_user_name_txt"
+                    app:layout_constraintTop_toTopOf="@+id/group_item_dynamic_user_name_txt"
+                    app:shapeAppearance="@style/circleImageStyle" />
+
+                <ImageView
+                    android:id="@+id/iv_medal"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginTop="1dp"
+                    android:src="@drawable/mine_medal"
+                    app:layout_constraintBottom_toBottomOf="@+id/group_item_dynamic_user_name_txt"
+                    app:layout_constraintEnd_toStartOf="@+id/post_trading_details_other_publish_layer"
+                    app:layout_constraintStart_toEndOf="@+id/userIsVerified"
+                    app:layout_constraintTop_toTopOf="@+id/group_item_dynamic_user_name_txt" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/post_trading_details_other_publish_layer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="16dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@drawable/post_trading_details_other_publish_bg"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/group_item_dynamic_user_name_txt"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/iv_medal"
+                    app:layout_constraintTop_toTopOf="@+id/group_item_dynamic_user_name_txt">
+
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_marginStart="4dp"
+                        android:src="@drawable/ic_post_trading_details_other_publish_icon" />
+
+                    <TextView
+                        android:id="@+id/post_trading_details_other_publish_tv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="1dp"
+                        android:layout_weight="1"
+                        android:text="正在发布8条交易"
+                        android:textColor="@color/color_blue"
+                        android:textSize="10sp" />
+
+                    <ImageView
+                        android:layout_width="7dp"
+                        android:layout_height="7dp"
+                        android:layout_marginEnd="4dp"
+                        android:src="@drawable/common_svg_right_arrow"
+                        app:tint="@color/color_blue" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:gravity="center_vertical|bottom"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/group_item_dynamic_user_time_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:textColor="@color/color_text_black5"
+                    android:textFontWeight="100"
+                    android:textSize="@dimen/text_size1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:text="5月4 12:00" />
+
+                <TextView
+                    android:id="@+id/group_item_dynamic_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:ellipsize="end"
+                    android:gravity="bottom"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/color_text_black5"
+                    android:textFontWeight="100"
+                    android:textSize="@dimen/text_size1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/group_item_dynamic_user_time_txt"
+                    tools:text="天府软件园天天府软件园天府软" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/header_score_layer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="评分"
+                android:textColor="@color/color_text_black3"
+                android:textSize="13sp" />
+
+            <com.willy.ratingbar.ScaleRatingBar
+                android:id="@+id/header_score_rating_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4.5dp"
+                android:gravity="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rating_title"
+                app:srb_clearRatingEnabled="false"
+                app:srb_clickable="false"
+                app:srb_drawableEmpty="@drawable/ic_small_rating_empty"
+                app:srb_drawableFilled="@drawable/ic_small_rating_fill"
+                app:srb_isIndicator="false"
+                app:srb_numStars="5"
+                app:srb_rating="3"
+                app:srb_scrollable="false"
+                app:srb_starHeight="11dp"
+                app:srb_starPadding="1.5dp"
+                app:srb_starWidth="11dp"
+                app:srb_stepSize="1" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_follow_user"
+                android:layout_width="52dp"
+                android:layout_height="26dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/follow_btn_sel"
+                android:gravity="center"
+                android:text="关注"
+                android:textColor="@color/color_text_black1"
+                android:textSize="@dimen/text_size3"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginEnd="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/icon_post_tag_hot"
+                    android:layout_width="39dp"
+                    android:layout_height="16dp"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/post_header_overlay"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/post_header_overlay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:src="@drawable/ic_icon_overlay_svg"
+                    android:visibility="visible"
+                    app:tint="@color/color_text_black5" />
+
+            </LinearLayout>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

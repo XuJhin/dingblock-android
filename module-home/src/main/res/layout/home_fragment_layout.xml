@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/bgV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipChildren="false">
+
+            <cool.dingstock.appbase.widget.NoScrollViewPager
+                android:id="@+id/home_fragment_vp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent" />
+
+            <FrameLayout
+                android:id="@+id/home_fragment_tablayout_lin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent">
+
+                <View
+                    android:id="@+id/tabBgV"
+                    android:layout_width="match_parent"
+                    android:layout_height="51dp"
+                    android:background="@color/white"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:id="@+id/title_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <net.lucode.hackware.magicindicator.MagicIndicator
+                        android:id="@+id/home_fragment_tablayout"
+                        android:layout_width="0dp"
+                        android:layout_height="51dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1"/>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/search_iv"
+                        android:layout_gravity="bottom"
+                        android:layout_width="49dp"
+                        android:layout_height="44dp"
+                        android:animateLayoutChanges="true"
+                        android:scaleType="centerCrop"
+                        android:padding="16.5dp"
+                        android:src="@drawable/search_svg_search"
+                        android:tint="@color/color_text_black1" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <View
+                android:id="@+id/fake_status_bar1"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/white"/>
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+</FrameLayout>

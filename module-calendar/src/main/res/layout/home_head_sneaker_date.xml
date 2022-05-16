@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="35dp"
+    android:background="@color/color_gray"
+    android:gravity="center_vertical"
+    android:minHeight="35dp">
+
+    <cool.dingstock.lib_base.widget.tv.font.PoppinsBoldTv
+        android:id="@+id/home_head_sneaker_date_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="12dp"
+        android:includeFontPadding="false"
+        android:textColor="@color/color_text_black2"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        tools:text="28" />
+
+    <TextView
+        android:id="@+id/home_head_sneaker_date_month"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/home_head_sneaker_date_txt"
+        android:layout_toEndOf="@id/home_head_sneaker_date_txt"
+        android:textColor="@color/color_text_black2"
+        android:textSize="@dimen/text_size1"
+        android:visibility="visible"
+        tools:text="/01" />
+
+    <LinearLayout
+        android:id="@+id/product_title_ing_layer"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginStart="12dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="invisible">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/sneakers_calendar_ing_icon" />
+
+        <TextView
+            android:id="@+id/ing_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="进行中"
+            android:textColor="@color/color_text_black1"
+            android:textSize="@dimen/text_size5"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</RelativeLayout>

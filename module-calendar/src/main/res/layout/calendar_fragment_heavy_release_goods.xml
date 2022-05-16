@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tool_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/shape_top_round_heavy_raffle"
+            app:contentInsetEnd="0dp"
+            app:contentInsetStart="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:paddingBottom="12dp"
+                android:id="@+id/layer_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            <cool.dingstock.lib_base.widget.tv.font.PoppinsBoldTv
+                    android:id="@+id/tv_good_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="8dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/color_text_black1"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_close"
+                    app:layout_constraintEnd_toStartOf="@+id/iv_close"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/iv_close"
+                    tools:text="adidas Yeezy Boost 350 V2 Flax TE ..."/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_close"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="12dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:tint="@color/color_text_black1"
+                    app:srcCompat="@drawable/svg_close"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tool_bar"
+            android:background="@color/color_gray"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+        <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_gray"
+                app:elevation="0dp"
+                app:layout_scrollFlags="scroll">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_scrollFlags="scroll"
+                    app:titleEnabled="false">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:paddingBottom="12dp"
+                        app:layout_collapseMode="none">
+
+                    <include
+                            android:id="@+id/layer_good_extras"
+                            layout="@layout/layout_heavy_raffle_good_info"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="12dp"/>
+
+                    <include
+                            android:id="@+id/product_video"
+                            layout="@layout/home_layer_product_video"
+                            android:visibility="gone"/>
+
+                </LinearLayout>
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layer_tool_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:background="@color/color_gray"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/layer_top"
+                    app:layout_isSticky="true">
+
+                <net.lucode.hackware.magicindicator.MagicIndicator
+                        android:id="@+id/magicIndicator"
+                        android:layout_width="0dp"
+                        android:layout_height="44dp"
+                        android:layout_weight="1"
+
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/store_count_layer"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tabIndicatorHeight="0dp"/>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/store_count_layer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        app:layout_constraintEnd_toEndOf="parent">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                            android:layout_width="10dp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/common_title_h_shadow"/>
+
+                    <TextView
+                            android:id="@+id/tv_raffle_counts"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="7dp"
+                            android:layout_marginEnd="12dp"
+                            android:textColor="@color/common_grey_blue_txt_color"
+                            android:textSize="14sp"
+                            tools:text="6条发售"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <cool.dingstock.appbase.widget.RecyclerviewAtViewPager2
+                    android:id="@+id/rv_raffle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/layer_tool_bar"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <include
+                android:id="@+id/layer_bottom"
+                layout="@layout/sneaker_layout_heavy_release_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</RelativeLayout>
+

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cool.dingstock.mine">
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/DcAppTheme">
+        <activity
+            android:name=".ui.medal.MedalDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.collection.MineCollectionActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection|fontScale|screenLayout|density"
+            android:exported="true" />
+        <activity
+            android:name=".ui.exchange.good.MineExchangeGoodsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.score.record.ScoreExchangeRecordActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.score.message.ReceiveInformationActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.score.detail.ScoreDetailActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.score.index.ScoreIndexActivity"
+            android:configChanges="uiMode"
+            android:exported="true" />
+        <activity
+            android:name=".ui.vip.VipCenterActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.follow.FollowActivity"
+            android:exported="true">
+            <intent-filter>
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="dc.action.router" />
+
+                <data
+                    android:host="app.dingstock.net"
+                    android:path="/mine/follow"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".dynamic.UserDynamicActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection|fontScale|screenLayout|density"
+            android:exported="true">
+            <intent-filter>
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="dc.action.router" />
+
+                <data
+                    android:host="app.dingstock.net"
+                    android:path="/mine/dynamic"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.message.NoticeActivity"
+            android:exported="true">
+            <intent-filter>
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="dc.action.router" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <data
+                    android:host="app.dingstock.net"
+                    android:path="/home/message"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.medal.MedalListActivity"
+            android:exported="true">
+            <intent-filter>
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="dc.action.router" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <data
+                    android:host="app.dingstock.net"
+                    android:path="/mine/medalList"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="cool.dingstock.mine.ui.avater.AvatarPreviewActivity"
+            android:theme="@style/Theme.ImagePreview"
+            android:exported="true">
+            <intent-filter>
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="dc.action.router" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <data
+                    android:host="app.dingstock.net"
+                    android:path="/mine/avatarPreview"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.avater.ModifyPendantActivity"
+            android:exported="true">
+            <intent-filter>
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="dc.action.router" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <data
+                    android:host="app.dingstock.net"
+                    android:path="/mine/modifyPendant"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

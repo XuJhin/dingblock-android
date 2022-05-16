@@ -1,0 +1,311 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <string name="app_name">盯链</string>
+    <string name="bp_test_name">Bp测试</string>
+    <string name="icon_like">&#xe635;</string>
+    <string name="icon_liked">&#xe7d6;</string>
+    <string name="icon_dislike">&#xe7d7;</string>
+    <string name="icon_disliked">&#xe7d8;</string>
+    <string name="icon_mine_share">&#xe62a;</string>
+    <string name="icon_back">&#xe7d9;</string>
+    <string name="icon_close">&#xe628;</string>
+    <string name="icon_more">&#xe629;</string>
+    <string name="icon_del">&#xe628;</string>
+    <string name="icon_tick">&#xe641;</string>
+    <string name="icon_triangle">&#xe66c;</string>
+    <string name="icon_back_large">&#xe61e;</string>
+    <string name="icon_edit_eyes">&#xe644;</string>
+    <string name="icon_edit_del">&#xe643;</string>
+    <string name="icon_gotem">&#xe642;</string>
+    <string name="icon_lock">&#xe6e5;</string>
+    <string name="icon_more_point">&#xe64d;</string>
+    <string name="icon_mute">&#xe615;</string>
+    <string name="icon_add">&#xe625;</string>
+    <string name="icon_camera">&#xe624;</string>
+    <string name="icon_copy">&#xe632;</string>
+    <string name="icon_switch">&#xe64a;</string>
+    <string name="icon_chat">&#xe64b;</string>
+    <string name="common_status_error_tips">网络连接失败</string>
+    <string name="common_status_empty_tips">数据为空</string>
+    <string name="common_loading_tip">加载中…</string>
+    <string name="common_done">完成</string>
+    <string name="common_all">全部</string>
+    <string name="common_confirm">确认</string>
+    <string name="common_confirm_filter">确定</string>
+    <string name="common_cancel">取消</string>
+    <string name="common_save">保存</string>
+    <string name="common_save_success">保存成功</string>
+    <string name="common_save_failed">保存失败</string>
+    <string name="dc_yyb_link">https://a.app.qq.com/o/simple.jsp?pkgname=cool.dingstock.mobile</string>
+    <string name="common_user_not_login">用户未登录</string>
+    <!--update-->
+    <string name="update_dialog_title">有新的版本需要更新</string>
+    <string name="common_dc_slogan">为核心潮流玩家而生</string>
+    <!--share-->
+    <string name="common_share_title">【盯链APP】为核心潮流玩家而生</string>
+    <string name="common_share_content">最全面的发售日历，最及时的潮流监控，尽在盯链APP</string>
+    <!--photo_select-->
+    <string name="common_photo_select_title">相册</string>
+    <string name="common_photo_select_preview">预览</string>
+    <string name="common_photo_select_max_choose_tip">最多选择%1$s张照片</string>
+    <!--product view -->
+    <string name="product_raffle_template">%1$1s条发售信息</string>
+    <string name="product_subscribe_template">%1$1s人关注</string>
+    <string name="common_subscribe_tip">关注后将收到产品的后续发售信息推送</string>
+    <string name="no_more_data">已经全部加载完毕</string>
+    <string name="dynamic_dialog_hit">一、盯链禁止攻击引战和不友善行为，包括但不限于以下行为：
+        \n
+        1.人身攻击、2.群体攻击、3.恶意挑衅引战，恶意煽动其他盯链网友、
+        4.禁止将个人私下恩怨带上社区，从而导致引发和挑起骂战、人肉等恶意违规；
+        \n
+        二、未经平台方许可，禁止发布广告相关形式的行为，包括但不限于：带有商业推广性质的活动链接、二维码引导下载或买卖、QQ号、微信号、欺骗性诱导外链等
+        \n
+        三、禁止色情淫秽、血腥暴恐类内容
+        \n
+        四、违反发布违反法律法规，涉及时政敏感类的内容
+        当出现违反社区规范的行为，管理员将限制违规内容曝光，根据违规内容的严重程度，对违规盯友采取：限制内容发布、禁止评论、封禁账号等处理措施，请盯友共同维护社区的良好环境。
+    </string>
+    <string name="dynamic_dialog_title">盯链社区规范</string>
+    <string name="dynamic_edit_add_link_dec">支持微博、抖音、bilibili 等各大主流视频网站嵌入播放</string>
+    <string name="dynamic_edit_add_link_copy_hint_dec">你复制过的链接</string>
+    <string name="dynamic_edit_i_know">知道了</string>
+
+
+    <string name="setting_index_title">设置</string>
+    <string name="setting_logout">退出登录</string>
+    <string name="setting_logout_confirm_title">确认要退出登录吗</string>
+
+    <string name="setting_invite_edit_hint">请输入邀请码</string>
+
+    <string name="setting_set_up_disturb">设置免打扰时间段</string>
+    <string name="setting_confirm_disturb">确定</string>
+    <string name="setting_close_do_not_disturb">关闭勿扰模式</string>
+
+
+    <!--user-edit-->
+    <string name="setting_user_edit_title">编辑资料</string>
+    <string name="setting_user_head_portrait">更改头像</string>
+    <string name="setting_user_nick">昵称</string>
+    <string name="setting_user_phone">手机号</string>
+    <string name="setting_user_nick_modify">修改昵称</string>
+    <string name="setting_user_nick_empty_tip">请填写昵称</string>
+    <string name="setting_user_save">保存</string>
+    <string name="setting_user_nick_max_length_tip">昵称最多为8个字哦!</string>
+    <string name="title_shield_account">已屏蔽用户</string>
+
+    <!--dynamic actions-->
+    <string name="post_raise">点赞</string>
+    <string name="post_comment">评论</string>
+    <string name="post_share">分享</string>
+    <!-- dynamic share -->
+    <string name="circle_dynamic_share_title">在盯链App发布了动态，快来围观！</string>
+    <!--dynamic edit-->
+    <string name="circle_dynamic_edit_image">图片</string>
+    <string name="circle_dynamic_edit_link">链接</string>
+    <string name="circle_dynamic_publish">发布</string>
+    <string name="circle_dynamic_publish_dialog_title">添加链接</string>
+    <string name="circle_dynamic_publish_success">发布成功</string>
+    <string name="circle_dynamic_publish_failed">发布失败</string>
+
+    <!--dynamic detail-->
+
+    <!-- circle mine dynamic -->
+
+    <!-- circle  dynamic detail-->
+    <string name="circle_dynamic_detail_title">动态详情</string>
+    <string name="circle_comment">发送</string>
+    <string name="circle_comment_hint">说点什么吧~</string>
+
+    <!-- circle  Identify detail-->
+    <string name="circle_identify_title">发布鉴定</string>
+    <string name="circle_identify_choose_brand">选择品牌</string>
+    <string name="circle_identify_choose">请选择</string>
+    <string name="circle_identify_photo">鉴别图片</string>
+    <string name="circle_identify_photo_tip">（最少添加6张基本图片）</string>
+    <string name="circle_identify_supplement">补充说明</string>
+    <string name="circle_identify_optional_tip">（非必填）</string>
+    <string name="circle_identify_et_hint">描述鉴别商品的信息，如颜色、购买渠道、价格等....</string>
+    <string name="circle_other_supplement">其他补充</string>
+    <string name="circle_identify_tips">1.盯链App将每月赠送盯链至尊会员免费鉴别次数，会员可使用进行球鞋鉴别，同时，免费赠送鉴别次数不进行累加。
+        鉴定师仅通过用户所给出的图片对球鞋进行真假鉴别，无法对货源真实性做出判断。\n
+        2.当球鞋不在鉴别范围内、图片提供不完整、拼图、使用带其他平台水印图片鉴别时，平台有权拒绝鉴别。\n
+        3.盯链App为会员提供的是免费鉴别服务，属于会员福利，并且在线鉴别受限于拍摄角度、光线、图片质量等诸多原因、且有别于传统线下鉴别对实物的感官分辨，仍有极少数概率出现鉴别失误的情形，对此盯链补偿用户\n
+        4.一次免费鉴别机会，但请您理解，盯链平台无法就您的其他额外损失承担赔偿责任。\n
+        5.盯链平台抵制用户恶意使用在线鉴别服务，如发现用户存在恶意行为，包括但不限于拼图，平台有权限制用户使用本服务。\n
+        6.本规则由盯链App定制公示，盯链平台有权对本规则进行调整修改，并及时进行公示，如您有疑问，可联系盯链App在线客服咨询。
+    </string>
+    <!-- circle  Deal detail-->
+    <string name="circle_deal_title_hint">标题类型（求购或出售）品牌、型号尺寸</string>
+    <string name="circle_deal_subtitle_hint">请描述具体交易（求购或出售）的商品品质、交易价格或交易需求等信息</string>
+    <string name="circle_deal_character">成色</string>
+    <string name="circle_deal_upload_photo">上传图片</string>
+
+    <string name="circle_deal_tips">【交易】\n
+        1、交易内容仅限于官方正品鞋类、衣服，严禁售卖非官方正品和假货，经发现一律删除，并永久黑名单。\n
+        2、交易发布必须使用本人盯链账号发布。\n
+        3、严禁发布预售、代购等交易内容。\n
+        4、严禁重复发布交易内容，违者删除圈子，并记录违规一次，三次违规，永久黑名单。\n
+        5、出售交易信息发布，须上传最少3张商品实物图片。\n
+        6、发布交易信息。\n
+        【二手】\n
+        1、对于二手物品交易，卖家务必详细写明商品情况，如有瑕疵必须给出瑕疵特写并配以说明。\n
+        【求购】\n
+        1、务必标明求购物品的尺码颜色等明确信息，心理价位等。\n
+        【特别提醒】\n
+        1、交易方式建议选择：淘宝、闲鱼、面交。全面禁止先款，走信誉等一切同类交易方式及字样\n
+        2、交易为用户个人行为，平台仅作为信息发布平台，任何交易与盯链无关，请用户自行斟酌。
+    </string>
+    <string name="circle_deal_check_title_1">全新闲置</string>
+    <string name="circle_deal_check_title_2">全新瑕疵</string>
+    <string name="circle_deal_check_title_3">轻微穿着</string>
+    <string name="circle_deal_check_title_4">二手穿着</string>
+    <string name="circle_dynamic_edit_vote">投票</string>
+    <string name="text_crate_topic_success">话题创建成功</string>
+    <string name="text_topic_created_success_desc">你可在「发现-关注的话题」找到自己\n创建的话题 \n\n 快去在话题里面发布动态吧，优质的动态和话\n题会被官方推荐喔</string>
+
+    <string name="monitor_activity_channel_subscribe_title">全部频道</string>
+
+    <string name="monitor_title_setting">监控设置</string>
+    <string name="monitor_recommend_add_monitor">添加监控</string>
+    <string name="monitor_recommend_has_monitored">已监控</string>
+    <string name="monitorFirst">将监控设为首页</string>
+    <string name="directLink">点击推送直接跳转源链接</string>
+    <string name="classicalType">经典模式</string>
+    <string name="shield">已屏蔽商品</string>
+    <string name="follow_regions">关注地区</string>
+    <string name="select_channel">选择频道</string>
+    <string name="add_keyword_rule_explain">监控信息中含有设置的商品名关键字将发送推送提醒 功能开启后请关注推送提醒是否与预期一致，我们推荐监控核心玩家体验该功能\n例： AJ1、Dunk
+        Low、SB Dunk等商品名称关键字
+    </string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+
+    <string name="input_goods_link">输入商品链接</string>
+    <string name="link_paste">粘贴</string>
+    <string name="choose_good">选择商品信息</string>
+    <string name="setting_jump_time">设置跳转时间</string>
+    <string name="title_submit_bot">秒杀神器</string>
+    <string name="bp_submit_bot_desc">1. 秒杀神器可以帮助你在购物平台自动提交订单，无需手动操作。\n
+        2. 使用秒杀神器一定要开启 无障碍模式，若未开启该模式，秒杀功能无法正常使用。\n
+        3. 秒杀神器开启后，需进入抢购平台的购物车页面，并一定要勾选需要抢购的商品，提前选择购买数量，秒杀功能倒计时结束时必须停留在购物车页面，如退出或跳转其他页面秒杀功能会失效\n
+        4. 秒杀神器开启后，在倒计时结束时会自动提交订单，所以需在倒计时结束前打开抢购平台App选择好商品，请合理设置跳转时间。\n
+        5. 倒计时结束后，秒杀神器会帮助你将购物车里已勾选的商品提交订单，你只需在平台规定时间内付款即可。
+    </string>
+
+    <string name="bp_jump_desc">1. 跳转抢购需停留在当前页面，请在倒计时结束前不要退出本页面
+        \n2. 跳转抢购建议提前打开购物App，可避免App启动时的广告开屏，再返回本页面等待倒计时结束
+        \n3. 请确认手机系统时间自动同步至北京时间，避免时间偏差
+        \n4. 购物App的结算按钮通常位于页面右下角，可以在跳转后持续点击右下角结算按钮的位置，提高结算成功率
+    </string>
+
+    <string name="setting_submit_time">设置秒杀时间</string>
+    <string name="submit_bot_service_label">盯链秒杀</string>
+    <string name="desc_submit_bot">正常使用盯链秒杀神器，需开启该功能，功能开启后，可以自动提交订单，无需手动提交订单。若关闭该功能，则无法正常使用秒杀神器，但不影响盯链App的其他功能使用。
+        \n部分安卓机型在退出盯链App后，手机会主动关闭无障碍权限，导致秒杀功能失效，建议关闭后重新手动开启无障碍权限，或重启手机
+        \n盯链App对本功能不收取任何费用，无需会员也可使用，功能仅供学习交流，不可商用盈利。
+    </string>
+
+
+    <!--mine sizeIndex -->
+    <string name="common_login">登录</string>
+    <string name="mine_vip_info_template">将于%1$1s到期</string>
+
+    <!--mine region-->
+    <string name="mine_region_title">关注地区/网站</string>
+    <string name="mine_focus_empty">还没有订阅任何地区哦~</string>
+
+    <!-- mine items -->
+    <string name="title_mine_notice">我的通知</string>
+
+
+    <!--detail-->
+    <string name="raffle_share_content_template">%1$1s即将发售%2$1s</string>
+    <string name="raffle_share_title">【盯链APP】有新的发售信息</string>
+    <string name="home_detail_title">发售详情</string>
+    <string name="heavy_title">热门发售</string>
+    <string name="home_setup_success">设置成功</string>
+    <string name="home_setup_failed">设置失败</string>
+
+
+    <!--featured-->
+    <string name="featured_tab_txt_super">重磅</string>
+    <string name="featured_tab_txt_focus">已关注</string>
+
+
+    <!--gotem-->
+    <string name="gotem_title">GOT\'EM</string>
+
+    <!--sms-->
+    <string name="sms_edit_send">发送</string>
+    <string name="sms_edit_foot_tip">您的信息仅被保存在您的手机上用于下次使用</string>
+    <string name="edit_not_content">未填写</string>
+    <string name="sms_phone_num_empty">手机号码为空</string>
+
+
+    <!--fashion brand-->
+    <string name="home_fashion_brand_title">全部潮牌</string>
+    <string name="title_latest_sale">最新发售</string>
+
+    <string name="text_follow_recommend">一键关注</string>
+    <string name="title_home_recommend_follow">这些玩家都很有料哦</string>
+
+
+    <string name="choose_topic">选择话题</string>
+    <string name="dynamic_hint">提醒：请勿发布辱骂骚扰、使用污秽言语，蔑称等直接辱骂或骚扰他人的动态评论；交易内容请选择发布至交易圈子，请大家共同维护社区良好环境</string>
+
+    <!--account sizeIndex-->
+    <string name="account_agreement_new_txt" tools:ignore="ExtraTranslation">登录即代表您同意《盯链用户协议》 《隐私政策》</string>
+
+    <!--loginWithSms-->
+    <string name="account_login_phone_hint">请输入手机号</string>
+    <string name="account_login_sms_hint">请输入验证码</string>
+    <string name="account_login">登录</string>
+
+
+    <!--country picker-->
+    <string name="account_activity_country_picker_title">选择区号</string>
+    <string name="account_activity_country_picker_search">搜索</string>
+    <string name="title_bind_mobile">绑定手机号</string>
+    <string name="mobile">手机号</string>
+
+    <!--    mine-->
+    <string name="dynamic">动态</string>
+
+    <!--    vip-->
+    <string name="dc_cip">盯链会员</string>
+    <string name="vip_qqjk">全球监控</string>
+    <string name="vip_input_promotion_hint">输入/粘贴邀请码享优惠</string>
+    <string name="not_input_promotion_hint">请输入邀请码</string>
+    <string name="immediately_renewal">立即续费</string>
+    <string name="confirm">确认</string>
+    <string name="cancel">取消</string>
+    <string name="wechat_pay">微信支付</string>
+    <string name="ali_pay">支付宝支付</string>
+    <string name="cancel_pay">取消支付</string>
+
+    <!--    search-->
+    <string name="search_history_txt">最近搜索</string>
+
+    <!--    BP-->
+    <string name="BP_title">秒杀神器</string>
+    <string name="BP_hint_list">提醒列表</string>
+    <string name="BP_reward">我的奖励</string>
+    <string name="score_index_helper_desc">1、第1~6天：分别+1~6积分，第7天及之后：+7积分。\n2、每14天为一个周期，若途中断签，则从第1天开始重新计算。
+        \n3、签到奖励:\n（1）连续签到为7的奇数倍天数时，可获得1天体验会员。\n（2）连续签到为7的偶数倍天数时，可获得3天体验会员。\n（3）在其它签到天数，会定期出现积分双倍奖励。
+    </string>
+    <string name="score_index_helper_title">每日一签说明</string>
+
+    <string name="sms_tips">1.姓名: 请确保三个字符，如果单名则需以空格补充。例如: 张 三(中间需要有一个空格)\n\n
+        2.尺码: 请填写EUR SIZE（欧码)，例如:40.0。男女款尺码范围不同，登记发送短信时需注意。\n\n
+        3.同一手机号，身份证号，信用卡只可以发送一次，重复发送予以作废。\n\n
+        4.短信接收号码只做接收短信使用，请勿拨打，详情咨询请拨打店铺电话。\n\n
+        6.如一天内登记多双鞋款与多家店铺，请按照对应的鞋款与店铺格式发送，发送前请仔细核对相关信息。\n\n
+        7.如抽签店铺有特殊格式（Juice、法雅体育等非直营平台）或者格式变动请以店铺方要求为准。
+    </string>
+
+    <string name="lottery_note_tips">
+        抽签笔记会记录通过盯链跳转参与的发售。\n选择\"已中签\"或\"未中签\"来标记每次参与发售的结果，总结你的每月中签战绩！
+    </string>
+
+</resources>

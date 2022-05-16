@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:id="@+id/kol_edit_layer"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:layout_marginTop="12dp"
+    android:layout_marginStart="20dp"
+    android:layout_marginEnd="20dp"
+    android:background="@drawable/vip_center_promotion_edit_bg"
+    >
+
+
+    <EditText
+        android:id="@+id/kol_edit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="70dp"
+        android:background="@null"
+        android:gravity="center_vertical"
+        android:paddingStart="13dp"
+        android:textSize="@dimen/text_size5"
+        android:textColor="@color/vip_edit_txt_color"
+        android:textColorHint="@color/vip_edit_hint_color"
+        android:hint="@string/vip_input_promotion_hint"
+        />
+
+    <TextView
+        android:id="@+id/code_check_tv"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:text="@string/confirm"
+        android:textColor="@color/vip_buy_color"
+        android:gravity="center"
+        android:textSize="@dimen/text_size5"
+        android:layout_gravity="end"
+        android:background="@drawable/vip_buy_bg"
+        />
+
+</FrameLayout>

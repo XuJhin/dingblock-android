@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginStart="43dp"
+    android:layout_marginEnd="43dp"
+    android:orientation="vertical"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="0dp"
+    android:layout_gravity="center"
+    app:cardBackgroundColor="@color/white"
+    >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/pop_common_top_bg"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="盯链社区规范"
+            android:textColor="@color/color_text_black1"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginStart="25dp"
+            />
+
+        <!--    <androidx.core.widget.NestedScrollView-->
+        <!--        android:layout_width="match_parent"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        android:layout_marginStart="30dp"-->
+        <!--        android:layout_marginTop="15dp"-->
+        <!--        android:layout_marginEnd="30dp"-->
+        <!--        >-->
+        <!--        <LinearLayout-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:orientation="vertical"-->
+        <!--            >-->
+
+        <!--        </LinearLayout>-->
+
+
+        <!--    </androidx.core.widget.NestedScrollView>-->
+
+        <TextView
+            android:id="@+id/content_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginTop="15dp"
+            android:lineSpacingExtra="3dp"
+            android:maxHeight="212dp"
+            android:minHeight="100dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/top_dialog"
+            android:textColor="@color/color_text_black2"
+            android:textSize="@dimen/text_size5"
+            tools:text="一、盯链禁止攻击引战和不友善行为，包括但不限于以下行为： 1.人身攻击、2.群体攻击、3.恶意挑衅引战，恶意煽动其他盯链网友。4.禁止将个人私下恩怨带上社区，从而导致引发和挑起骂战、人肉等恶意违规； 二、未经平台方许可，禁止发布广告相关形式的行为，包括但不限于：带有商业推广性质的活动链接、二维码引导下载或买卖、QQ号、微信号、欺骗性诱导外链等 三、禁止色情淫秽、血腥暴恐类内容 四、违反发布违反法律法规，涉及时政敏感类的内容 当出现违反社区规范的行为，管理员将限制违规内容曝光，根据违规内容的严重程度，对违规盯友采取：限制内容发布、禁止评论、封禁账号等处理措施，请盯友共同维护社区的良好环境。" />
+
+        <TextView
+            android:id="@+id/confirm_tv"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="17dp"
+            android:background="@drawable/common_btn_r8_black_bg"
+            android:gravity="center"
+            android:text="我知道了"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+
+            />
+    </LinearLayout>
+
+
+
+</androidx.cardview.widget.CardView>

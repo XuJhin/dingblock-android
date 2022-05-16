@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_gray"
+    android:orientation="vertical"
+    tools:context=".ui.address.MyAddressActivity">
+
+    <cool.dingstock.appbase.widget.TitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white" />
+
+
+    <com.scwang.smart.refresh.layout.SmartRefreshLayout
+        android:id="@+id/address_list_index_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipChildren="false"
+        android:overScrollMode="never">
+
+        <cool.dingstock.appbase.widget.consecutivescroller.ConsecutiveScrollerLayout
+            android:id="@+id/layout_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never">
+
+            <LinearLayout
+                android:id="@+id/ll_empty_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:visibility="visible">
+
+                <cool.dingstock.appbase.widget.CommonEmptyView
+                    android:id="@+id/empty_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tv_empty_action"
+                    android:layout_width="118dp"
+                    android:layout_height="38dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/re_conent_bg"
+                    android:gravity="center"
+                    android:text="添加收货地址"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size5" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never"
+                app:cardElevation="0dp" />
+
+
+        </cool.dingstock.appbase.widget.consecutivescroller.ConsecutiveScrollerLayout>
+    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_button_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_add_address"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/common_btn_r8_black"
+            android:gravity="center"
+            android:text="添加收货地址"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size7" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,120 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-parcelize'
+    id 'kotlin-kapt'
+    id 'com.mob.sdk'
+    id 'org.jetbrains.kotlin.plugin.serialization' version '1.6.20'
+}
+apply from: '../MobSDK.gradle'
+apply from: '../version_config.gradle'
+def ext = rootProject.ext
+android {
+    compileSdkVersion ext.compileSdkVersion
+
+    buildFeatures {
+        viewBinding true
+    }
+    defaultConfig {
+        versionCode ext.versionCode
+        versionName ext.versionName
+        minSdkVersion ext.minSdkVersion
+        targetSdkVersion ext.targetSdkVersion
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_11
+        sourceCompatibility JavaVersion.VERSION_11
+    }
+
+    kotlinOptions {
+        jvmTarget = "11"
+    }
+    packagingOptions {
+        exclude 'classes.dex'
+        exclude '**.**'
+        pickFirst 'lib/armeabi-v7a/libRSSupport.so'
+        pickFirst 'lib/arm64-v8a/libRSSupport.so'
+        pickFirst 'lib/x86_64/libRSSupport.so'
+        pickFirst 'lib/x86/libRSSupport.so'
+        pickFirst 'lib/arm64-v8a/librsjni.so'
+        pickFirst 'lib/x86/librsjni.so'
+        pickFirst 'lib/x86_64/librsjni.so'
+        pickFirst 'lib/armeabi-v7a/librsjni.so'
+        pickFirst 'lib/x86_64/librsjni_androidx.so'
+        pickFirst 'lib/armeabi-v7a/librsjni_androidx.so'
+        pickFirst 'lib/x86/librsjni_androidx.so'
+        pickFirst 'lib/arm64-v8a/librsjni_androidx.so'
+    }
+    lintOptions {
+        checkReleaseBuilds false
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+
+dependencies {
+
+    api fileTree(include: ['*.jar', '*.aar'], dir: 'libs')
+    api project(':dc-foundation')
+    api project(':dc-uikit')
+    api project(path: ':imagepicker')
+    implementation project(path: ':lib-pay')
+    implementation project(path: ":lib-launch")
+    kapt "com.google.dagger:dagger-compiler:$rootProject.ext.dagger2"
+    //引导库
+    api "com.github.huburt-Hu:NewbieGuide:$rootProject.ext.appbase_version_NewbieGuide"
+
+    api "com.github.li-xiaojun:XPopup:$rootProject.ext.appbase_version_xiaojun_XPopup"
+  //由于topOn广告使用了support v7包所以这里必须加上不然会报错
+    api "com.squareup.okhttp3:logging-interceptor:$rootProject.ext.appbase_version_okhttp3_logging_interceptor"
+
+    api("org.greenrobot:eventbus:3.3.1")
+
+    //推送
+    api "com.tencent.tpns:xiaomi:${pushVersion}-release"
+    api "com.tencent.tpns:oppo:${pushVersion}-release"
+    api "com.tencent.tpns:vivo:${pushVersion}-release"
+    api "com.tencent.tpns:meizu:${pushVersion}-release"
+    api "com.tencent.tpns:tpns:${pushVersion}-release"
+    api "androidx.constraintlayout:constraintlayout:$rootProject.ext.common_version_constraintlayout"
+    // 友盟
+    api("com.umeng.umsdk:common:$rootProject.ext.lib_base_version_umsdk_common")
+    api("com.umeng.umsdk:asms:$rootProject.ext.lib_base_version_umsdk_asms")
+    api("com.umeng.umsdk:apm:$rootProject.ext.lib_base_version_umsdk_apm")
+    api("com.umeng.umsdk:abtest:$rootProject.ext.lib_base_version_umsdk_abtest")
+    api("com.umeng.sdk:utdid:$rootProject.ext.lib_base_version_umeng_sdk_utdid")
+    //微信
+    api "com.tencent.mm.opensdk:wechat-sdk-android-without-mta:$rootProject.ext.lib_base_version_wechat_sdk_android_without_mta"
+    // Kotlin
+    //dialog
+
+    //视频播放器
+    api "com.github.CarGuo.GSYVideoPlayer:gsyVideoPlayer-java:$rootProject.ext.lib_base_version_gsyVideoPlayer"
+    //是否需要ExoPlayer模式
+    api "com.github.CarGuo.GSYVideoPlayer:GSYVideoPlayer-exo2:$rootProject.ext.lib_base_version_gsyVideoPlayer"
+    //根据你的需求ijk模式的so
+    api "com.github.CarGuo.GSYVideoPlayer:gsyVideoPlayer-armv7a:$rootProject.ext.lib_base_version_gsyVideoPlayer"
+    api "com.github.CarGuo.GSYVideoPlayer:gsyVideoPlayer-arm64:$rootProject.ext.lib_base_version_gsyVideoPlayer"
+    api "com.meiqia:meiqiasdk:$rootProject.ext.lib_base_version_meiqiasdk"
+    kapt "io.github.meituan-dianping:compiler:$rootProject.ext.wm_router"
+}
+
+repositories {
+    mavenCentral()
+}

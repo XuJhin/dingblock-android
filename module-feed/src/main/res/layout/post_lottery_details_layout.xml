@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/common_item_bg_gray_radius_8">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/details_gift_iv"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/gift_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+
+    <TextView
+        android:id="@+id/details_lottery_state_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="抽奖中"
+        android:textColor="@color/color_text_black1"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/details_gift_iv"
+        app:layout_constraintStart_toEndOf="@id/details_gift_iv"
+        app:layout_constraintTop_toTopOf="@id/details_gift_iv" />
+
+    <TextView
+        android:id="@+id/details_lottery_countdown_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textColor="@color/color_text_black3"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/details_gift_iv"
+        app:layout_constraintStart_toEndOf="@id/details_lottery_state_tv"
+        app:layout_constraintTop_toTopOf="@id/details_gift_iv"
+        tools:text="距离开奖仅剩 7 天 2 小时 23 分" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="4dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="4dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/details_gift_iv">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/lottery_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

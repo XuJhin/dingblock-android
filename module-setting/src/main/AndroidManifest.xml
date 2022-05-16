@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cool.dingstock.uicommon.setting">
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/DcAppTheme">
+        <activity
+            android:name="cool.dingstock.setting.ui.setting.updatePhone.CheckPhoneActivity"
+            android:exported="false" />
+        <activity
+            android:name="cool.dingstock.setting.ui.setting.updatePhone.SetNewPhoneActivity"
+            android:exported="false" />
+        <activity
+            android:name="cool.dingstock.setting.ui.setting.account.AccountSettingActivity"
+            android:exported="false"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="cool.dingstock.setting.ui.about_dc.AboutDcActivity"
+            android:exported="true" />
+        <activity
+            android:name="cool.dingstock.setting.ui.shield.ShieldUserActivity"
+            android:exported="true">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="dc.action.router" />
+
+                <data
+                    android:host="app.dingstock.net"
+                    android:path="/setting/shield"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cool.dingstock.setting.ui.verify.VerifyActivity"
+            android:exported="true">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="dc.action.router" />
+
+                <data
+                    android:host="app.dingstock.net"
+                    android:path="/setting/verify"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cool.dingstock.setting.ui.setting.index.SettingIndexActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/DcAppThemeBlack">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="dc.action.router" />
+
+                <data
+                    android:host="app.dingstock.net"
+                    android:path="/setting/index"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cool.dingstock.setting.ui.edit.SettingUserEditActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/DcAppThemeBlack">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="dc.action.router" />
+
+                <data
+                    android:host="app.dingstock.net"
+                    android:path="/setting/userEdit"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cool.dingstock.setting.ui.setting.index.VideoSettingActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/DcAppThemeBlack">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="dc.action.router" />
+
+                <data
+                    android:host="app.dingstock.net"
+                    android:path="/setting/setVideo"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cool.dingstock.setting.ui.setting.darkMode.DarkModeSettingActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/DcAppThemeBlack">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="dc.action.router" />
+
+                <data
+                    android:host="app.dingstock.net"
+                    android:path="/setting/darkMode"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

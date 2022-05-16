@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_gray">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mine_avatar_bg"
+        android:layout_width="match_parent"
+        android:layout_height="440dp"
+        android:layout_marginTop="-100dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/mine_avatar_iv"
+            android:layout_width="match_parent"
+            android:layout_height="530dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_avatar"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <include
+            android:id="@+id/avatar_shadow"
+            layout="@layout/mine_avatar_shadow"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/mine_top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:orientation="vertical">
+
+            <include layout="@layout/view_fake_status_bar" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_top_height"
+                android:clipChildren="false">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/mine_top_left_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:tint="@color/color_text_absolutely_white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_icon_nav_back" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/mine_top_left_menu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:src="@drawable/ic_icon_menu"
+                    android:tint="@color/color_text_absolutely_white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:textColor="@color/color_text_absolutely_white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/mine_overlay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/ic_icon_overlay_svg"
+                    android:tint="@color/color_text_absolute_white_90_a"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+        <com.scwang.smart.refresh.layout.SmartRefreshLayout
+            android:id="@+id/mine_swipe_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never">
+
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipChildren="false"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <com.google.android.material.appbar.AppBarLayout
+                    android:id="@+id/home_fragment_appBarLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    android:clipChildren="false"
+                    app:elevation="0dp"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                    <com.google.android.material.appbar.CollapsingToolbarLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_scrollFlags="scroll">
+
+                        <LinearLayout
+                            android:id="@+id/view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" />
+                    </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/mine_top_radius_bg"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp">
+
+                        <TextView
+                            android:id="@+id/tv_dynamic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="12dp"
+                            android:padding="5dp"
+                            android:text="@string/dynamic"
+                            android:textColor="@color/color_text_black1"
+                            android:textSize="@dimen/text_size5"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_deal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="22dp"
+                            android:padding="5dp"
+                            android:text="交易"
+                            android:textColor="@color/color_text_black1"
+                            android:textSize="@dimen/text_size5"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/lottery_notes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="22dp"
+                            android:drawablePadding="3dp"
+                            android:padding="5dp"
+                            android:text="抽签笔记"
+                            android:textColor="@color/color_text_black1"
+                            android:textSize="@dimen/text_size5"
+                            android:textStyle="bold"
+                            android:visibility="gone"
+                            app:drawableEndCompat="@drawable/ic_help"
+                            app:drawableTint="@color/color_text_black1" />
+
+                        <TextView
+
+                            android:id="@+id/tv_own_shoes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="22dp"
+                            android:padding="5dp"
+                            android:text="拥有鞋款"
+                            android:textColor="@color/color_text_black1"
+                            android:textSize="@dimen/text_size5"
+                            android:textStyle="bold"
+                            app:drawableTint="@color/color_text_black4" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.appbar.AppBarLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/color_gray"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                    <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/vp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+                </LinearLayout>
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+        </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_action_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="30dp"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <FrameLayout
+            android:id="@+id/follow_view"
+            android:layout_width="115dp"
+            android:layout_height="50dp"
+            android:background="@drawable/user_follow_btn_bg">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/mine_svg_flow"
+                    app:tint="@color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:text="关注TA"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size7"
+                    android:visibility="visible" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/im_view_without_follow"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/user_follow_btn_bg">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/im_svg_start_conversion"
+                    app:tint="@color/white" />
+
+            </LinearLayout>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/im_view"
+            android:layout_width="115dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/user_follow_btn_bg">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/im_svg_start_conversion"
+                    app:tint="@color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:text="私信"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size7"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+</FrameLayout>

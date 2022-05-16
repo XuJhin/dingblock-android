@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginStart="38dp"
+    android:layout_marginEnd="38dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="0dp">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/pop_common_top_bg" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="26dp"
+            android:text="如何完成发帖任务"
+            android:textColor="@color/color_text_black1"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/desc_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="25dp"
+            android:lineSpacingExtra="8sp"
+            android:maxHeight="200dp"
+            android:minHeight="150dp"
+            android:text="全面支持话题，给喜欢的音乐打个标签吧!
+            \n2.支持查看更多精彩评论\n3.评论举报增加无关评论\n4.支持微信支付\n4.支持微信支付\n4.支持微信支付\n4.支持微信支付\n4.支持微信支付\n4.支持微信支付\n4.支持微信支付\n4.支持微信支付\n4.支持微信支付\n4.支持微信支付"
+            android:textColor="@color/color_text_black2"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/confirm_tv"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="17dp"
+            android:background="@drawable/common_btn_r8_black_bg"
+            android:gravity="center"
+            android:text="知道了"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

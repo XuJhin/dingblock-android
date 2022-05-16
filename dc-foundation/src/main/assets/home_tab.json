@@ -1,0 +1,27 @@
+[
+
+  {
+    "tabText": "首页",
+    "tabIconRes": "home.json",
+    "tabIconDarkRes": "home_dark.json",
+    "tabId": "home"
+  },
+  {
+    "tabText": "监控",
+    "tabIconRes": "monitor.json",
+    "tabIconDarkRes": "monitor_dark.json",
+    "tabId": "monitor"
+  },
+  {
+    "tabText": "消息",
+    "tabIconRes": "find.json",
+    "tabIconDarkRes": "find_dark.json",
+    "tabId": "community"
+  },
+  {
+    "tabText": "我的",
+    "tabIconRes": "sneakers.json",
+    "tabIconDarkRes": "sneakers_dark.json",
+    "tabId": "usercenter"
+  }
+]

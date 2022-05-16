@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/not_display_btn"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/monitor_shape_white_8dp"
+        android:textSize="@dimen/text_size5"
+        android:textColor="@color/color_text_black1"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="15dp"
+        android:text="不显示发货地"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/location_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/not_display_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/monitor_shape_white_8dp"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="12dp"
+        android:layout_marginTop="10dp"
+        app:layout_goneMarginTop="0dp">
+
+        <TextView
+            android:id="@+id/location_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textSize="@dimen/text_size5"
+            android:textColor="@color/color_text_black4"
+            android:text="当前定位"/>
+
+        <TextView
+            android:id="@+id/location_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/location_title_tv"
+            android:layout_marginTop="13dp"
+            android:textSize="@dimen/text_size5"
+            android:textColor="@color/color_text_black1"
+            tools:text="成都"/>
+
+        <TextView
+            android:id="@+id/relocation_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBaseline_toBaselineOf="@+id/location_tv"
+            app:layout_constraintStart_toEndOf="@+id/location_tv"
+            android:paddingHorizontal="8dp"
+            android:paddingTop="8dp"
+            android:textSize="@dimen/text_size5"
+            android:textColor="@color/color_blue"
+            android:textStyle="bold"
+            android:text="重新定位"
+            android:visibility="gone"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

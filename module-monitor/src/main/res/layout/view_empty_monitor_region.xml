@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="97dp"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+
+    <LinearLayout
+        android:id="@+id/btn_line"
+        android:layout_width="170dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:background="@drawable/monitor_empty_bg1"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/add_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/monitor_svg_add"
+            android:tint="@color/color_text_absolutely_white" />
+
+        <TextView
+            android:id="@+id/offline_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="@string/monitor_add_sale_region"
+            android:textSize="14sp"
+            android:textColor="@color/color_text_absolutely_white" />
+
+    </LinearLayout>
+
+
+</FrameLayout>

@@ -1,0 +1,34 @@
+[
+{
+    "needLogin": false,
+    "tabInfo":
+    {
+        "tabText": "首页",
+        "tabIconRes": "home.json",
+        "tabIconDarkRes": "home_dark.json",
+        "tabId": "home"
+    },
+    "type":"Home"
+},
+{
+    "needLogin": false,
+     "type":"Market",
+    "tabInfo":
+    {
+        "tabId": "market",
+        "tabText": "市场",
+        "tabIconRes": "monitor.json",
+        "tabIconDarkRes": "monitor_dark.json"
+    }
+},
+{
+    "needLogin": true,
+    "type": "Profile",
+    "tabInfo":
+    {
+        "tabText": "我的",
+        "tabIconRes": "sneakers.json",
+        "tabIconDarkRes": "sneakers_dark.json",
+        "tabId": "usercenter"
+    }
+}]

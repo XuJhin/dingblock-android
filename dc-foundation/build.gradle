@@ -1,0 +1,130 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-parcelize'
+    id 'kotlin-kapt'
+    id 'org.jetbrains.kotlin.plugin.serialization' version '1.6.20'
+}
+apply from: '../MobSDK.gradle'
+apply from: '../version_config.gradle'
+
+def ext = rootProject.ext
+android {
+
+    compileSdkVersion ext.compileSdkVersion
+
+
+    defaultConfig {
+        versionCode ext.versionCode
+        versionName ext.versionName
+        minSdkVersion ext.minSdkVersion
+        targetSdkVersion ext.targetSdkVersion
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    kotlinOptions {
+        jvmTarget = 11
+    }
+}
+
+dependencies {
+    api fileTree(include: ['*.jar', '*.aar'], dir: 'libs')
+    //jobx2d
+    api "androidx.constraintlayout:constraintlayout:$rootProject.ext.common_version_constraintlayout"
+
+    api "androidx.appcompat:appcompat:$rootProject.ext.common_version_appcompat"
+    api "androidx.recyclerview:recyclerview:1.2.1"
+    api "com.google.android.material:material:$rootProject.ext.common_version_material"
+    api "androidx.percentlayout:percentlayout:$rootProject.ext.lib_base_version_percentlayout"
+    api "androidx.core:core-ktx:$rootProject.ext.lib_base_version_core_ktx"
+
+    //gson
+    api "com.google.code.gson:gson:$rootProject.ext.lib_base_version_gson"
+    //adapter
+    api "com.github.CymChad:BaseRecyclerViewAdapterHelper:$rootProject.ext.lib_base_version_BaseRecyclerViewAdapterHelper"
+ //图片
+    api 'com.github.bumptech.glide:glide:4.13.2'
+    kapt 'com.github.bumptech.glide:compiler:4.13.2'
+    api "top.zibin:Luban:$rootProject.ext.lib_base_version_Luban"
+    //华为依赖
+//    api 'com.aliyun.ams:alicloud-android-third-push-huawei:3.6.0'
+    // ... 程序其他依赖
+    implementation "com.tencent.tpns:huawei:${pushVersion}-release"
+    //  华为推送 [VERSION] 为当前最新 SDK 版本号，版本号可在 Android SDK 发布动态 查看
+
+
+    api project(':repo:aar-tencent-captcha')
+    //暂时不用支付宝，使用hipo。。
+    api project(':repo:aar-ali-pay')
+    api "io.cabriole:decorator:$rootProject.ext.lib_base_version_decorator"
+    //登陆
+//    //阿里百川要求必须集成fastjson
+    api "com.alibaba:fastjson:$rootProject.ext.lib_base_version_alibaba_fastjson"
+    api "com.youth.banner:banner:$rootProject.ext.lib_base_version_banner"
+    api "com.github.lihangleo2:ShadowLayout:$rootProject.ext.lib_base_version_ShadowLayout"
+    //网络
+    api "com.squareup.okhttp3:okhttp:$rootProject.ext.lib_base_version_okhttp3_okhttp"
+    api "io.reactivex.rxjava3:rxandroid:$rootProject.ext.lib_base_version_rxjava3_rxandroid"
+    api "io.reactivex.rxjava3:rxjava:$rootProject.ext.lib_base_version_rxjava3_rxjava"
+    api "com.squareup.retrofit2:retrofit:$rootProject.ext.lib_base_version_retrofit2_retrofit"
+    // 必要retrofit依赖
+    api "com.squareup.retrofit2:converter-gson:$rootProject.ext.lib_base_version_retrofit2_converter_gson"
+    // 必要依赖，解析json字符所用
+    //    api 'com.squareup.okhttp3:logging-interceptor:3.8.1' //非必要依赖， log依赖，如果需要打印OkHttpLog需要添加
+    api "com.github.akarnokd:rxjava3-retrofit-adapter:$rootProject.ext.lib_base_version_rxjava3_retrofit_adapter"
+    //dagger2
+    api "com.google.dagger:dagger:$rootProject.ext.dagger2"//
+    api "com.google.dagger:dagger-android:$rootProject.ext.dagger2"
+    kapt "com.google.dagger:dagger-compiler:$rootProject.ext.dagger2"//
+    //让错误日志更详细
+    api "com.google.code.findbugs:$rootProject.ext.lib_base_version_findbugs"
+    //权限
+    api "org.permissionsdispatcher:permissionsdispatcher:4.8.0"
+    kapt "org.permissionsdispatcher:permissionsdispatcher-processor:4.8.0"
+    api "com.yanzhenjie:permission:$rootProject.ext.lib_base_version_permission"
+    //协程
+    api "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.1"
+    //jetpack
+    api 'androidx.core:core-ktx:1.7.0'
+    api 'androidx.appcompat:appcompat:1.4.1'
+    api 'com.google.android.material:material:1.5.0'
+    api 'androidx.constraintlayout:constraintlayout:2.1.3'
+    api "androidx.fragment:fragment-ktx:1.4.1"
+    api "androidx.activity:activity-ktx:1.4.0"
+    api 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0'
+    api 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.0'
+    api "androidx.lifecycle:lifecycle-viewmodel-savedstate:$rootProject.ext.lifecycle_version"//
+    api 'com.gyf.immersionbar:immersionbar:3.0.0'
+    api 'com.gyf.immersionbar:immersionbar-components:3.0.0'
+    api 'com.gyf.immersionbar:immersionbar-ktx:3.0.0'
+
+    api "com.github.kongzue.DialogX:DialogX:0.0.44"
+    api 'com.github.kongzue.DialogX:DialogXIOSStyle:0.0.44'
+    api 'com.tencent:mmkv:1.2.13'
+
+    //二维码
+    api "com.google.zxing:core:$rootProject.ext.appbase_version_zxing_core"
+    api "com.guolindev.permissionx:permissionx:$rootProject.ext.appbase_version_permissionx"
+    api "com.github.princekin-f:EasyFloat:$rootProject.ext.appbase_version_EasyFloat"
+    api "com.yunpian:onelogin:$rootProject.ext.appbase_version_yunpian_onelogin"
+    api "androidx.multidex:multidex:$rootProject.ext.appbase_version_multidex"
+
+//    json
+    api("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.2")
+    api("com.squareup.moshi:moshi:1.13.0")
+    api("com.squareup.moshi:moshi-kotlin:1.13.0")
+    kapt("com.squareup.moshi:moshi-kotlin-codegen:1.13.0")
+    kapt "io.github.meituan-dianping:compiler:$rootProject.ext.wm_router"
+    api "io.github.meituan-dianping:router:$wm_router"
+}

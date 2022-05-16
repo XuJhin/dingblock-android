@@ -1,0 +1,50 @@
+[
+  {
+    "head": "",
+    "items": [
+      {
+        "name": "将监控设为首页",
+        "type": "monitorFirst",
+        "actionType": "switch",
+        "value": ""
+      },
+      {
+        "name": "点击推送直接跳转",
+        "type": "directLink",
+        "actionType": "switch",
+        "value": ""
+      },
+      {
+        "name": "经典模式",
+        "type": "classicalType",
+        "actionType": "switch",
+        "value": ""
+      },
+      {
+        "name": "已屏蔽内容",
+        "type": "shield",
+        "actionType": "link",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "head": "推送设置",
+    "items": [
+      {
+        "name": "推送音效",
+        "type": "pushSound",
+        "actionType": "link",
+        "desc": "仅当APP处于前台/后台运行时生效",
+        "value": ""
+      },
+      {
+        "name": "夜间免打扰",
+        "type": "disturb",
+        "actionType": "link",
+        "desc": "仅当APP处于前台/后台运行时生效",
+        "value": ""
+      }
+    ]
+  }
+]

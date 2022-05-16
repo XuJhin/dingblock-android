@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/background">
+        <shape>
+            <corners android:radius="4dp" />
+            <solid android:color="@color/white" />
+<!--            <stroke-->
+<!--                android:width="1px"-->
+<!--                android:color="#FFCBD2DC"/>-->
+        </shape>
+    </item>
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape>
+                <corners android:radius="4dp" />
+                <solid android:color="@color/post_vote_unsel_progress_color" />
+<!--                <stroke-->
+<!--                    android:width="1px"-->
+<!--                    android:color="#FFCBD2DC"/>-->
+            </shape>
+        </clip>
+    </item>
+</layer-list>

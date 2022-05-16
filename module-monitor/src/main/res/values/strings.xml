@@ -1,0 +1,8 @@
+<resources>
+    <string name="monitor_add_region">添加地区/频道</string>
+    <string name="monitor_no_sale_sneakers">你监控的地区暂无发售</string>
+    <string name="monitor_add_sale_region">添加关注地区</string>
+    <string name="all_monitor_filter_setting">自定义监控规则</string>
+    <string name="monitor_rule">以上规则若同时设置，则只会推送提醒【同时满足所有规则】的信息，请谨慎设置！！！\n\n不符合规则的信息不再发送提醒，仅在监控列表中显示\n\n例如：设置商品名关键字AJ1，设置尺码42码，当监控到42码的AJ1商品会发送推送提醒，不符合该规则的不发送提醒</string>
+    <string name="share_to">分享到</string>
+</resources>

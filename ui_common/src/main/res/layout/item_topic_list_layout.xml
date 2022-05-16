@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="12dp"
+    android:layout_marginEnd="12dp"
+    android:layout_marginBottom="12dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="0dp">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/topic_conver_iv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="@id/root_item"
+            app:layout_constraintTop_toTopOf="@id/root_item" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/root_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/topic_item_bg"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/topic_name_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="100dp"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size8"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="#今日热门穿搭今日热门穿搭今日热门穿搭今日热门穿搭今日热门穿搭今日热门穿搭今日热门穿搭" />
+
+            <TextView
+                android:id="@+id/topic_dec_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="100dp"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textColor="@color/color_text_white_a70"
+                android:textSize="@dimen/text_size3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/topic_name_tv"
+                tools:text="日常出街，晒出你的必备单品晒出你的必备单品晒出你的必备单品晒出你的必备单品晒出你的必备单品晒出你的必备单品" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/next_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/common_svg_right_arrow"
+                app:layout_constraintBottom_toBottomOf="@id/topic_dec_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/topic_name_tv" />
+
+            <View
+                android:id="@+id/space"
+                android:layout_width="0dp"
+                android:layout_height="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/topic_dec_tv" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/topic_white_alp_bg"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/space">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/item_layer_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible">
+
+                    <cool.dingstock.imagepicker.views.roundImageView.RoundImageView
+                        android:id="@+id/item_iv_1"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:src="@color/color_black"
+                        app:border_color="@color/color_line"
+                        app:border_conner="6dp"
+                        app:border_width="0.5dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:view_type="type_round" />
+
+                    <ImageView
+                        android:id="@+id/video_play_iv_1"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/post_video_play"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@id/item_iv_1"
+                        app:layout_constraintEnd_toEndOf="@id/item_iv_1"
+                        app:layout_constraintStart_toStartOf="@id/item_iv_1"
+                        app:layout_constraintTop_toTopOf="@id/item_iv_1" />
+
+
+                    <TextView
+                        android:id="@+id/item_dec_tv_1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="15dp"
+                        android:ellipsize="end"
+                        android:lineSpacingExtra="4dp"
+                        android:lines="2"
+                        android:textColor="@color/color_text_black1"
+                        android:textSize="@dimen/text_size4"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/item_iv_1"
+                        app:layout_constraintTop_toTopOf="@id/item_iv_1"
+                        tools:text="厦门双杀 完毕，感觉运运气用完啦言啦三对，都瑕疵。感觉运运气用完啦言感觉运运气用完啦言感觉运运气用完啦言..." />
+
+                    <cool.dingstock.imagepicker.views.roundImageView.RoundImageView
+                        android:id="@+id/item_user_iv_1"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginStart="10dp"
+                        android:src="@drawable/default_avatar"
+                        app:layout_constraintBottom_toBottomOf="@id/item_iv_1"
+                        app:layout_constraintStart_toEndOf="@id/item_iv_1" />
+
+                    <TextView
+                        android:id="@+id/item_user_nick_tv_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        android:maxWidth="100dp"
+                        android:textColor="@color/color_text_black4"
+                        android:textSize="@dimen/text_size2"
+                        app:layout_constraintBottom_toBottomOf="@id/item_iv_1"
+                        app:layout_constraintStart_toEndOf="@id/item_user_iv_1"
+                        tools:text="S3评论vanCcwSivanCcwSivanCcwSivanCcw" />
+
+                    <TextView
+                        android:id="@+id/item_post_time_tv_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        android:textColor="@color/color_text_black4"
+                        android:textSize="@dimen/text_size2"
+                        app:layout_constraintBottom_toBottomOf="@id/item_iv_1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        tools:text="1分钟前" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/item_layer_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:background="@color/color_line"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <cool.dingstock.imagepicker.views.roundImageView.RoundImageView
+                        android:id="@+id/item_iv_2"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:src="@color/color_black"
+                        app:border_color="@color/color_line"
+                        app:border_conner="6dp"
+                        app:border_width="0.5dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:view_type="type_round" />
+
+                    <ImageView
+                        android:id="@+id/video_play_iv_2"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/post_video_play"
+                        app:layout_constraintBottom_toBottomOf="@id/item_iv_2"
+                        app:layout_constraintEnd_toEndOf="@id/item_iv_2"
+                        app:layout_constraintStart_toStartOf="@id/item_iv_2"
+                        app:layout_constraintTop_toTopOf="@id/item_iv_2" />
+
+                    <TextView
+                        android:id="@+id/item_dec_tv_2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="15dp"
+                        android:ellipsize="end"
+                        android:lines="2"
+                        android:text="厦门双杀 完毕，感觉运运气用完啦言啦三对，都瑕疵。感觉运运气用完啦言感觉运运气用完啦言感觉运运气用完啦言..."
+                        android:textColor="@color/color_text_black1"
+                        android:textSize="@dimen/text_size4"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/item_iv_2"
+                        app:layout_constraintTop_toTopOf="@id/item_iv_2" />
+
+                    <cool.dingstock.imagepicker.views.roundImageView.RoundImageView
+                        android:id="@+id/item_user_iv_2"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginStart="10dp"
+                        android:src="@drawable/default_avatar"
+                        app:layout_constraintBottom_toBottomOf="@id/item_iv_2"
+                        app:layout_constraintStart_toEndOf="@id/item_iv_2" />
+
+                    <TextView
+                        android:id="@+id/item_user_nick_tv_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        android:maxWidth="100dp"
+                        android:textColor="@color/color_text_black4"
+                        android:textSize="@dimen/text_size2"
+                        app:layout_constraintBottom_toBottomOf="@id/item_iv_2"
+                        app:layout_constraintStart_toEndOf="@id/item_user_iv_2"
+                        tools:text="S3评论vanCcwSivanCcwSivanCcwSivanCcw" />
+
+                    <TextView
+                        android:id="@+id/item_post_time_tv_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        android:textColor="@color/color_text_black4"
+                        android:textSize="@dimen/text_size2"
+                        app:layout_constraintBottom_toBottomOf="@id/item_iv_2"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        tools:text="1分钟前" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

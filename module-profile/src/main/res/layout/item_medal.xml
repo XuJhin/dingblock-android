@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingTop="12dp"
+    android:paddingBottom="18dp">
+
+    <ImageView
+        android:id="@+id/metal_iv"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="centerInside" />
+
+    <TextView
+        android:id="@+id/available_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        app:layout_constraintStart_toStartOf="@+id/metal_iv"
+        app:layout_constraintTop_toTopOf="@+id/metal_iv"
+        android:layout_marginStart="51.5dp"
+        android:layout_marginTop="7.5dp"
+        android:paddingHorizontal="4.5dp"
+        android:background="@drawable/shape_medal_available_bg"
+        android:gravity="center"
+        android:textSize="@dimen/text_size1"
+        android:textColor="@color/color_text_absolutely_white"
+        android:text="可领取"
+        android:visibility="gone"
+        tools:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/metal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/metal_iv"
+        android:layout_marginTop="10dp"
+        android:textSize="@dimen/text_size4"
+        android:textColor="#8A8B8D"
+        tools:text="众星捧月"/>
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/count_down_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="clock_iv,count_down_tv"
+        android:visibility="invisible"
+        tools:visibility="visible"/>
+
+    <ImageView
+        android:id="@+id/clock_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/metal_iv"
+        app:layout_constraintTop_toBottomOf="@+id/metal_tv"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="6dp"
+        android:src="@drawable/ic_clock"/>
+
+    <TextView
+        android:id="@+id/count_down_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/clock_iv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/clock_iv"
+        app:layout_constraintBottom_toBottomOf="@+id/clock_iv"
+        android:textSize="@dimen/text_size2"
+        android:textColor="#79787C"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:layout_marginHorizontal="3dp"
+        tools:text="1天22小时"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

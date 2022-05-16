@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:titlebar="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/layout_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/fake_status_bar"
+                layout="@layout/view_fake_status_bar" />
+
+            <RelativeLayout
+                android:id="@+id/title_rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_top_height"
+                android:clipChildren="false"
+                android:clipToPadding="false">
+
+                <cool.dingstock.appbase.widget.TitleBar
+                    android:id="@+id/circle_activity_comment_common_titleBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    titlebar:titleText="@string/circle_dynamic_detail_title"
+                    titlebar:titleTextColor="@color/color_text_black1" />
+
+                <FrameLayout
+                    android:id="@+id/head_fra"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:visibility="visible">
+
+                    <cool.dingstock.imagepicker.views.AvatarView
+                        android:id="@+id/head_iv"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_gravity="center"
+                        tool:ava_src="@drawable/default_avatar" />
+
+                    <ImageView
+                        android:id="@+id/group_item_dynamic_user_verified"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_gravity="end|bottom"
+                        android:src="@drawable/post_renzheng"
+                        android:visibility="visible" />
+
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/anti_fraud_tv"
+                    android:layout_width="58dp"
+                    android:layout_height="22dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="50dp"
+                    android:background="@drawable/post_anti_fraud_tips_bg"
+                    android:gravity="center"
+                    android:text="防骗指南"
+                    android:textColor="@color/color_orange"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <cool.dingstock.post.view.DcVideoPlayer
+                android:id="@+id/video_player"
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/screen_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/layout_toolbar">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/circle_activity_comment_common_rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="50dp" />
+
+            <include
+                android:id="@+id/comment_layout"
+                layout="@layout/circle_layer_bottom_edit" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

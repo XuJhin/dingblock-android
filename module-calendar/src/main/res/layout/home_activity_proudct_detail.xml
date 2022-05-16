@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_gray"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/home_product_detail_appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_gray"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:statusBarScrim="@color/color_gray">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/home_product_detail_content_rootlayer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_gray">
+
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/home_product_detail_iv"
+                    android:layout_width="match_parent"
+                    android:layout_height="222dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="15dp"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:paddingStart="23dp"
+                    android:paddingEnd="23dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <cool.dingstock.appbase.widget.IconTextView
+                    android:id="@+id/home_product_detail_back_icon"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/product_detail_back_bg"
+                    android:gravity="center"
+                    android:text="@string/icon_back"
+                    android:textColor="@color/color_text_absolutely_white"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <FrameLayout
+                    android:id="@+id/home_product_detail_share_fra"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/product_detail_back_bg"
+                    android:gravity="center"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/svg_share_product_icon"
+                        app:tint="@color/color_text_absolutely_white" />
+                </FrameLayout>
+
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/ll_shoe_certification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/common_item_bg_radius_6"
+                    android:gravity="center"
+                    android:paddingStart="7dp"
+                    android:paddingEnd="7dp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toTopOf="@+id/ll_shoes_msg"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:visibility="visible">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/icon_shoes"
+                        app:tint="@color/color_text_black3" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="3dp"
+                        android:gravity="center"
+                        android:text="球鞋认证"
+                        android:textColor="@color/color_text_black3"
+                        android:textSize="13sp" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_next_small_icon_white"
+                        app:tint="@color/color_text_black3" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toTopOf="@+id/ll_shoes_msg"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <TextView
+                        android:id="@+id/img_index_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/color_text_black1"
+                        android:textSize="20sp"
+                        tools:text="1" />
+
+                    <TextView
+                        android:id="@+id/img_count_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/text_size1"
+                        android:textColor="@color/color_text_black1"
+                        android:textSize="@dimen/text_size1"
+                        tools:text="/9" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_shoes_msg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="26dp"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toBottomOf="@+id/home_product_detail_iv">
+
+
+                    <include
+                        android:id="@+id/product_info"
+                        layout="@layout/home_layer_product_info" />
+
+                    <include
+                        android:id="@+id/product_video"
+                        layout="@layout/home_layer_product_video" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:layout_marginBottom="12dp" />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="88dp"
+                android:visibility="invisible" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="88dp"
+                android:layout_gravity="bottom"
+                android:orientation="vertical">
+
+                <cool.dingstock.appbase.widget.TitleBar
+                    android:id="@+id/home_product_detail_titleBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_weight="1"
+                    android:background="@color/color_gray"
+                    android:visibility="invisible" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:orientation="horizontal">
+
+                    <net.lucode.hackware.magicindicator.MagicIndicator
+                        android:id="@+id/home_activity_product_detail_tab"
+                        android:layout_width="0dp"
+                        android:layout_height="44dp"
+                        android:layout_weight="1"
+                        android:background="@color/color_gray" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/store_count_layer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:layout_width="10dp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/common_title_h_shadow" />
+
+                        <TextView
+                            android:id="@+id/home_product_detail_product_raffle_count_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="7dp"
+                            android:layout_marginEnd="12dp"
+                            android:textColor="@color/common_grey_blue_txt_color"
+                            android:textSize="14sp"
+                            tools:text="6条发售" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </LinearLayout>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/home_activity_product_detail_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_gray"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/product_action"
+            layout="@layout/home_layer_product_action"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+

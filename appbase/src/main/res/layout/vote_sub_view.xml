@@ -1,0 +1,74 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_parent"
+    android:layout_width="match_parent"
+    android:layout_height="34dp">
+
+    <ProgressBar
+        android:id="@+id/progress_view"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:progressDrawable="@drawable/select_progress_view_bg" />
+
+    <ImageView
+        android:id="@+id/iv_selected_flag"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="4dp"
+        android:layout_toEndOf="@id/name_text_view"
+        android:src="@drawable/post_vote" />
+
+    <TextView
+        android:id="@+id/name_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="start"
+        android:ellipsize="end"
+        android:gravity="start"
+        android:maxWidth="250dp"
+        android:maxLength="17"
+        android:maxLines="1"
+        android:textColor="@color/color_text_deep_gray"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/progress_view"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_goneMarginEnd="8dp"
+        tools:text="我选择死亡" />
+
+    <TextView
+        android:id="@+id/number_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_gravity="end|center_vertical"
+        android:layout_marginEnd="6dp"
+        android:layout_toStartOf="@id/percent_vote_view"
+        android:textSize="@dimen/text_size3"
+        android:textColor="@color/post_vote_count_txt_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/percent_vote_view"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="80票" />
+
+    <TextView
+        android:id="@+id/percent_vote_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="8dp"
+        android:textColor="@color/post_vote_percent_txt_color"
+        android:textSize="@dimen/text_size3"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/progress_view"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="30%" />
+
+</RelativeLayout>

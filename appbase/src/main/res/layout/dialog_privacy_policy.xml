@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/pop_common_top_bg">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="6dp"
+                    android:gravity="start"
+                    android:text="@string/title_dialog_privacy"
+                    android:textColor="@color/color_text_black1"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="match_parent"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_height="328dp"
+                android:gravity="center_vertical"
+                android:lineSpacingExtra="4dp"
+                tools:text="阿双方就啊理发店六块腹肌啊到了放假啊疯了啦放假啊都是六块腹肌阿里逻辑啊啦放假啊到了就啊疯了就啊阿双方就啊理发店六块腹肌啊到了放假啊疯了啦放假啊都是六块腹肌阿里逻辑啊啦放假啊到了就啊疯了就啊阿双方就啊理发店六块腹肌啊到了放假啊疯了啦放假啊都是六块腹肌阿里逻辑啊啦放假啊到了就啊疯了就啊阿双方就啊理发店六块腹肌啊到了放假啊疯了啦放假啊都是六块腹肌阿里逻辑啊啦放假啊到了就啊疯了就啊阿双方就啊理发店六块腹肌啊到了放假啊疯了啦放假啊都是六块腹肌阿里逻辑啊啦放假啊到了就啊疯了就啊阿双方就啊理发店六块腹肌啊到了放假啊疯了啦放假啊都是六块腹肌阿里逻辑啊啦放假啊到了就啊疯了就啊"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:scrollbars="vertical"
+                android:textColor="@color/color_text_black2"
+                android:textSize="14sp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="74dp"
+                android:layout_gravity="center"
+                android:baselineAligned="false"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingStart="25dp"
+                android:paddingEnd="25dp">
+
+                <TextView
+                    android:id="@+id/tv_quit"
+                    android:layout_width="0dp"
+                    android:layout_height="38dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/home_second_btn"
+                    android:gravity="center"
+                    android:text="@string/title_privacy_disagree"
+                    android:textColor="@color/color_text_black1"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tv_agree"
+                    android:layout_width="0dp"
+                    android:layout_height="38dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/home_first_btn"
+                    android:gravity="center"
+                    android:text="@string/title_privacy_agree"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</FrameLayout>

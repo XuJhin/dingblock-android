@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="@color/color_gray">
+
+    <com.scwang.smart.refresh.layout.SmartRefreshLayout
+        android:id="@+id/home_fragment_sneakers_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="40dp">
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <cool.dingstock.lib_base.widget.tabs.DcTabLayout
+                android:id="@+id/home_fragment_sneakers_tab"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@color/color_gray"
+                app:tabIndicatorHeight="0dp"
+                app:tabMaxWidth="70dp"
+                app:tabMinWidth="50dp"
+                app:tabMode="scrollable"
+                app:tabPaddingEnd="0dp"
+                app:tabPaddingStart="0dp"
+                app:tabRippleColor="@color/transparent" />
+
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:id="@+id/coordinator"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.appbar.AppBarLayout
+                    android:id="@+id/layout_app_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    android:elevation="0dp"
+                    app:elevation="0dp">
+
+                    <com.google.android.material.appbar.CollapsingToolbarLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:expandedTitleMarginBottom="0dp"
+                        app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                        app:title="">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            >
+                            <!--                        这里保证appBar 不会完全消失 不然会下拉刷新监听会出问题-->
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"/>
+
+                            <LinearLayout
+                                android:id="@+id/recent_recommend_line"
+                                android:layout_marginTop="7dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="32dp"
+                                    android:layout_marginStart="12dp"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/sneakers_calendar_hot_icon" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="5dp"
+                                        android:text="@string/title_least_hot"
+                                        android:textColor="@color/color_text_black1"
+                                        android:textSize="@dimen/text_size5"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/rv_recommend_goods"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="66dp"
+                                    android:layout_marginStart="12dp"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginEnd="12dp"
+                                    android:layout_marginBottom="4dp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+                </com.google.android.material.appbar.AppBarLayout>
+
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/home_fragment_sneakers_rv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:overScrollMode="always"
+                        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+                    <cool.dingstock.calendar.widget.BrandFilterView
+                        android:id="@+id/home_head_sneaker_brand_layer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="15dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:visibility="visible" />
+
+                    <FrameLayout
+                        android:id="@+id/empty_sneakers"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="100dp"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <cool.dingstock.appbase.widget.CommonEmptyView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+                    </FrameLayout>
+
+                </FrameLayout>
+
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
+</FrameLayout>

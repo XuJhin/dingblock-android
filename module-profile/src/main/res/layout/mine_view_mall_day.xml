@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="72dp"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <cool.dingstock.appbase.widget.IconTextView
+        android:id="@+id/mine_view_mall_day_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginBottom="5dp"
+        android:text="@string/icon_triangle"
+        android:textColor="#FE6C6C" />
+
+
+    <cool.dingstock.appbase.widget.IconTextView
+        android:id="@+id/mine_view_mall_day_content_txt"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:background="@drawable/mine_day_normal_bg"
+        android:gravity="center"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/mine_view_mall_day_name_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:textColor="#A1AAB3"
+        android:textSize="12sp" />
+
+
+</LinearLayout>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/circle_item_dynamic_link_layer"
+    android:layout_width="match_parent"
+    android:layout_height="62dp"
+    android:background="@drawable/circle_dynamic_edit_link_item_bg"
+    android:clickable="true"
+    android:minHeight="62dp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/circle_item_dynamic_edit_link_icon"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/shape_circle_loading_bg"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/circle_item_dynamic_edit_link_icon"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/circle_publish_link_loading"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:padding="10dp"
+            android:src="@drawable/circle_publish_loading"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/circle_item_dynamic_edit_link_icon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/circle_item_dynamic_edit_link_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_toStartOf="@+id/circle_item_dynamic_edit_link_del"
+        android:layout_toEndOf="@+id/circle_item_dynamic_edit_link_icon"
+        android:maxLines="2"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:textColor="#696E82"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/circle_item_dynamic_edit_link_del"
+        app:layout_constraintStart_toEndOf="@+id/circle_item_dynamic_edit_link_icon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_goneMarginLeft="12dp" />
+
+    <ImageView
+        android:id="@+id/circle_item_dynamic_edit_link_del"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="10dp"
+        android:gravity="center"
+        android:src="@drawable/circle_publish_delete"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

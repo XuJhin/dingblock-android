@@ -1,0 +1,40 @@
+[
+  {
+    "items": [
+      {
+        "name": "账户设置",
+        "type": "accountSetting",
+        "actionType": "link",
+        "value": "",
+        "resId": "setting_icon_account"
+      },
+      {
+        "name": "关于盯链",
+        "type": "about",
+        "actionType": "link",
+        "value": "",
+        "resId": "setting_icon_gydc"
+      },
+      {
+        "name": "清除缓存",
+        "type": "clearCache",
+        "actionType": "link",
+        "value": "",
+        "resId": "setting_icon_qchc"
+      },
+      {
+        "name": "视频和动图设置",
+        "type": "videoSetting",
+        "actionType": "link",
+        "resId": "setting_icon_spsz"
+      },
+      {
+        "name": "将监控设为首页",
+        "type": "monitorFirst",
+        "actionType": "switch",
+        "resId": "setting_icon_jksy"
+      }
+    ]
+  }
+]
+

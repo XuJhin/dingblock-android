@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="sectioning_adapter_tag_key_view_viewholder" type="id" />
+    <item name="np__increment" type="id" />
+    <item name="np__decrement" type="id" />
+    <item name="view_last_click_time" type="id"/>
+
+    <item name="head_iv_url" type="id"/>
+    <item name="product_iv_url" type="id"/>
+
+
+    <item name="iv_entity" type="id"/>
+    <item name="iv_position" type="id"/>
+
+    <item name="view_enable_show" type="id"/>
+
+    <item name="anim_icon" type="id"/>
+
+    <item name="cache_vp_tag" type="id"/>
+
+</resources>
+

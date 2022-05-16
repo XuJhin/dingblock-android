@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <cool.dingstock.appbase.customerview.betterlinktv.BetterLinkTv
+        android:id="@+id/circle_view_dynamic_subcomment_better_link_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contextClickable="true"
+        android:lineSpacingExtra="3dp"
+        android:textColor="@color/color_text_black1"
+        android:textColorLink="@color/color_blue"
+        android:textSize="@dimen/text_size3"
+        tools:text="wwa" />
+
+</FrameLayout>

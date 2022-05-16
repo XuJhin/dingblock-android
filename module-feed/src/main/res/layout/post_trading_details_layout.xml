@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+
+    <FrameLayout
+        android:id="@+id/trading_details_size_layer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/single_size_layer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/single_price_layer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="7dp">
+
+                <cool.dingstock.lib_base.widget.tv.font.PoppinsBoldTv
+                    android:id="@+id/single_price_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="8dp"
+                    android:text="1299"
+                    android:textColor="@color/color_blue"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <cool.dingstock.lib_base.widget.tv.font.PoppinsBoldTv
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/single_price_tv"
+                    android:text="¥"
+                    android:textColor="@color/color_blue"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/trading_tag_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/post_trading_tag_tv_bg"
+                android:paddingHorizontal="3dp"
+                android:paddingVertical="1dp"
+                android:text="全新无瑕"
+                android:textColor="@color/color_green"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/single_size_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/post_trading_tag_tv_bg"
+                android:gravity="center"
+                android:paddingStart="3dp"
+                android:paddingTop="1dp"
+                android:paddingEnd="3dp"
+                android:paddingBottom="1dp"
+                android:text="43码"
+                android:textColor="@color/color_green"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/trading_no_price_size_layer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            app:flexWrap="wrap"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/trading_have_price_size_layer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/trading_have_price_size_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:id="@+id/trading_details_expand_layer"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="-30dp"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@drawable/post_trading_details_expand_bg" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="展开"
+                        android:textColor="@color/color_blue"
+                        android:textSize="13sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_icon_arrow_down"
+                        app:tint="@color/color_blue" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/post_trading_look_count_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        tools:text="222人浏览·12人想要"
+        android:textColor="@color/color_text_black4"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/trading_details_size_layer" />
+
+
+    <ImageView
+        android:id="@+id/post_trading_details_send_address_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="1dp"
+        android:src="@drawable/post_svg_location"
+        app:layout_constraintBottom_toBottomOf="@id/post_trading_look_count_tv"
+        app:layout_constraintEnd_toStartOf="@id/post_trading_details_send_address_tv"
+        app:layout_constraintTop_toTopOf="@id/post_trading_look_count_tv"
+        app:tint="@color/color_text_black4" />
+
+    <TextView
+        android:id="@+id/post_trading_details_send_address_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="发货地 成都"
+        android:textColor="@color/color_text_black4"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/post_trading_look_count_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/post_trading_look_count_tv" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/trading_product_layer"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/common_gary_2_bg_radius_6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/post_trading_details_send_address_tv">
+
+        <ImageView
+            android:id="@+id/trading_product_iv"
+            android:layout_width="45dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="9dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/trading_product_name_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="40dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Air Jordan 1 Retro High OGOGOGOGOGOGOGOGOGOGOGOG"
+            android:textColor="@color/color_text_black1"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@id/product_desc_layer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/trading_product_iv"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/product_desc_layer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="3dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/trading_product_iv"
+            app:layout_constraintTop_toBottomOf="@id/trading_product_name_tv">
+
+            <TextView
+                android:id="@+id/trading_product_publish_count_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_blue"
+                android:textSize="12sp"
+                tools:text="23" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:text="条交易信息"
+                android:textColor="@color/color_text_black4"
+                android:textSize="10sp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/common_svg_right_arrow"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/color_text_black4" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

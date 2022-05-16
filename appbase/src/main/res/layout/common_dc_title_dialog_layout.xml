@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="38dp"
+    android:layout_marginEnd="38dp"
+    android:background="@drawable/common_dialog_bg"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingStart="25dp"
+        android:paddingTop="33dp"
+        android:paddingEnd="25dp"
+        android:paddingBottom="18dp"
+        android:text="提示"
+        android:textColor="@color/color_text_black1"
+        android:textSize="@dimen/text_size7"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/content_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingStart="25dp"
+        android:paddingEnd="25dp"
+        android:paddingBottom="37dp"
+        android:text="没有标题的文字的的文字的内容描sfs述格式是这样述格式是这样"
+        android:textColor="@color/color_text_black3"
+        android:textSize="@dimen/text_size5"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/color_line"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/cancel_tv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/color_text_black1"
+            android:textSize="16sp" />
+
+        <View
+            android:id="@+id/center_line"
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="@color/color_line" />
+
+
+        <TextView
+            android:id="@+id/confirm_tv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="好的"
+            android:textColor="@color/color_text_black1"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

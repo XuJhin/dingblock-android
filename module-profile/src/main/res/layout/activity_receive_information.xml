@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_gray"
+    android:orientation="vertical"
+    tools:context="cool.dingstock.mine.ui.score.message.ReceiveInformationActivity">
+
+
+    <cool.dingstock.appbase.widget.TitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/shape_get_good_bg">
+
+        <TextView
+            android:id="@+id/tv_get_good_people"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:gravity="center_vertical"
+            android:text="收货人"
+            android:textColor="#FF000000"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_get_good_number"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/ed_people"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="110dp"
+            android:background="@null"
+            android:hint="请输入"
+            android:maxLength="30"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_get_good_people"
+            app:layout_constraintEnd_toStartOf="@+id/iv_people"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_get_good_people" />
+
+        <ImageView
+            android:id="@+id/iv_people"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_icon_delete"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_get_good_people"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ed_people"
+            app:layout_constraintTop_toTopOf="@+id/tv_get_good_people" />
+
+
+        <TextView
+            android:id="@+id/tv_get_good_number"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:gravity="center_vertical"
+            android:text="手机号码"
+            android:textColor="#FF000000"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_get_good_people" />
+
+        <EditText
+            android:id="@+id/ed_number"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="110dp"
+            android:background="@null"
+            android:maxLength="13"
+            android:hint="请输入"
+            android:inputType="number"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_get_good_number"
+            app:layout_constraintEnd_toStartOf="@+id/iv_number"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_get_good_people"
+            app:layout_constraintTop_toTopOf="@+id/tv_get_good_number" />
+
+        <ImageView
+            android:id="@+id/iv_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_icon_delete"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_get_good_number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ed_number"
+            app:layout_constraintTop_toTopOf="@+id/tv_get_good_number" />
+
+        <TextView
+            android:id="@+id/tv_get_good_address"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:gravity="center_vertical"
+            android:text="详细地址"
+            android:textColor="#FF000000"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_get_good_number" />
+
+        <EditText
+            android:id="@+id/ed_address"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="110dp"
+            android:background="@null"
+            android:hint="请输入"
+            android:maxLines="2"
+            android:minLines="2"
+            android:maxLength="100"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_get_good_address"
+            app:layout_constraintEnd_toStartOf="@+id/iv_address"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_get_good_number"
+            app:layout_constraintTop_toTopOf="@+id/tv_get_good_address" />
+
+        <ImageView
+            android:id="@+id/iv_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_icon_delete"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_get_good_address"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ed_address"
+            app:layout_constraintTop_toTopOf="@+id/tv_get_good_address" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv_submit"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/shape_black_round_btn_6"
+        android:gravity="center"
+        android:text="确定"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_link" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:text="将在填写收货信息后7日内发出" />
+
+</LinearLayout>
+
+
+
+
+
+

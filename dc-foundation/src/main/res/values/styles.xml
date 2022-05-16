@@ -1,0 +1,10 @@
+<resources>
+
+    <style name="ToastAni">
+        <item name="android:windowEnterAnimation">@anim/toast_show</item>
+        <item name="android:windowExitAnimation">@anim/toast_hide</item>
+
+
+    </style>
+
+</resources>

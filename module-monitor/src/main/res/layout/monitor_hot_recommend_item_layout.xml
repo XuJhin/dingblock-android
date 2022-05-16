@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/hot_recommend_channel_layer_1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:background="@drawable/monitor_hot_channel_bg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/recommend_iv"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="14dp"
+        android:padding="1dp"
+        app:shapeAppearance="@style/r8ImageStyle"
+        app:strokeColor="@color/color_line"
+        app:strokeWidth="1dp"
+        tools:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/recommend_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="6dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:lines="2"
+        android:maxLines="2"
+        android:textColor="@color/color_text_black1"
+        android:textSize="12sp"
+        tools:text="apple 成都成都成都成都成都成都成都成都成都成都成都成都成都成都" />
+
+    <LinearLayout
+        android:id="@+id/recommend_subject_layer"
+        android:layout_width="52dp"
+        android:layout_height="24dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/monitor_channel_selector_stock_20"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/round_iv_channel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/round_iv_channel">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/recommend_vip_tag"
+            android:layout_width="13dp"
+            android:layout_height="11dp"
+            android:layout_marginEnd="2dp"
+            android:src="@drawable/icon_monitor_channel_vip"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/recommend_channel_status_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="监控"
+            android:textColor="@color/monitor_channel_selected"
+            android:textSize="11sp" />
+
+    </LinearLayout>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
+

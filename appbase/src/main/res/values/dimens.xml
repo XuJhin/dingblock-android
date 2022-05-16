@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+
+    <!--    圆角-->
+
+
+    <!--    边距-->
+    <dimen name="card_out_distance">12dp</dimen>
+    <dimen name="content_out_distance">15dp</dimen>
+    <dimen name="content_out_distance1">20dp</dimen>
+
+    <dimen name="content_content_distance">8dp</dimen>
+
+    <!--    字体大小-->
+    <dimen name="text_size0">9sp</dimen>
+    <dimen name="text_size1">10sp</dimen>
+    <dimen name="text_size2">11sp</dimen>
+    <dimen name="text_size3">12sp</dimen>
+    <dimen name="text_size4">13sp</dimen>
+    <dimen name="text_size5">14sp</dimen>
+    <dimen name="text_size6">15sp</dimen>
+    <dimen name="text_size7">16sp</dimen>
+    <dimen name="text_size8">18sp</dimen>
+
+    <dimen name="popin_margin_top">2dp</dimen>
+    <dimen name="popin_line_space">-4dp</dimen>
+    <!--    old-->
+    <dimen name="pop_radius" tools:ignore="ResourceName">7dp</dimen>
+    <dimen name="bulge_size" tools:ignore="ResourceName">7dp</dimen>
+    <dimen name="statusbar_view_height">25dp</dimen>
+    <dimen name="layout_top_height">50dp</dimen>
+
+
+    <dimen name="height_post_icon">20dp</dimen>
+    <dimen name="bottomsheet_default_sheet_width">0dp</dimen>
+
+</resources>

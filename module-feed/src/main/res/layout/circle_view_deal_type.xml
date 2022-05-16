@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingStart="24dp"
+    android:paddingEnd="21dp">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="类型"
+        android:textColor="@color/color_text_black2"
+        android:textSize="16sp" />
+
+
+    <LinearLayout
+        android:id="@+id/ask_to_buy_layer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/ask_to_buy_check_iv"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/common_checkbox" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="求购"
+            android:textColor="@color/color_text_black3"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/sell_layer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/sell_check_iv"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/common_checkbox" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="出售"
+            android:textColor="@color/color_text_black3"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

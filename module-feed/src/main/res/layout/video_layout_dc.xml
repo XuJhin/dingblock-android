@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/black">
+
+    <RelativeLayout
+        android:id="@+id/surface_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/thumb"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:background="#000000"
+        android:scaleType="fitCenter" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/video_control_bg"
+        android:visibility="invisible">
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/video_action_layer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/progress"
+            app:flexWrap="nowrap"
+            app:justifyContent="space_between"
+            app:alignItems="center"
+            android:paddingHorizontal="15dp"
+            android:visibility="gone">
+            <!--        分享-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/post_video_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/share_iv"
+                    android:layout_width="@dimen/height_post_icon"
+                    android:layout_height="@dimen/height_post_icon"
+                    android:src="@drawable/post_share_light_gray"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <cool.dingstock.lib_base.widget.tv.font.PoppinsSemiBoldTv
+                    style="@style/TextStyle.Post.Action"
+                    android:layout_marginTop="@dimen/popin_margin_top"
+                    android:text="@string/post_share"
+                    android:textColor="#B2B2B2"
+                    app:layout_constraintBottom_toBottomOf="@+id/share_iv"
+                    app:layout_constraintStart_toEndOf="@+id/share_iv"
+                    app:layout_constraintTop_toTopOf="@+id/share_iv" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--        收藏 -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/post_video_collection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/collection_iv"
+                    android:layout_width="@dimen/height_post_icon"
+                    android:layout_height="@dimen/height_post_icon"
+                    android:src="@drawable/post_light_collection_selector"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <cool.dingstock.lib_base.widget.tv.font.PoppinsSemiBoldTv
+                    android:id="@+id/tv_video_collection"
+                    style="@style/TextStyle.Post.Action"
+                    android:layout_marginTop="@dimen/popin_margin_top"
+                    android:text="收藏"
+                    android:textColor="@color/selector_light_post_collect_action"
+                    app:layout_constraintBottom_toBottomOf="@+id/collection_iv"
+                    app:layout_constraintStart_toEndOf="@+id/collection_iv"
+                    app:layout_constraintTop_toTopOf="@+id/collection_iv" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- 评论 -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/post_video_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/comment_iv"
+                    android:layout_width="@dimen/height_post_icon"
+                    android:layout_height="@dimen/height_post_icon"
+                    android:src="@drawable/post_comment_light_gray"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <cool.dingstock.lib_base.widget.tv.font.PoppinsSemiBoldTv
+                    android:id="@+id/tv_video_comment"
+                    style="@style/TextStyle.Post.Action"
+                    android:layout_marginTop="@dimen/popin_margin_top"
+                    android:text="@string/post_comment"
+                    android:textColor="#B2B2B2"
+                    app:layout_constraintBottom_toBottomOf="@+id/comment_iv"
+                    app:layout_constraintStart_toEndOf="@+id/comment_iv"
+                    app:layout_constraintTop_toTopOf="@+id/comment_iv" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/post_video_raise"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/raise_iv"
+                    android:layout_width="@dimen/height_post_icon"
+                    android:layout_height="@dimen/height_post_icon"
+                    android:src="@drawable/post_light_raise_state"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <cool.dingstock.lib_base.widget.tv.font.PoppinsSemiBoldTv
+                    android:id="@+id/tv_video_raise"
+                    style="@style/TextStyle.Post.Action"
+                    android:layout_marginTop="@dimen/popin_margin_top"
+                    android:text="@string/post_raise"
+                    android:textColor="@color/selector_light_post_action"
+                    app:layout_constraintBottom_toBottomOf="@+id/raise_iv"
+                    app:layout_constraintStart_toEndOf="@+id/raise_iv"
+                    app:layout_constraintTop_toTopOf="@+id/raise_iv" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.flexbox.FlexboxLayout>
+
+        <ImageView
+            android:id="@+id/mute"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:scaleType="center"
+            android:paddingStart="12dp"
+            android:src="@drawable/ic_icon_unmute"/>
+
+        <SeekBar
+            android:id="@+id/progress"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            app:layout_constraintStart_toEndOf="@+id/mute"
+            app:layout_constraintTop_toTopOf="@+id/mute"
+            app:layout_constraintEnd_toStartOf="@+id/current"
+            android:layout_weight="1.0"
+            android:background="@null"
+            android:max="100"
+            android:maxHeight="2dp"
+            android:minHeight="2dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:progressDrawable="@drawable/dc_video_seek_progress"
+            android:thumb="@drawable/shape_video_seek_thumb" />
+
+        <TextView
+            android:id="@+id/current"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/progress"
+            app:layout_constraintTop_toTopOf="@+id/progress"
+            app:layout_constraintBottom_toBottomOf="@+id/progress"
+            app:layout_constraintEnd_toStartOf="@+id/slash"
+            android:textSize="11sp"
+            android:text="00:00"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:id="@+id/slash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/current"
+            app:layout_constraintTop_toTopOf="@+id/progress"
+            app:layout_constraintBottom_toBottomOf="@+id/progress"
+            app:layout_constraintEnd_toStartOf="@+id/total"
+            android:textSize="11sp"
+            android:text="/"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:id="@+id/total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            app:layout_constraintStart_toEndOf="@+id/slash"
+            app:layout_constraintTop_toTopOf="@+id/progress"
+            app:layout_constraintBottom_toBottomOf="@+id/progress"
+            app:layout_constraintEnd_toStartOf="@+id/fullscreen"
+            android:textSize="11sp"
+            android:textColor="#ffffff" />
+
+        <ImageView
+            android:id="@+id/fullscreen"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toEndOf="@+id/total"
+            app:layout_constraintTop_toTopOf="@+id/progress"
+            app:layout_constraintBottom_toBottomOf="@+id/progress"
+            app:layout_constraintEnd_toStartOf="@+id/orientation"
+            android:paddingHorizontal="12dp"
+            android:scaleType="center"
+            android:src="@drawable/ic_icon_enlarge" />
+
+        <ImageView
+            android:id="@+id/orientation"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toEndOf="@+id/fullscreen"
+            app:layout_constraintTop_toTopOf="@+id/progress"
+            app:layout_constraintBottom_toBottomOf="@+id/progress"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:paddingEnd="12dp"
+            android:scaleType="center"
+            android:src="@drawable/ic_icon_orientation"
+            android:visibility="gone"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/video_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:visibility="gone"/>
+
+    <ProgressBar
+        android:id="@+id/bottom_progressbar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:layout_alignParentBottom="true"
+        android:max="100"
+        android:progressDrawable="@drawable/video_progress" />
+
+    <ImageView
+        android:id="@+id/back_tiny"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="6dp"
+        android:visibility="gone" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/video_title_bg">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:paddingStart="15dp"
+            android:paddingEnd="8dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_video_close"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="#ccffffff"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/back"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_goneMarginStart="16dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <moe.codeest.enviews.ENDownloadView
+        android:id="@+id/loading"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_vertical"
+        android:padding="22dp"
+        android:src="@drawable/ic_icon_play" />
+
+
+    <ImageView
+        android:id="@+id/small_close"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:paddingStart="10dp"
+        android:paddingTop="10dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/video_small_close"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/lock_screen"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="50dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/unlock"
+        android:visibility="gone" />
+
+</RelativeLayout>

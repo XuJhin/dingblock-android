@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="calendar_release_bg">#B33D3E45</color>
+    <color name="calendar_selected_border">#438FFF</color>
+</resources>

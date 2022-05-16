@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_item_region_raffle_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="10dp">
+
+    <ImageView
+        android:id="@+id/home_item_product_comment_iv"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="15dp"
+        android:scaleType="centerInside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_toRightOf="@id/home_item_product_comment_iv"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/home_item_product_comment_iv"
+        app:layout_constraintTop_toTopOf="@+id/home_item_product_comment_iv">
+
+        <cool.dingstock.lib_base.widget.tv.font.PoppinsBoldTv
+            android:id="@+id/home_item_product_comment_name_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="0dp"
+            android:ellipsize="end"
+            android:lineSpacingExtra="@dimen/popin_line_space"
+            android:maxLines="2"
+            android:textColor="@color/color_text_black1"
+            android:textSize="@dimen/text_size4"
+            android:textStyle="bold"
+            tools:text="xxxxnxxxxxxnxxxxxxnxxxxxxnxxxxxxnxxxxxxnxxxxxxnxxxxxxnxx" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/home_item_product_comment_name_txt"
+            android:layout_alignBaseline="@id/home_item_product_comment_info_txt"
+            android:layout_marginTop="4dp"
+            android:baselineAligned="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            tools:ignore="NotSibling">
+
+            <LinearLayout
+                android:id="@+id/sale_layer"
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginEnd="18dp"
+                android:layout_height="wrap_content">
+                <cool.dingstock.lib_base.widget.tv.font.PoppinsBoldTv
+                    android:id="@+id/home_item_product_comment_info_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textColor="@color/color_orange"
+                    android:textSize="@dimen/text_size7"
+                    tools:text="6" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:singleLine="true"
+                    android:text="条发售信息"
+                    android:textColor="@color/color_text_black1"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/home_item_product_comment_price_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/home_item_region_raffle_product_name_txt"
+                android:textColor="@color/color_text_black4"
+                android:textSize="12sp"
+                tools:text="发售价格:$3131" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

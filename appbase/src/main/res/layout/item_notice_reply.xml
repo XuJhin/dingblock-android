@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingStart="20dp"
+    android:paddingTop="14dp"
+    android:paddingEnd="20dp"
+    android:paddingBottom="16dp">
+
+    <cool.dingstock.imagepicker.views.AvatarView
+        android:id="@+id/riv_avatar"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        app:ava_src="@drawable/default_avatar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/layout_circle_content"
+        app:layout_constraintStart_toEndOf="@+id/riv_avatar"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/color_text_black1"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            tools:text="中签小能手" />
+
+        <cool.dingstock.appbase.customerview.betterlinktv.BetterLinkTv
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:linksClickable="false"
+            android:textColor="@color/color_text_black2"
+            android:textColorLink="@color/color_text_black2"
+            android:textSize="14sp"
+            tools:text="回复了你：我就是想回复你一下" />
+
+        <RelativeLayout
+            android:id="@+id/fLayout_users"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/color_text_black5"
+            android:textSize="14sp"
+            tools:text="12-03" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/layout_circle_content"
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:background="@drawable/shape_notice_item_right"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <cool.dingstock.imagepicker.views.roundImageView.RoundImageView
+            android:id="@+id/iv_circle_content_cover"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:border_color="@color/color_line"
+            app:border_width="0.5dp"
+            app:border_conner="4dp"
+            app:view_type="type_round" />
+
+        <TextView
+            android:id="@+id/tv_circle_content_txt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:lineSpacingExtra="2dp"
+            android:maxLines="3"
+            android:textColor="@color/color_text_black3"
+            android:textSize="11sp"
+            android:visibility="gone"
+            tools:text="情人节快乐快乐情人节你说好吗…" />
+
+        <TextView
+            android:id="@+id/tv_follow_user"
+            android:layout_width="52dp"
+            android:layout_height="26dp"
+            android:layout_gravity="end"
+            android:background="@drawable/follow_btn_sel"
+            android:gravity="center"
+            android:text="关注"
+            android:textColor="@color/follow_btn_text_color"
+            android:textSize="12sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

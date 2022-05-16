@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <ImageView
+        android:id="@+id/top_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/guide_indicator_triangle_top"
+        android:layout_marginStart="25dp"
+        android:visibility="visible"
+        android:layout_marginBottom="-1dp"
+        />
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="140dp"
+        android:layout_height="42dp"
+        android:text="查看监控详细信息"
+        android:gravity="center"
+        android:background="@drawable/guide_red_bg_radius_6"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:includeFontPadding="false"
+        />
+    <ImageView
+        android:id="@+id/bottom_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/guide_indicator_triangle_bottom"
+        android:layout_marginStart="25dp"
+        android:visibility="visible"
+        android:layout_marginTop="-1dp"
+        />
+
+</LinearLayout>

@@ -1,0 +1,56 @@
+[
+  {
+    "name": "双外侧图",
+    "iconRes": "deal_shoes_out_side",
+    "guideIconRes": "deal_guide_shoes_out_side",
+    "type": "shoesOutSide"
+  },
+  {
+    "name": "双内侧图",
+    "iconRes": "deal_shoes_in_side",
+    "guideIconRes": "deal_guide_shoes_in_side",
+    "type": "shoesInSide"
+  },
+  {
+    "name": "正面图",
+    "iconRes": "deal_shoes_front",
+    "guideIconRes": "deal_guide_shoes_front",
+    "type": "dealShoesFront"
+  },
+  {
+    "name": "背面图",
+    "iconRes": "deal_shoes_back",
+    "guideIconRes": "deal_guide_shoes_back",
+    "type": "dealShoesBack"
+  },
+  {
+    "name": "鞋内村",
+    "iconRes": "deal_shoes_in_village",
+    "guideIconRes": "deal_guide_shoes_in_village",
+    "type": "dealShoesInVillage"
+  },
+  {
+    "name": "鞋垫",
+    "iconRes": "deal_shoes_insoles",
+    "guideIconRes": "deal_guide_shoes_insoles",
+    "type": "dealShoesInsoles"
+  },
+  {
+    "name": "鞋底图",
+    "iconRes": "deal_shoe_sole",
+    "guideIconRes": "deal_guide_shoe_sole",
+    "type": "dealShoeSole"
+  },
+  {
+    "name": "球鞋鞋标",
+    "iconRes": "deal_shoes_logo",
+    "guideIconRes": "deal_guide_shoes_logo",
+    "type": "dealShoesLogo"
+  },
+  {
+    "name": "鞋盒",
+    "iconRes": "deal_shoes_box",
+    "guideIconRes": "deal_guide_shoes_box",
+    "type": "dealShoesBox"
+  }
+]

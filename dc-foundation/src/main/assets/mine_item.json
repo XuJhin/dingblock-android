@@ -1,0 +1,27 @@
+[
+  {
+    "name": "关注地区/网站",
+    "iconRes": "mine_focus_areas",
+    "type": "focusAreas"
+  },
+  {
+    "name": "价格提醒",
+    "iconRes": "mine_price",
+    "type": "priceRemind"
+  },
+  {
+    "name": "积分商城",
+    "iconRes": "mine_integral_mall",
+    "type": "mall"
+  },
+  {
+    "name": "常见问题",
+    "iconRes": "mine_issue",
+    "type": "questions"
+  },
+  {
+    "name": "在线客服",
+    "iconRes": "mine_feedback",
+    "type": "onlineService"
+  }
+]

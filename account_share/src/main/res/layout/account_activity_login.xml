@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/login_window_bg" />
+
+    <LinearLayout
+        android:id="@+id/title_lin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/fake_status_bar"
+            android:layout_width="match_parent"
+            android:layout_height="19dp" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="17dp">
+
+            <ImageView
+                android:id="@+id/account_login_back_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="15dp"
+                android:gravity="center"
+                android:paddingEnd="27dp"
+                android:src="@drawable/icon_back_white"
+                android:text="@string/icon_back_large"
+                android:textColor="@color/common_txt_color1"
+                android:textSize="14dp" />
+
+
+            <TextView
+                android:id="@+id/account_problem_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="20dp"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:text="遇到问题"
+                android:textColor="#ffffffff"
+                android:textSize="14sp" />
+
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/input_lin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/login_icon"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="100dp"
+            android:src="@drawable/login_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="24dp"
+            android:text="为\t\t核\t\t心\t\t潮\t\t流\t\t玩\t\t家\t\t而\t\t生"
+            android:textColor="#ffffffff"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="152" />
+
+        <TextView
+            android:id="@+id/bind_phone_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:includeFontPadding="false"
+            android:text="手机号"
+            android:textColor="#66ffffff"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/account_login_zone_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:minWidth="30dp"
+                android:text="+86"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:gravity="center"
+                android:src="@drawable/login_sanjiaoxing"
+                android:text="@string/icon_triangle"
+                android:textColor="@color/common_txt_color1"
+                android:textSize="12dp" />
+
+            <EditText
+                android:id="@+id/account_login_phone_edit"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="6dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:inputType="phone"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:theme="@style/DCEditStyle" />
+
+            <ImageView
+                android:id="@+id/account_login_edit_del_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:paddingStart="24dp"
+                android:src="@drawable/icon_edit_del"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/phone_line"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="#33ffffff" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="19dp"
+            android:layout_marginEnd="30dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:text="验证码"
+                android:textColor="#33ffffff"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="12dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/account_login_sms_edit"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:theme="@style/DCEditStyle" />
+
+                <cool.dingstock.appbase.widget.TimerButton
+                    android:id="@+id/account_login_sms_timer_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="4dp"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:textColor="@color/time_btn_blue_gray_color" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <View
+            android:id="@+id/code_line"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="#33ffffff" />
+
+        <TextView
+            android:id="@+id/account_login_txt"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="28dp"
+            android:background="@drawable/login_theme_btn_bg_t60"
+            android:enabled="false"
+            android:gravity="center"
+            android:text="@string/account_login"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="40dp"
+            android:layout_weight="169" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_lin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="10dp" />
+
+        <TextView
+            android:id="@+id/account_activity_agreement_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="登录即代表您同意《隐私政策》《用户协议》"
+            android:textColor="#55ffffff"
+            android:textSize="11sp" />
+
+        <View
+            android:id="@+id/bottom_bar"
+            android:layout_width="0dp"
+            android:layout_height="23dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

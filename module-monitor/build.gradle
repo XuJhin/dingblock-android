@@ -1,0 +1,83 @@
+apply from: '../dc_config.gradle'
+apply from: '../version_config.gradle'
+if (isPart) {
+    apply plugin: 'com.android.application'
+} else {
+    apply plugin: 'com.android.library'
+}
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-parcelize'
+apply plugin: 'kotlin-kapt'
+if (isPart) {
+    apply plugin: 'com.mob.sdk'
+    apply plugin: 'WMRouter'
+}
+
+def ext = rootProject.ext
+android {
+
+    compileSdkVersion ext.compileSdkVersion
+   
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    defaultConfig {
+        if (isPart) {
+            applicationId "net.dingblock.mobile"
+        }
+        versionCode ext.versionCode
+        versionName ext.versionName
+        minSdkVersion ext.minSdkVersion
+        targetSdkVersion ext.targetSdkVersion
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+    }
+
+    sourceSets {
+        main {
+            if (isPart) {
+                manifest.srcFile 'src/main/debug/AndroidManifest.xml'
+            } else {
+                manifest.srcFile 'src/main/release/AndroidManifest.xml'
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    kotlinOptions {
+        jvmTarget = "11"
+    }
+
+
+}
+
+dependencies {
+    implementation project(':appbase')
+    implementation project(':account_share')
+    implementation project(':ui_common')
+    implementation project(':module-feed')
+    if (isPart) {
+        debugImplementation project(':debug')
+    }
+    implementation "androidx.appcompat:appcompat:$rootProject.ext.common_version_appcompat"
+
+    implementation "androidx.constraintlayout:constraintlayout:$rootProject.ext.common_version_constraintlayout"
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation files('../lib-pay/libs/UPPayAssistEx.jar')
+
+    kapt "com.google.dagger:dagger-compiler:$rootProject.ext.dagger2"
+    kapt "io.github.meituan-dianping:compiler:$rootProject.ext.wm_router"
+}

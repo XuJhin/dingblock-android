@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:lottie="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="68dp"
+    android:gravity="center">
+
+    <ProgressBar
+        android:id="@+id/loading_view"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/end_tv"
+        android:layout_width="match_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:textSize="13sp"
+        android:visibility="gone"
+        android:text="@string/no_more_data"
+        android:textColor="#FFB3B3BB"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>

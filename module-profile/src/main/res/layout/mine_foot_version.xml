@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:gravity="center_horizontal|bottom"
+        android:textSize="12sp"
+        android:text="xxxx"
+        android:paddingBottom="10dp"
+        android:id="@+id/mine_foot_version_txt"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+</RelativeLayout>

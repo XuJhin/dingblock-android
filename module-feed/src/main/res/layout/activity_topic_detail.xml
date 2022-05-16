@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp">
+
+            <ImageView
+                android:id="@+id/bg_topic_detail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:background="#75470E0E"
+                android:importantForAutofill="auto"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/layout_topic_detail_creator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/shape_topic_detail_creator"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="8dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="4dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_follow_status"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_follow_status">
+
+                <cool.dingstock.imagepicker.views.roundImageView.RoundImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@color/color_ding_theme"
+                    app:view_type="type_circle" />
+
+                <ImageView
+                    android:layout_width="53dp"
+                    android:layout_height="18dp"
+                    android:layout_marginStart="2dp"
+                    android:src="@drawable/selector_topic_detail_creator" />
+            </LinearLayout>
+
+            <TextView
+
+                android:id="@+id/tv_follow_status"
+                android:layout_width="72dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="36dp"
+                android:background="@drawable/shape_topic_detail_focus_detail"
+                android:gravity="center"
+                android:text="已关注"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <cool.dingstock.imagepicker.views.roundImageView.RoundImageView
+                android:id="@+id/iv_topic_cover"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="18dp"
+                android:src="@color/color_ding_theme"
+                app:border_conner="8dp"
+                app:layout_constraintBottom_toTopOf="@+id/layout_topic_detail_creator"
+                app:layout_constraintStart_toStartOf="parent"
+                app:view_type="type_round" />
+
+            <TextView
+                android:id="@+id/tv_topic_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
+                android:layout_marginEnd="16dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/bg_topic_detail"
+                app:layout_constraintStart_toEndOf="@+id/iv_topic_cover"
+                app:layout_constraintTop_toTopOf="@+id/iv_topic_cover"
+                tools:text="#万人空巷在抽签" />
+
+            <TextView
+                android:id="@+id/tv_topic_desc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="#CCFFFFFF"
+                android:textSize="12dp"
+                app:layout_constraintEnd_toEndOf="@+id/tv_topic_title"
+                app:layout_constraintStart_toStartOf="@+id/tv_topic_title"
+                app:layout_constraintTop_toBottomOf="@+id/tv_topic_title"
+                tools:text="今天SNKRS突袭，你抢到了几双" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="-8dp"
+            android:background="@drawable/home_post_tab_bg" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:paddingTop="20dp">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="14dp"
+            android:padding="8dp"
+            android:src="@drawable/icon_back_white"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_more_view_help"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/iv_more_view_help" />
+
+        <ImageView
+            android:id="@+id/iv_more_view_help"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:padding="4dp"
+            android:src="@drawable/topic_index_help"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

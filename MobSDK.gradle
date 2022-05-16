@@ -1,0 +1,26 @@
+apply plugin: 'com.mob.sdk'
+
+MobSDK {
+    appKey "2a335e8a25cd8"
+    appSecret "db076e857942147dbb6e13019154c82b"
+//    mobEnv 'x'
+//    spEdition "fp" // 设定MobSDK为隐私协议适配版本
+    ShareSDK {
+        devInfo {
+            QQ {
+                appId "1108724846"
+                appKey "c010df7101b6fa2af5d2e89830dd33ae"
+            }
+            Wechat {
+                appId "wxa5ea8aba36059455"
+                userName="gh_994f32006aae"
+            }
+            WechatMoments {
+                appId "wxa5ea8aba36059455"
+            }
+            WechatFavorite {
+                appId "wxa5ea8aba36059455"
+            }
+        }
+    }
+}

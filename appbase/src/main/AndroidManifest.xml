@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="cool.dingstock.appbase">
+
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <uses-feature android:name="android.hardware.camera"/>
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/> <!-- tencent x5添加 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/> <!-- 硬件加速对X5视频播放非常重要，建议开启 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+
+    <uses-permission
+            android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+            tools:ignore="ProtectedPermissions"/>
+
+    <application
+            android:allowBackup="true"
+            android:label="@string/app_name"
+            android:supportsRtl="true"
+            android:theme="@style/DcAppTheme"
+            android:usesCleartextTraffic="true">
+        <activity
+                android:name=".webview.HelperWebActivity"
+                android:exported="true"
+                android:windowSoftInputMode="adjustResize"/>
+
+        <activity
+                android:name=".webview.DCWebViewActivity"
+                android:exported="true"
+                android:screenOrientation="portrait"
+                android:theme="@style/DcAppTheme"
+                android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name=".webview.DcDefaultWebViewActivity"
+                android:exported="true"
+
+                android:windowSoftInputMode="adjustResize"
+                android:hardwareAccelerated="true"/>
+        <activity
+                android:name=".widget.dialog.OpenPushDialog"
+                android:exported="true"
+                android:theme="@style/Theme.ActivityDialogStyle">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <action android:name="dc.action.router"/>
+
+                <data
+                        android:host="app.dingstock.net"
+                        android:path="/common/checkpush"
+                        android:scheme="https"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name=".widget.dialog.UpdateVerDialogActivity"
+                android:exported="false"
+                android:theme="@style/Theme.ActivityDialogStyle">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <action android:name="dc.action.router"/>
+
+                <data
+                        android:host="app.dingstock.net"
+                        android:path="/common/updateVerDialog"
+                        android:scheme="https"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name=".widget.dialog.CommonPartyDialogActivity"
+                android:exported="false"
+                android:theme="@style/Theme.ActivityDialogStyle">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <action android:name="dc.action.router"/>
+
+                <data
+                        android:host="app.dingstock.net"
+                        android:path="/common/commonPartyDialog"
+                        android:scheme="https"/>
+            </intent-filter>
+        </activity>
+
+        <service
+                android:name=".service.TimeClockService"
+                android:enabled="true"
+                android:exported="true">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <action android:name="dc.action.router"/>
+
+                <data
+                        android:host="app.dingstock.net"
+                        android:path="/lab/clockService"
+                        android:scheme="https"/>
+            </intent-filter>
+        </service>
+
+        <activity
+                android:name=".widget.dialog.CommonImgDialogActivity"
+                android:exported="true"
+                android:theme="@style/Theme.ActivityDialogStyle">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <action android:name="dc.action.router"/>
+
+                <data
+                        android:host="app.dingstock.net"
+                        android:path="/common/commonImgDialog"
+                        android:scheme="https"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name=".widget.dialog.vipget.VipLayeredRemindDialogActivity"
+                android:exported="true"
+                android:theme="@style/Theme.ActivityDialogStyle">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <action android:name="dc.action.router"/>
+
+                <data
+                        android:host="app.dingstock.net"
+                        android:path="/common/vipRemindDialog"
+                        android:scheme="https"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name=".widget.photoselect.activity.DCPhotoSelectActivity"
+                android:configChanges="orientation|screenSize"
+                android:exported="true"
+                android:screenOrientation="portrait"
+                android:theme="@style/DcAppThemeGray">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <action android:name="dc.action.router"/>
+
+                <data
+                        android:host="app.dingstock.net"
+                        android:path="/common/select"
+                        android:scheme="https"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name=".widget.photoselect.activity.DCPhotoSelectPreviewActivity"
+                android:exported="true"
+                android:screenOrientation="portrait"
+                android:theme="@style/FullTheme">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <action android:name="dc.action.router"/>
+
+                <data
+                        android:host="app.dingstock.net"
+                        android:path="/common/select_preview"
+                        android:scheme="https"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name=".widget.preview.DCPreviewActivity"
+                android:exported="true"
+                android:screenOrientation="portrait"
+                android:theme="@style/FullTheme">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <action android:name="dc.action.router"/>
+
+                <data
+                        android:host="app.dingstock.net"
+                        android:path="/common/preview"
+                        android:scheme="https"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name=".widget.clip.DCClipActivity"
+                android:exported="true"
+                android:screenOrientation="portrait"
+                android:theme="@style/FullTheme">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <action android:name="dc.action.router"/>
+
+                <data
+                        android:host="app.dingstock.net"
+                        android:path="/common/clip"
+                        android:scheme="https"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name=".widget.camera.DCCameraActivity"
+                android:exported="true"
+                android:screenOrientation="portrait"
+                android:theme="@style/FullTheme">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <action android:name="dc.action.router"/>
+            </intent-filter>
+        </activity>
+
+        <service android:name=".updater.UpdaterService"/>
+
+        <service
+                android:name=".service.RecordService"
+                android:enabled="true"
+                android:exported="false"
+                android:foregroundServiceType="mediaProjection"
+                tools:targetApi="q"/>
+
+        <provider
+                android:name="cool.dingstock.appbase.storage.DingStockFileProvider"
+                android:authorities="net.dingblock.mobile.FileProvider"
+                android:exported="false"
+                android:grantUriPermissions="true">
+            <meta-data
+                    android:name="android.support.FILE_PROVIDER_PATHS"
+                    android:resource="@xml/provider_paths"/>
+        </provider>
+        <activity android:name="cool.dingstock.mobile.alipay.AliPayActivity"/>
+        <activity
+                android:name="cool.dingstock.mobile.wxapi.WXEntryActivity"
+                android:configChanges="keyboardHidden|orientation|screenSize"
+                android:exported="true"
+                android:launchMode="singleTask"
+                android:taskAffinity="${applicationId}"
+                android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+
+
+        <activity
+                android:name="cool.dingstock.mobile.alipay.OverseaAliPayActivity"
+                android:exported="true"/>
+
+        <!--        抖音分享 start -->
+
+        <provider
+                android:name=".storage.ScreenRecordFileProvider"
+                android:authorities="${applicationId}.screenRecordeFileProvider"
+                android:exported="false"
+                android:grantUriPermissions="true">
+            <meta-data
+                    android:name="android.support.FILE_PROVIDER_PATHS"
+                    android:resource="@xml/screen_recorde_share_provider_paths"/>
+        </provider>
+
+        <!--        抖音分享  end-->
+
+    </application>
+
+</manifest>

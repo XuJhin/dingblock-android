@@ -1,0 +1,38 @@
+[
+  {
+    "name": "鞋外观",
+    "iconRes": "shoes_look",
+    "guideIconRes": "identified_guide_shoes_look",
+    "type": "shoesLook"
+  },
+  {
+    "name": "球鞋鞋标",
+    "iconRes": "shoes_logo",
+    "guideIconRes": "identified_guide_shoes_logo",
+    "type": "shoesLogo"
+  },
+  {
+    "name": "中底走线",
+    "iconRes": "shoes_bottom_line",
+    "guideIconRes": "identified_guide_shoes_bottom_line",
+    "type": "shoesBottomLine"
+  },
+  {
+    "name": "鞋垫",
+    "iconRes": "shoes_insole",
+    "guideIconRes": "identified_guide_shoes_insole",
+    "type": "shoesInsole"
+  },
+  {
+    "name": "球鞋钢印",
+    "iconRes": "shoes_steel_seal",
+    "guideIconRes": "identified_guide_shoes_steel_seal",
+    "type": "shoesSteelSeal"
+  },
+  {
+    "name": "鞋盒侧标",
+    "iconRes": "shoes_box_sidehead",
+    "guideIconRes": "identified_guide_shoes_box_sidehead",
+    "type": "shoesBoxSideHead"
+  }
+]

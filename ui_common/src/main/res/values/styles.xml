@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="SettingItemTextStyle">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:textColor">@color/color_text_black1</item>
+        <item name="android:textSize">@dimen/text_size6</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginStart">15dp</item>
+    </style>
+
+    <style name="SettingItemGroupStyle">
+        <item name="android:layout_height">56dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="SettingItemNextArrowStyle">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical|end</item>
+        <item name="android:layout_marginEnd">15dp</item>
+        <item name="android:tint">@color/color_text_black5</item>
+    </style>
+
+</resources>

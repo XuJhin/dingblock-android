@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <View
+        android:id="@+id/line_top"
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:background="@color/color_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/img_fra"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="20dp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line_top">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/img_iv"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom"
+            android:scaleType="centerInside"
+            android:src="@drawable/common_default_shape"
+            app:shapeAppearance="@style/r4ImageStyle" />
+
+        <FrameLayout
+            android:id="@+id/img_cancel"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="end">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="7dp"
+                android:alpha="0.5"
+                android:background="@drawable/search_ic_clear" />
+        </FrameLayout>
+
+
+    </FrameLayout>
+
+    <EditText
+        android:id="@+id/comment_et"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/common_gary_2_bg_radius_6"
+        android:hint="@string/circle_comment_hint"
+        android:maxHeight="86dp"
+        android:paddingHorizontal="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textColor="@color/color_text_black1"
+        android:textSize="@dimen/text_size5"
+        android:theme="@style/DCEditStyle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_fra" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:layout_marginHorizontal="22dp"
+        android:background="@color/color_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/comment_et" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/function_cl"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line">
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/other_btn_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="select_pic_iv,select_emoji_iv" />
+
+        <ImageView
+            android:id="@+id/select_pic_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="5dp"
+            android:src="@drawable/ic_select_pic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/select_emoji_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="5dp"
+            android:src="@drawable/ic_select_emoji"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/select_pic_iv"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/send_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/shape_blue_15dp"
+            android:gravity="center"
+            android:paddingHorizontal="10dp"
+            android:text="发送"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/text_size3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/emoji_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="emoji_vp,emoji_tab_layout" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/emoji_vp"
+        android:layout_width="0dp"
+        android:layout_height="260dp"
+        android:background="@color/color_sec_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/function_cl" />
+
+    <cool.dingstock.appbase.widget.tablayout.MyTabLayout
+        android:id="@+id/emoji_tab_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emoji_vp"
+        app:tabBackground="@drawable/selector_emoji_tab_bg"
+        app:tabIndicator="@null"
+        app:tabMode="scrollable"
+        app:tabPadding="0dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/m_root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_sec_bg"
+    android:orientation="vertical"
+
+    >
+
+    <cool.dingstock.appbase.widget.CommonEmptyView
+        android:id="@+id/commonEmptyView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        />
+
+    <View
+        android:id="@+id/view_space"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp" />
+
+</LinearLayout>

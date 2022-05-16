@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <cool.dingstock.appbase.customerview.betterlinktv.BetterLinkTv
+        android:id="@+id/comment_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="3dp"
+        android:textColor="@color/color_text_deep_gray"
+        android:textColorLink="@color/color_blue"
+        android:textSize="@dimen/text_size3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/commenter_tv"
+        tools:text="爱摄影的豆豆爱摄影的豆豆爱摄影的豆豆 \nsdfafa" />
+
+    <ImageView
+        android:id="@+id/bg_v"
+        android:layout_width="45dp"
+        android:layout_height="18dp"
+        android:src="@drawable/god_comment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/commenter_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="2dp"
+        android:textColor="@color/color_text_black1"
+        android:textSize="@dimen/text_size3"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/bg_v"
+        app:layout_constraintStart_toEndOf="@id/bg_v"
+        app:layout_constraintTop_toTopOf="@id/bg_v"
+        tools:text="爱摄影的豆豆：" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

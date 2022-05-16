@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <solid android:color="@color/boot_white" />
+        </shape>
+    </item>
+    <item android:bottom="115dp">
+        <bitmap
+            android:gravity="center"
+            android:src="@drawable/boot_iv" />
+    </item>
+    <item android:bottom="75dp">
+        <bitmap
+            android:gravity="bottom"
+            android:src="@drawable/boot_logo_iv" />
+    </item>
+
+</layer-list>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.lihang.ShadowLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hl_cornerRadius_leftTop="14dp"
+        app:hl_cornerRadius_rightTop="14dp"
+        app:hl_layoutBackground="@color/white"
+        app:hl_shadowHiddenBottom="true"
+        app:hl_shadowHiddenLeft="true"
+        app:hl_shadowHiddenRight="true"
+        app:hl_shadowLimit="13dp"
+        app:hl_shadowSymmetry="false"
+        app:hl_shadowColor="@color/black">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="71dp"
+            android:layout_gravity="center"
+            android:baselineAligned="false"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+        <LinearLayout
+                android:id="@+id/layout_comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_comment"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    app:tint="@color/color_text_black3"
+                    android:src="@drawable/svg_comment"/>
+
+            <cool.dingstock.lib_base.widget.tv.font.PoppinsBoldTv
+                    android:id="@+id/tv_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:text="0"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/layer_dislike"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_dislike"
+                    android:layout_width="18dp"
+                    android:layout_height="match_parent"
+                    app:tint="@color/color_text_black3"
+                    android:src="@drawable/svg_dislike"/>
+
+            <cool.dingstock.lib_base.widget.tv.font.PoppinsBoldTv
+                    android:id="@+id/tv_dislike"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:text="0"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/layer_like"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_like"
+                    app:tint="@color/color_text_black3"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/svg_like"/>
+
+            <cool.dingstock.lib_base.widget.tv.font.PoppinsBoldTv
+                    android:id="@+id/tv_like"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:text="0"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</com.lihang.ShadowLayout>

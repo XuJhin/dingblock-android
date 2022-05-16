@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="25dp"
+    android:minHeight="210dp"
+    android:orientation="horizontal">
+
+    <View
+        android:id="@+id/left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="97dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/image_iv"
+            android:layout_width="97dp"
+            android:layout_height="97dp"
+            android:background="@color/color_sec_bg"
+            android:scaleType="centerInside"
+            tools:src="@drawable/default_avatar" />
+
+        <TextView
+            android:id="@+id/name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:gravity="center_horizontal"
+            android:maxLines="2"
+            android:textColor="@color/color_text_black2"
+            android:textSize="13sp"
+            tools:text="会员" />
+
+        <TextView
+            android:id="@+id/desc_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/color_text_black4"
+            android:textSize="@dimen/text_size2"
+            tools:text="3000积分" />
+
+        <TextView
+            android:id="@+id/exchange_tv"
+            android:layout_width="66dp"
+            android:layout_height="26dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/mine_exchange_tv_bg"
+            android:gravity="center"
+            android:textColor="@color/mine_exchange_txt_color"
+            android:textSize="@dimen/text_size3"
+            tools:text="领取" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+</LinearLayout>

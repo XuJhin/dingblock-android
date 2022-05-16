@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:titleBar="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_gray"
+    tools:context=".ui.monitorCity.MonitorCityActivity">
+
+    <cool.dingstock.appbase.widget.TitleBar
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_top_height"
+        android:layout_alignParentTop="true"
+        android:background="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        titleBar:leftIconColor="@color/color_text_black1"
+        titleBar:titleText="已监控城市" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleBar">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_left"
+            android:layout_width="88dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="14dp"
+            android:background="@drawable/monitor_shape_white_8dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@id/rv_left">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:background="@color/white"
+                android:id="@+id/rv_right"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="15dp"
+                android:paddingStart="12dp" />
+
+            <ViewStub
+                android:id="@+id/view_empty"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout="@layout/common_recycler_empty" />
+
+            <ViewStub
+                android:id="@+id/view_error"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout="@layout/common_recycler_error" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

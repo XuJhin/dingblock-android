@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.percentlayout.widget.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:percent="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <cool.dingstock.imagepicker.views.roundImageView.RoundImageView
+        android:id="@+id/circle_item_dynamic_edit_photo_iv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        percent:border_conner="5dp"
+        percent:layout_aspectRatio="100%"
+        percent:layout_widthPercent="100%"
+        percent:view_type="type_round" />
+
+    <ImageView
+        android:id="@+id/circle_item_dynamic_edit_photo_del_iv"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:padding="5dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/circle_dynamic_del" />
+
+</androidx.percentlayout.widget.PercentRelativeLayout>

@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="15dp"
+    android:layout_marginEnd="15dp"
+    android:background="@drawable/common_item_bg_radius_6"
+    android:paddingStart="12dp"
+    android:paddingEnd="12dp">
+
+
+    <cool.dingstock.imagepicker.views.roundImageView.RoundImageView
+        android:id="@+id/home_item_region_detail_iv"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="19dp"
+        app:border_color="@color/common_image_gray"
+        app:border_conner="6dp"
+        app:border_width="0.5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:view_type="type_round" />
+
+
+    <RelativeLayout
+        android:id="@+id/home_item_region_detail_info_layer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_toRightOf="@id/home_item_region_detail_iv"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/home_item_region_detail_iv"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/title_lin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/home_item_region_detail_name_txt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:layout_marginEnd="12dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:textColor="@color/color_text_black1"
+                android:textSize="@dimen/text_size6"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/linearLayout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="xxxxx\nsfa" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="17dp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:gravity="end"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/calendar_raffle_item_layer_bp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="10dp"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:visibility="gone">
+
+                    <org.libpag.PAGView
+                        android:id="@+id/pagView"
+                        android:layout_width="60dp"
+                        android:layout_height="25dp"
+                        android:layout_marginBottom="-8dp"
+                        app:layout_constraintBottom_toTopOf="@+id/home_item_flash_or_sms_action_icon"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/home_item_flash_or_sms_action_icon"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:src="@drawable/calendar_icon_bp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/calendar_raffle_item_layer_sms"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="10dp"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:visibility="gone">
+
+                    <org.libpag.PAGView
+                        android:id="@+id/message_pag_view"
+                        android:layout_width="60dp"
+                        android:layout_height="25dp"
+                        android:layout_marginBottom="-8dp"
+                        app:layout_constraintBottom_toTopOf="@+id/home_item_region_detail_action_icon"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/home_item_region_detail_action_icon"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:src="@drawable/calendar_icon_message"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/home_item_region_detail_share_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:src="@drawable/calendar_icon_share" />
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+            android:id="@+id/home_item_region_detail_method_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title_lin"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="100dp"
+            android:includeFontPadding="false"
+            android:textColor="@color/common_grey_blue_txt_color"
+            android:textSize="@dimen/text_size3"
+            tools:text="抽签方式\n抽签方式" />
+
+
+        <TextView
+            android:id="@+id/home_item_region_detail_time_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/home_item_region_detail_method_txt"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="100dp"
+            android:layout_marginBottom="25dp"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="5dp"
+            android:text="开始时间：9月17日 13:00 \n截止时间：9月18日 13:00"
+            android:textColor="@color/color_text_black1"
+            android:textSize="@dimen/text_size3" />
+
+
+        <LinearLayout
+            android:id="@+id/home_item_region_detail_joined_lin"
+            android:layout_width="66dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/home_item_region_detail_time_txt"
+            android:layout_alignParentEnd="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_is_john"
+                android:layout_width="66dp"
+                android:layout_height="26dp"
+                android:background="@drawable/gray_r100_bg"
+                android:gravity="center"
+                android:text="前往"
+                android:textColor="@color/color_blue_1"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/home_item_region_detail_joined_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="4dp"
+                android:text="1.2K人已参与"
+                android:textColor="@color/color_text_black4"
+                android:textSize="9sp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/home_item_region_detail_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/home_item_region_detail_info_layer"
+        android:layout_marginStart="52dp"
+        android:background="@color/calendar_color_divider"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

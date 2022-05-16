@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/flayout_content"
+            android:layout_width="31dp"
+            android:layout_height="35dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <FrameLayout
+                android:id="@+id/ui_checked_in_layout_bg"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_gravity="top|start"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/shape_continue_vip"
+                tools:ignore="RtlHardcoded">
+
+                <ImageView
+                    android:id="@+id/mine_iv_checked_in"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:src="@drawable/mine_score_signed" />
+
+                <TextView
+                    android:id="@+id/mine_tv_score_checked_in"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="+7"
+                    android:textColor="@color/color_text_black3"
+                    android:textSize="13sp" />
+
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/mine_checked_in_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="bottom|start"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/shape_continue_desc"
+                android:gravity="bottom"
+                android:paddingStart="1dp"
+                android:paddingEnd="1dp"
+                android:text="3天体验"
+                android:textColor="@color/color_text_absolutely_white"
+                android:textSize="7sp" />
+
+            <TextView
+                android:id="@+id/mine_tv_checked_in_double"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|end"
+                android:background="@drawable/shape_continue_checked_in_double"
+                android:gravity="center"
+                android:paddingStart="3dp"
+                android:paddingEnd="3dp"
+                android:text="x2"
+                android:textColor="@color/white"
+                android:textSize="8sp"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toTopOf="parent" />
+        </FrameLayout>
+
+
+        <TextView
+            android:id="@+id/mine_tv_name_check_in"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/flayout_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="1天"
+            android:textColor="@color/color_text_black4"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/flayout_content"
+            app:layout_constraintStart_toStartOf="@+id/flayout_content"
+            app:layout_constraintTop_toBottomOf="@+id/flayout_content" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/mine_checked_divider"
+        android:layout_width="13dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="4dp"
+        android:background="@color/color_line"
+        app:layout_constraintBottom_toBottomOf="@+id/ui_checked_in_layout_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ui_checked_in_layout_bg"
+        app:layout_constraintTop_toTopOf="@+id/ui_checked_in_layout_bg" />
+
+</LinearLayout>

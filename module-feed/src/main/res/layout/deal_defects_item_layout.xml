@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    >
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/product_iv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@color/colorTextRed"
+        app:layout_constraintDimensionRatio="h,1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearance="@style/r8ImageStyle" />
+
+    <LinearLayout
+        android:id="@+id/location_layer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/deal_location_bg"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingVertical="1dp"
+        android:paddingStart="2dp"
+        android:paddingEnd="4dp"
+        app:layout_constraintBottom_toBottomOf="@id/product_iv"
+        app:layout_constraintStart_toStartOf="@id/product_iv">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_location_icon"
+            app:tint="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/location_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:text="安徽"
+            android:textColor="#FFFFFFFF"
+            android:textSize="11sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/price_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:text="¥900"
+        android:textColor="@color/color_text_black1"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/product_iv" />
+
+
+    <cool.dingstock.imagepicker.views.AvatarView
+        android:id="@+id/avatar_iv"
+        android:layout_width="19dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="@id/avatar_iv"
+        app:layout_constraintTop_toBottomOf="@id/price_tv" />
+
+    <TextView
+        android:id="@+id/user_name_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="16dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="潮人会飞"
+        android:textColor="@color/user_is_vip_post_name_color"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@id/avatar_iv"
+        app:layout_constraintEnd_toStartOf="@id/contact_layer"
+        app:layout_constraintStart_toEndOf="@id/avatar_iv"
+        app:layout_constraintTop_toTopOf="@id/avatar_iv" />
+
+    <LinearLayout
+        android:id="@+id/contact_layer"
+        android:layout_width="wrap_content"
+        android:layout_height="23dp"
+        android:layout_marginEnd="2dp"
+        android:background="@drawable/deal_defects_contact_bg"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingHorizontal="7dp"
+        app:layout_constraintBottom_toBottomOf="@id/avatar_iv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/avatar_iv">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:src="@drawable/ic_common_im_icon"
+            app:tint="@color/color_blue" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="联系TA"
+            android:textColor="@color/color_blue"
+            android:textSize="11sp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

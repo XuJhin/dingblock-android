@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_heavy_sneaker_icon">@color/color_black_a10</color>
+    <color name="color_bp_clock_btn_bg">@color/color_sec_bg</color>
+    <color name="color_bp_product_bub_bg">@color/white</color>
+    <color name="color_bp_product_coupon_txt">@color/color_orange</color>
+    <color name="color_bp_product_coupon_bg">@color/color_clue_coupon_change</color>
+    <color name="color_remind_list_rv_bg">@color/color_box_detail_rv_bg</color>
+    <color name="color_sign_goods_btn_bg">@color/black</color>
+    <color name="color_box_detail_rv_bg">@color/white</color>
+    <color name="color_box_detail_bg">#7FFFFFFF</color>
+    <color name="color_box_detail_title">#1B1D58</color>
+    <color name="color_bag_product_bg">@color/color_text_absolutely_white</color>
+    <color name="color_bag_special_btn">@color/color_text_black1</color>
+    <color name="color_bag_border">#DEDFF3</color>
+    <color name="color_bag_hint_bar_bg">#FFE1D1</color>
+    <color name="color_clue_scroll_bar_bg">@color/color_black_a20</color>
+    <color name="color_clue_top_bar_bg">@color/white</color>
+    <color name="color_clue_coupon_change">#FFF1E9</color>
+    <color name="color_sneakers_btn_change">#F3F9FF</color>
+    <color name="color_sneakers_bg_change">#7787A7</color>
+    <color name="blackAlpha50">#80000000</color>
+    <color name="blackAlpha30">#4D000000</color>
+    <color name="blackAlpha10">#1A000000</color>
+    <color name="whiteAlpha50">#80FFFFFF</color>
+    <color name="whiteAlpha30">#4DFFFFFF</color>
+    <color name="whiteAlpha10">#1AFFFFFF</color>
+    <color name="color_view_bg_black_change"/>
+    <color name="color_blue">#438FFF</color>
+    <color name="color_green">#1CBB5C</color>
+    <color name="color_orange">#FF6F26</color>
+    <color name="color_red">#FF3B47</color>
+
+    <color name="color_gray">#F4F5FA</color>
+    <color name="common_grey_blue_txt_color">#8C9BBE</color>
+    <color name="color_black">#21222A</color>
+    <color name="color_sec_bg">#F6F7F9</color>
+    <color name="color_clickable_bg">#EFF7FF</color>
+
+    <!--    监控页面色值 version 2.11.0-->
+    <color name="monitor_color_end">#D7E5F8</color>
+    <color name="monitor_color_start">#5693C0</color>
+    <color name="monitor_hot_channel">@color/white</color>
+    <color name="monitor_bg_custom_rules">#1AFFFFFF</color>
+    <color name="monitor_bg_zone_no_release">#4D003F6D</color>
+    <!--    白色字体-->
+    <color name="text_white">#FFFFFF</color>
+    <color name="text_white_a80">#CCFFFFFF</color>
+    <color name="bg_24292f">#24292F</color>
+
+    <color name="dialog_left_red">#FFEAEA</color>
+    <color name="dialog_right_blue">#DBF5FF</color>
+    <color name="dialog_top_white">@color/white</color>
+    <color name="dialog_bottom_white">@color/color_white_a0</color>
+    <color name="dialog_color_mask">@color/transparent</color>
+    <!--    一般字体颜色-->
+    <color name="color_text_absolutely_white">@color/white</color>
+    <color name="color_text_absolute_white_90_a">#E6FFFFFF</color>
+    <color name="color_text_black1">#25262A</color>
+    <color name="color_text_black2">#3D3E45</color>
+    <color name="color_text_black3">#6A7181</color>
+    <color name="color_text_black4">#9FA5B3</color>
+    <color name="color_text_black5">#C0C2CE</color>
+    <color name="color_text_white_a80">#CCFFFFFF</color>
+    <color name="color_text_white_a70">#B3FFFFFF</color>
+    <color name="color_text_white_a60">#99FFFFFF</color>
+    <color name="color_text_white_a50">#88FFFFFF</color>
+    <color name="color_text_white_a40">#66FFFFFF</color>
+    <color name="color_text_deep_gray">#686E82</color>
+    <color name="color_pag_title">@color/color_text_black1</color>
+    <color name="color_pag_content">@color/color_text_black3</color>
+    <!--    透明度-->
+    <color name="color_black_a80">#CC000000</color>
+    <color name="color_black_a70">#b3000000</color>
+    <color name="color_black_a60">#99000000</color>
+    <color name="color_black_a40">#66000000</color>
+    <color name="color_black_a50">#88000000</color>
+    <color name="color_black_a20">#33000000</color>
+    <color name="color_black_a10">#1A000000</color>
+    <color name="color_black_a100">#000000</color>
+    <color name="color_white_a20">#33FFFFFF</color>
+    <color name="color_white_a15">#26FFFFFF</color>
+    <color name="color_white_a10">#1Affffff</color>
+    <color name="color_white_a0">#00ffffff</color>
+    <color name="monitor_color_border">#E3E9EE</color>
+    <color name="common_vip">#D39E5F</color>
+    <color name="color_line">#EAECEF</color>
+    <color name="color_line_2">@color/color_line</color>
+    <!-- Theme -->
+    <color name="colorAccent">#FE6C6C</color>
+    <color name="common_statusBar_light_bg">#F7F7F9</color>
+    <color name="transparent">#00000000</color>
+    <color name="common_image_gray">#EBEBEB</color>
+    <color name="common_black">#242933</color>
+    <color name="common_gray">#434343</color>
+    <color name="common_select_gray">#F5F5F5</color>
+    <color name="common_title_color">#373E4D</color>
+    <color name="delete_color">#FE434E</color>
+    <!-- TitleBar -->
+    <color name="common_titleBar_light_right_disable">@color/colorTextGray</color>
+    <color name="common_titleBar_light_line">#FFF6F6F6</color>
+    <color name="common_title_black">@color/colorTextBlack</color>
+    <color name="common_multiEdit_light_icon">#FFB4BFC6</color>
+    <color name="common_dc_theme_color">@color/colorAccent</color>
+    <color name="common_title_deep_gray">#15171A</color>
+    <color name="common_title_dark">@color/common_black</color>
+    <color name="common_txt_color1">@color/common_title_color</color>
+    <color name="common_txt_time">#A0A9B5</color>
+    <color name="common_txt_color2">#696E82</color>
+    <color name="common_txt_color3">#A1A8B3</color>
+    <color name="common_line_color">#4D000000</color>
+    <color name="common_line_color2">@color/color_black_a10</color>
+    <!--字体颜色-->
+    <color name="colorTextBlack">#333333</color>
+    <color name="colorTextGrayDark">#666666</color>
+    <color name="colorTextGray">#999999</color>
+    <color name="colorTextRed">#FE4A29</color>
+    <color name="colorTextVip">#EEA147</color>
+
+    <color name="navigation_bar_dark">#4A5378</color>
+    <color name="color_blue_1">#4D9FF6</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="boot_white">#FFFFFFFF</color>
+    <color name="animatorColor">#C4D8F4</color>
+
+    <!--悬浮窗-->
+    <color name="float_window_bg_border_normal">#bcbcbc</color>
+    <color name="float_window_bg_border_edit">#4f95ff</color>
+
+    <color name="colorDivider">@color/common_image_gray</color>
+    <color name="calendar_color_divider">#EBEBEB</color>
+    <color name="common_txt_color4">#FF949AAE</color>
+    <color name="common_txt_color5">#FFB4B9C8</color>
+
+    <!--    设置 -->
+    <color name="setting_next_icon_color">#CCD1DB</color>
+
+    <!--    会员页 -->
+    <color name="vip_bg">#191B20</color>
+    <color name="vip_bg2">#212429</color>
+    <color name="vip_line_color">#30343B</color>
+    <color name="vip_text_common">#b6b9c0</color>
+    <color name="vip_buy_color">#9B9693</color>
+    <color name="vip_edit_hint_color">#4D4F53</color>
+    <color name="vip_edit_txt_color">#BCBDBF</color>
+    <color name="vip_rule_txt_color">@color/vip_buy_color</color>
+    <color name="vip_renewal_color">@color/vip_bg</color>
+
+    <!--    社交-->
+    <color name="followed_text_color">#BCC6D3</color>
+
+    <!--    动态-->
+    <color name="god_comment_commenter_nick_color">@color/comment_input_txt_color</color>
+    <color name="post_overlay_color">#C3C7D3</color>
+    <color name="post_vote_title_txt_color_sel">@color/post_vote_percent_txt_color</color>
+    <color name="post_vote_count_txt_color">#93A7C3</color>
+    <color name="post_vote_percent_txt_color">#556B8C</color>
+    <color name="post_vote_progress_color">#C1D2EA</color>
+    <color name="post_vote_unsel_progress_color">#D2D7E0</color>
+    <color name="post_img_border_color">#E3E9EE</color>
+    <color name="comment_input_txt_color">#000000</color>
+    <color name="comment_not_send_txt_color">#B6BDC6</color>
+    <color name="dynamic_edit_pop_add_link_copy_content_color">@color/common_title_color</color>
+    <color name="dynamic_edit_pop_add_link_copy_hint_color">@color/common_txt_time</color>
+    <color name="dynamic_edit_pop_add_link_copy_btn_color">@color/bp_index_good_link_txt_color1
+    </color>
+    <color name="sec_comment_bg_color">#F2F3F5</color>
+    <color name="topic_details_bg_color">#292B37</color>
+    <color name="topic_details_top_bg_color">#00292B37</color>
+    <color name="post_liked_color">@color/delete_color</color>
+
+    <!--    球鞋日历-->
+    <color name="calendar_month_un_sel_txt_color">#70788A</color>
+    <color name="calendar_like_sel_txt_color">@color/delete_color</color>
+    <color name="calendar_like_un_sel_txt_color">#A1A7B8</color>
+    <color name="calendar_dislike_un_sel_txt_color">@color/calendar_like_un_sel_txt_color</color>
+    <color name="calendar_bottom_sel_txt_color">@color/comment_input_txt_color</color>
+    <color name="calendar_more_video_desc_txt_color">#313237</color>
+    <color name="calendar_bottom_action_bg_color">#BEC1C9</color>
+
+    <!--    bp-->
+    <color name="bp_index_bg_start_color">@color/time_clock_title_bg</color>
+    <color name="bp_index_bg_end_color">#B3CDE2</color>
+    <color name="bp_index_hint_list_txt_color">#F8F8F8</color>
+    <color name="bp_index_hint_list_count_txt_color">#609AC4</color>
+    <color name="bp_index_good_link_txt_color1">#3385FE</color>
+    <color name="bp_link_copy_txt_hint_color">@color/common_txt_time</color>
+    <color name="bp_goods_inventory_txt_color">#9FA5B5</color>
+    <color name="bp_goods_jump_time_txt_color">#464E64</color>
+    <color name="bp_goods_jump_time_high_color">@color/delete_color</color>
+
+    <!--    监控-->
+    <color name="monitor_channel_title_txt_color">#484A4E</color>
+    <color name="monitor_sub_header_txt_color">#B1B8C8</color>
+    <color name="monitor_empty_hint_txt_color">#2E3236</color>
+    <!--    弹窗-->
+    <color name="pop_desc_txt_color">#373D4D</color>
+
+    <color name="time_clock_title_bg">#4488B9</color>
+
+    <color name="home_index_bottom_bg">@color/white</color>
+    <color name="home_index_tab_text_sel">@color/comment_input_txt_color</color>
+    <color name="home_index_tab_text_unsel">#B5BAC9</color>
+    <color name="topic_icon_color">@color/color_text_black2</color>
+    <color name="deal_label_bg">#E4F2EA</color>
+    <color name="profile_card_start">#443A35</color>
+    <color name="profile_card_end">#2A221D</color>
+    <color name="link_bubble_bg">@color/white</color>
+    <color name="talk_detail_bg">@color/color_text_black1</color>
+    <color name="talk_detail_top_bg">#4D25262A</color>
+    <color name="pop_top_start_1">@color/dialog_left_red</color>
+    <color name="pop_top_start_2">@color/white</color>
+    <color name="pop_top_end_1">@color/dialog_right_blue</color>
+    <color name="pop_top_end_2">@color/color_white_a0</color>
+    <color name="fashion_list_bg">@color/color_text_black2</color>
+    <color name="fashion_list_top_bg">#CC3D3E45</color>
+
+    <color name="series_details_btn_bg">@color/black</color>
+    <color name="series_details_card_start_bg">@color/sec_comment_bg_color</color>
+    <color name="series_details_card_end_bg">@color/color_text_absolutely_white</color>
+    <color name="series_details_user_own_bg">@color/color_text_deep_gray</color>
+
+    <color name="series_details_type_bg">#F9F9FA</color>
+    <color name="series_details_star_input_bg">@color/common_select_gray</color>
+    <color name="color_blue_no_change">@color/color_blue</color>
+    <color name="color_btn_gray_no_change_bg">@color/color_sec_bg</color>
+
+    <color name="bp_bg_clock_tab_selected">@color/white</color>
+    <color name="bp_bg_clock_tab_un_selected">@color/color_gray</color>
+    <color name="bp_text_tab_selected">@color/color_text_black1</color>
+
+    <color name="tidy_tab_bar_selected">@color/color_gray</color>
+    <color name="tidy_text_tab_unselected">@color/color_text_black3</color>
+    <color name="tidy_text_tab_selected">@color/color_text_black1</color>
+
+    <color name="bp_text_tab_unselected">@color/color_text_black3</color>
+    <color name="monitor_color_bg_button">@color/color_black_a10</color>
+    <color name="profile_color_btn">@color/color_text_black1</color>
+    <color name="tidy_tab_bar_bg">#E9EBF2</color>
+    <color name="tide_hot_txt_color">@color/color_gray</color>
+    <color name="tide_rv_scroll_animator_color">@color/animatorColor</color>
+    <color name="sneaker_detail_top_icon_bg_color">#33000000</color>
+    <color name="monitor_detail_top_btn_bg">@color/color_black_a10</color>
+    <color name="common_check_box_uncheck">#FFF1F1F4</color>
+    <color name="common_check_box_checked">#438FFF</color>
+    <color name="monitor_bg_button_green">#FFEFF7FF</color>
+    <color name="monitor_border_shield">#FFEAECEF</color>
+    <color name="box_buy_dialog_txt">#25262A</color>
+    <color name="unselect_rank_color">#E3E9EE</color>
+    <color name="check_price_logo">#000000</color>
+    <color name="topic_detail_btn_bg">#25262A</color>
+    <color name="topic_detail_unable_btn_bg">#C0C2CE</color>
+    <color name="mine_color_verify">#6A7181</color>
+
+    <color name="lottery_note_choose">#F26363</color>
+    <color name="lottery_note_un_choose">#B4B4B4</color>
+</resources>

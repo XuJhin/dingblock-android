@@ -1,0 +1,8 @@
+<resources>
+    <string name="title_dialog_privacy">隐私声明</string>
+    <string name="title_privacy_disagree">不同意</string>
+    <string name="title_privacy_agree">同意</string>
+    <string name="time_clock">悬浮时钟</string>
+    <string name="region_raffle">关注地区</string>
+    <string name="sneakers_calendar">球鞋日历</string>
+</resources>

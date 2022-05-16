@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:background="#B3000000">
+
+
+    <FrameLayout
+        android:id="@+id/mine_header_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/mine_header_iv"
+            android:layout_width="match_parent"
+            android:layout_height="375dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_avatar"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/mine_header_user_info_nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="28dp"
+        android:includeFontPadding="false"
+        android:textColor="@color/color_text_absolutely_white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="盯友h2b2v" />
+
+
+    <LinearLayout
+        android:id="@+id/layout_medal_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_content_distance"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingEnd="8dp"
+        app:layout_constraintStart_toStartOf="@id/mine_header_user_info_nickname"
+        app:layout_constraintTop_toBottomOf="@id/mine_header_user_info_nickname">
+
+        <FrameLayout
+            android:id="@+id/layout_medal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:clipChildren="false"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/shape_user_verified">
+
+                <TextView
+                    android:id="@+id/tv_medal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginEnd="7dp"
+                    android:includeFontPadding="false"
+                    android:text="查看勋章"
+                    android:textColor="@color/color_text_white_a80"
+                    android:textSize="@dimen/text_size1" />
+            </FrameLayout>
+
+            <View
+                android:id="@+id/mine_medal_hint_v"
+                android:layout_width="7dp"
+                android:layout_height="7dp"
+                android:layout_gravity="end"
+                android:background="@drawable/mine_medal_hint_bg"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:background="#FB2532" />
+
+            <ImageView
+                android:id="@+id/iv_medal"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/mine_medal" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layout_badge_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_content_distance"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toEndOf="@+id/layout_medal_container"
+        app:layout_constraintTop_toBottomOf="@id/mine_header_user_info_nickname">
+
+        <FrameLayout
+            android:id="@+id/layout_badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:clipChildren="false"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="3dp"
+                android:background="@drawable/shape_user_verified">
+
+                <TextView
+                    android:id="@+id/tv_badge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginEnd="7dp"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/color_text_white_a80"
+                    android:textSize="@dimen/text_size1"
+                    tools:text="宇宙无敌霹雳弹" />
+            </FrameLayout>
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/user_header_renzheng" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_user_desc"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="64dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@color/color_text_white_a60"
+        android:textSize="12sp"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="@id/mine_header_bg"
+        app:layout_constraintTop_toBottomOf="@+id/layout_medal_container"
+        tools:text="这颗韭菜很懒什么都没这颗韭菜很懒什么都没这颗韭菜很懒什么都没这颗韭菜很懒什么都没" />
+
+    <cool.dingstock.imagepicker.views.AvatarView
+        android:id="@+id/mine_head_user_info_iv"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="15dp"
+        app:ava_src="@drawable/default_avatar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/mine_header_user_info_nickname" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="@+id/mine_header_bg"
+        app:layout_constraintStart_toStartOf="@id/mine_header_bg"
+        app:layout_constraintTop_toBottomOf="@id/layout_badge_container">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_fans_followed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:gravity="bottom"
+            android:paddingBottom="15dp">
+
+            <TextView
+                android:id="@+id/tv_other_user_desc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginBottom="5dp"
+                android:ellipsize="end"
+                android:gravity="bottom"
+                android:maxLines="4"
+                android:textColor="@color/color_text_white_a60"
+                android:textSize="12sp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/layout_focus"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/layout_focus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="15dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/layout_followed"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <cool.dingstock.lib_base.widget.tv.font.PoppinsBoldTv
+                    android:id="@+id/tv_fans_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="2dp"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="0"
+                    android:textColor="@color/color_text_absolutely_white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="1dp"
+                    android:layout_toStartOf="@id/tv_fans_count"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="关注"
+                    android:textColor="@color/color_text_white_a60"
+                    android:textSize="@dimen/text_size3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_followed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="38dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/layout_think_good"
+                app:layout_constraintStart_toEndOf="@+id/layout_focus">
+
+                <cool.dingstock.lib_base.widget.tv.font.PoppinsBoldTv
+                    android:id="@+id/tv_followed_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="2dp"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="0"
+                    android:textColor="@color/color_text_absolutely_white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/title_stared"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="1dp"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="粉丝"
+                    android:textColor="@color/color_text_white_a60"
+                    android:textSize="@dimen/text_size3" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_think_good"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="38dp"
+                android:layout_marginEnd="12dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/layout_followed">
+
+                <cool.dingstock.lib_base.widget.tv.font.PoppinsBoldTv
+                    android:id="@+id/tv_click_good_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="2dp"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="0"
+                    android:textColor="@color/color_text_absolutely_white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/title_good"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="1dp"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="获赞"
+                    android:textColor="@color/color_text_white_a60"
+                    android:textSize="@dimen/text_size3" />
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/iv_vip_bub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="7dp"
+                android:src="@drawable/vip_bub"
+                app:layout_constraintBottom_toTopOf="@+id/score_layer"
+                app:layout_constraintEnd_toEndOf="@+id/score_layer"
+                app:layout_constraintStart_toStartOf="@+id/score_layer" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/score_layer"
+                android:layout_width="wrap_content"
+                android:layout_height="26dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="13dp"
+                android:layout_marginBottom="6dp"
+                android:background="@drawable/mine_score_bg"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:paddingStart="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <cool.dingstock.lib_base.widget.tv.font.PoppinsBoldTv
+                    android:id="@+id/tv_score_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="2dp"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/color_text_absolutely_white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/score_tv"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="90" />
+
+                <TextView
+                    android:id="@+id/score_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="积分待领取"
+                    android:textColor="@color/color_text_white_a80"
+                    android:textSize="@dimen/text_size3"
+                    app:layout_constraintEnd_toStartOf="@+id/mine_score_show_more_iv" />
+
+                <ImageView
+                    android:id="@+id/mine_score_show_more_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/icon_show_more"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/mine_score_hint_v"
+                    android:layout_width="7dp"
+                    android:layout_height="7dp"
+                    android:layout_marginEnd="-2dp"
+                    android:background="@drawable/mine_score_hint_bg"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="5dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ll_vip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/profile_vip_border"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/vip_hint_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_mine_vip_hint"
+                    android:nestedScrollingEnabled="false"
+                    android:paddingBottom="10dp"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/mine_vip_layer"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"
+                    android:layout_gravity="center_vertical"
+                    android:paddingStart="18dp"
+                    android:paddingTop="3dp"
+                    android:paddingEnd="18dp"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/vip_hint_rv">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iv_vip_flag"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/vip_bg_tag"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/mine_head_user_info_vip_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="2dp"
+                        android:includeFontPadding="false"
+                        android:text="开通会员享更多专属特权"
+                        android:textColor="#FDEFD3"
+                        android:textSize="@dimen/text_size5"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/iv_vip_flag"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_next1"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/mine_head_user_info_vip_txt"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/mine_vip_info_action_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/mine_vip_info_action_btn_bg_v1"
+                        android:gravity="center"
+                        android:paddingStart="15dp"
+                        android:paddingTop="5dp"
+                        android:paddingEnd="15dp"
+                        android:paddingBottom="5dp"
+                        android:text="立即开通"
+                        android:textColor="#382418"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

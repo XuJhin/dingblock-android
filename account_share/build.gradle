@@ -1,0 +1,56 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-parcelize'
+    id 'kotlin-kapt'
+    id 'com.mob.sdk'
+}
+apply from: '../dc_config.gradle'
+apply from: '../version_config.gradle'
+apply from: '../MobSDK.gradle'
+
+def ext = rootProject.ext
+android {
+    compileSdkVersion ext.compileSdkVersion
+
+    buildFeatures {
+        viewBinding true
+    }
+    defaultConfig {
+        versionCode ext.versionCode
+        versionName ext.versionName
+        minSdkVersion ext.minSdkVersion
+        targetSdkVersion ext.targetSdkVersion
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled = true
+    }
+
+    buildTypes {
+        release {
+            buildConfigField("boolean", "isPart", "" + isPart)
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            buildConfigField("boolean", "isPart", "" + isPart)
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_11
+        sourceCompatibility JavaVersion.VERSION_11
+    }
+
+    kotlinOptions {
+        jvmTarget = "11"
+    }
+}
+
+dependencies {
+    implementation project(':appbase')
+    kapt "com.google.dagger:dagger-compiler:$rootProject.ext.dagger2"
+    kapt "io.github.meituan-dianping:compiler:$rootProject.ext.wm_router"
+
+}

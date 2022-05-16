@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="10dp" />
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieAniView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/refreshStateTv"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/refresh_success_bg"
+        android:gravity="center"
+        android:text="刷新成功"
+        android:textColor="@color/color_text_black2"
+        android:visibility="gone" />
+
+
+</FrameLayout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="94dp"
+    android:layout_height="110dp"
+    android:layout_marginStart="12dp"
+    android:background="@drawable/monitor_shape_white_6dp">
+
+    <ImageView
+        android:id="@+id/iv_monitor_header_region_cover"
+        android:layout_width="86dp"
+        android:layout_height="61dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/placeholder"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_monitor_header_region_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="start"
+        android:includeFontPadding="false"
+        android:maxLines="2"
+        android:textColor="@color/color_text_black2"
+        android:textSize="@dimen/text_size6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="成都" />
+
+    <cool.dingstock.lib_base.widget.tv.font.PoppinsBoldTv
+        android:id="@+id/tv_monitor_header_region_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="6dp"
+        android:includeFontPadding="false"
+        android:textColor="@color/color_text_black2"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_monitor_header_region_name"
+        tools:text="3" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/content_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:constraint_referenced_ids="iv_monitor_header_region_cover,tv_monitor_header_region_count,tv_monitor_header_region_name" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/add_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/monitor_svg_add"
+        android:tint="@color/color_text_black1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/add_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:includeFontPadding="false"
+        android:text="@string/monitor_add_region"
+        android:textColor="@color/color_text_black2"
+        android:textSize="@dimen/text_size3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/add_iv" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/add_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="add_tv,add_iv" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

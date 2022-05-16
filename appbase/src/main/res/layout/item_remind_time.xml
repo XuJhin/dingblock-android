@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="4.5dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginEnd="4.5dp"
+    android:background="@drawable/monitor_remind_state_bg">
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textColor="@color/monitor_selector_remind_time"
+        android:textSize="@dimen/text_size5"
+        tools:text="开始前1分钟" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv"
+        android:layout_width="11dp"
+        android:layout_height="9dp"
+        android:src="@drawable/monitor_remind_flag"
+        app:layout_constraintEnd_toEndOf="@id/tv"
+        app:layout_constraintTop_toTopOf="@id/tv" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

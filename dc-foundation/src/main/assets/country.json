@@ -1,0 +1,902 @@
+[
+  {
+    "name": "阿富汗",
+    "code": "93",
+    "spell": "afuhan"
+  },
+  {
+    "name": "阿尔巴尼亚",
+    "code": "355",
+    "spell": "aerbaniya"
+  },
+  {
+    "name": "阿尔及利亚",
+    "code": "213",
+    "spell": "aerjiliya"
+  },
+  {
+    "name": "安哥拉",
+    "code": "244",
+    "spell": "angela"
+  },
+  {
+    "name": "阿根廷",
+    "code": "54",
+    "spell": "agenting"
+  },
+  {
+    "name": "亚美尼亚",
+    "code": "374",
+    "spell": "yameiniya"
+  },
+  {
+    "name": "澳大利亚",
+    "code": "61",
+    "spell": "aodaliya"
+  },
+  {
+    "name": "奥地利",
+    "code": "43",
+    "spell": "aodili"
+  },
+  {
+    "name": "阿塞拜疆",
+    "code": "994",
+    "spell": "asaibaijiang"
+  },
+  {
+    "name": "巴林",
+    "code": "973",
+    "spell": "balin"
+  },
+  {
+    "name": "孟加拉国",
+    "code": "880",
+    "spell": "mengjialaguo"
+  },
+  {
+    "name": "白俄罗斯",
+    "code": "375",
+    "spell": "baieluosi"
+  },
+  {
+    "name": "比利时",
+    "code": "32",
+    "spell": "bilishi"
+  },
+  {
+    "name": "伯利兹",
+    "code": "501",
+    "spell": "bolizi"
+  },
+  {
+    "name": "贝宁",
+    "code": "229",
+    "spell": "beining"
+  },
+  {
+    "name": "不丹",
+    "code": "975",
+    "spell": "budan"
+  },
+  {
+    "name": "玻利维亚",
+    "code": "591",
+    "spell": "boliweiya"
+  },
+  {
+    "name": "波斯尼亚和黑塞哥维那",
+    "code": "387",
+    "spell": "bosiniyaheheisaigeweinei"
+  },
+  {
+    "name": "博茨瓦纳",
+    "code": "267",
+    "spell": "bociwana"
+  },
+  {
+    "name": "巴西",
+    "code": "55",
+    "spell": "baxi"
+  },
+  {
+    "name": "英属维京群岛",
+    "code": "1284",
+    "spell": "yingshuweijingqundao"
+  },
+  {
+    "name": "文莱",
+    "code": "673",
+    "spell": "wenlai"
+  },
+  {
+    "name": "保加利亚",
+    "code": "359",
+    "spell": "baojialiya"
+  },
+  {
+    "name": "布基纳法索",
+    "code": "226",
+    "spell": "bujinafasuo"
+  },
+  {
+    "name": "布隆迪",
+    "code": "257",
+    "spell": "bulongdi"
+  },
+  {
+    "name": "柬埔寨",
+    "code": "855",
+    "spell": "jianpuzhai"
+  },
+  {
+    "name": "喀麦隆",
+    "code": "237",
+    "spell": "kamailong"
+  },
+  {
+    "name": "加拿大",
+    "code": "1",
+    "spell": "jianada"
+  },
+  {
+    "name": "佛得角",
+    "code": "238",
+    "spell": "fodejiao"
+  },
+  {
+    "name": "开曼群岛",
+    "code": "1345",
+    "spell": "kaimanqundao"
+  },
+  {
+    "name": "中非共和国",
+    "code": "236",
+    "spell": "zhongfeigongheguo"
+  },
+  {
+    "name": "乍得",
+    "code": "235",
+    "spell": "zhade"
+  },
+  {
+    "name": "智利",
+    "code": "56",
+    "spell": "zhili"
+  },
+  {
+    "name": "中国",
+    "code": "86",
+    "spell": "zhongguo"
+  },
+  {
+    "name": "哥伦比亚",
+    "code": "57",
+    "spell": "gelunbiya"
+  },
+  {
+    "name": "科摩罗",
+    "code": "269",
+    "spell": "kemoluo"
+  },
+  {
+    "name": "刚果(布)",
+    "code": "242",
+    "spell": "gangguo(bu)"
+  },
+  {
+    "name": "刚果(金)",
+    "code": "243",
+    "spell": "gangguo(jin)"
+  },
+  {
+    "name": "哥斯达黎加",
+    "code": "506",
+    "spell": "gesidalijia"
+  },
+  {
+    "name": "克罗地亚",
+    "code": "385",
+    "spell": "keluodiya"
+  },
+  {
+    "name": "塞浦路斯",
+    "code": "357",
+    "spell": "saipulusi"
+  },
+  {
+    "name": "捷克共和国",
+    "code": "420",
+    "spell": "jiekegongheguo"
+  },
+  {
+    "name": "丹麦",
+    "code": "45",
+    "spell": "danmai"
+  },
+  {
+    "name": "吉布提",
+    "code": "253",
+    "spell": "jibuti"
+  },
+  {
+    "name": "多米尼加共和国",
+    "code": "1809",
+    "spell": "duominijiagongheguo"
+  },
+  {
+    "name": "厄瓜多尔",
+    "code": "593",
+    "spell": "eguaduoer"
+  },
+  {
+    "name": "埃及",
+    "code": "20",
+    "spell": "aiji"
+  },
+  {
+    "name": "萨尔瓦多",
+    "code": "503",
+    "spell": "saerwaduo"
+  },
+  {
+    "name": "赤道几内亚",
+    "code": "240",
+    "spell": "chidaojineiya"
+  },
+  {
+    "name": "厄立特里亚",
+    "code": "291",
+    "spell": "eliteliya"
+  },
+  {
+    "name": "爱沙尼亚",
+    "code": "372",
+    "spell": "aishaniya"
+  },
+  {
+    "name": "埃塞俄比亚",
+    "code": "251",
+    "spell": "aisaiebiya"
+  },
+  {
+    "name": "斐济",
+    "code": "679",
+    "spell": "feiji"
+  },
+  {
+    "name": "芬兰",
+    "code": "358",
+    "spell": "fenlan"
+  },
+  {
+    "name": "法国",
+    "code": "33",
+    "spell": "faguo"
+  },
+  {
+    "name": "加蓬",
+    "code": "241",
+    "spell": "jiapeng"
+  },
+  {
+    "name": "冈比亚",
+    "code": "220",
+    "spell": "gangbiya"
+  },
+  {
+    "name": "格鲁吉亚",
+    "code": "995",
+    "spell": "gelujiya"
+  },
+  {
+    "name": "德国",
+    "code": "49",
+    "spell": "deguo"
+  },
+  {
+    "name": "加纳",
+    "code": "233",
+    "spell": "jiana"
+  },
+  {
+    "name": "希腊",
+    "code": "30",
+    "spell": "xila"
+  },
+  {
+    "name": "格陵兰",
+    "code": "299",
+    "spell": "gelinglan"
+  },
+  {
+    "name": "危地马拉",
+    "code": "502",
+    "spell": "weidimala"
+  },
+  {
+    "name": "几内亚",
+    "code": "224",
+    "spell": "jineiya"
+  },
+  {
+    "name": "圭亚那",
+    "code": "592",
+    "spell": "guiyanei"
+  },
+  {
+    "name": "海地",
+    "code": "509",
+    "spell": "haidi"
+  },
+  {
+    "name": "洪都拉斯",
+    "code": "504",
+    "spell": "hongdoulasi"
+  },
+  {
+    "name": "中国香港特别行政区",
+    "code": "852",
+    "spell": "zhongguoxianggangtebiexingzhengqu"
+  },
+  {
+    "name": "匈牙利",
+    "code": "36",
+    "spell": "xiongyali"
+  },
+  {
+    "name": "冰岛",
+    "code": "354",
+    "spell": "bingdao"
+  },
+  {
+    "name": "印度",
+    "code": "91",
+    "spell": "yindu"
+  },
+  {
+    "name": "印度尼西亚",
+    "code": "62",
+    "spell": "yindunixiya"
+  },
+  {
+    "name": "伊朗",
+    "code": "98",
+    "spell": "yilang"
+  },
+  {
+    "name": "伊拉克",
+    "code": "964",
+    "spell": "yilake"
+  },
+  {
+    "name": "爱尔兰",
+    "code": "353",
+    "spell": "aierlan"
+  },
+  {
+    "name": "马恩岛",
+    "code": "44",
+    "spell": "maendao"
+  },
+  {
+    "name": "以色列",
+    "code": "972",
+    "spell": "yiselie"
+  },
+  {
+    "name": "意大利",
+    "code": "39",
+    "spell": "yidali"
+  },
+  {
+    "name": "科特迪瓦",
+    "code": "225",
+    "spell": "ketediwa"
+  },
+  {
+    "name": "牙买加",
+    "code": "1876",
+    "spell": "yamaijia"
+  },
+  {
+    "name": "日本",
+    "code": "81",
+    "spell": "riben"
+  },
+  {
+    "name": "约旦",
+    "code": "962",
+    "spell": "yuedan"
+  },
+  {
+    "name": "哈萨克斯坦",
+    "code": "7",
+    "spell": "hasakesitan"
+  },
+  {
+    "name": "肯尼亚",
+    "code": "254",
+    "spell": "kenniya"
+  },
+  {
+    "name": "韩国",
+    "code": "82",
+    "spell": "hanguo"
+  },
+  {
+    "name": "科威特",
+    "code": "965",
+    "spell": "keweite"
+  },
+  {
+    "name": "吉尔吉斯斯坦",
+    "code": "996",
+    "spell": "jierjisisitan"
+  },
+  {
+    "name": "老挝",
+    "code": "856",
+    "spell": "laowo"
+  },
+  {
+    "name": "拉脱维亚",
+    "code": "371",
+    "spell": "latuoweiya"
+  },
+  {
+    "name": "黎巴嫩",
+    "code": "961",
+    "spell": "libanen"
+  },
+  {
+    "name": "莱索托",
+    "code": "266",
+    "spell": "laisuotuo"
+  },
+  {
+    "name": "利比里亚",
+    "code": "231",
+    "spell": "libiliya"
+  },
+  {
+    "name": "利比亚",
+    "code": "218",
+    "spell": "libiya"
+  },
+  {
+    "name": "立陶宛",
+    "code": "370",
+    "spell": "litaowan"
+  },
+  {
+    "name": "卢森堡",
+    "code": "352",
+    "spell": "lusenbao"
+  },
+  {
+    "name": "中国澳门特别行政区",
+    "code": "853",
+    "spell": "zhongguoaomentebiexingzhengqu"
+  },
+  {
+    "name": "马其顿",
+    "code": "389",
+    "spell": "maqidun"
+  },
+  {
+    "name": "马达加斯加",
+    "code": "261",
+    "spell": "madajiasijia"
+  },
+  {
+    "name": "马拉维",
+    "code": "265",
+    "spell": "malawei"
+  },
+  {
+    "name": "马来西亚",
+    "code": "60",
+    "spell": "malaixiya"
+  },
+  {
+    "name": "马尔代夫",
+    "code": "960",
+    "spell": "maerdaifu"
+  },
+  {
+    "name": "马里",
+    "code": "223",
+    "spell": "mali"
+  },
+  {
+    "name": "马耳他",
+    "code": "356",
+    "spell": "maerta"
+  },
+  {
+    "name": "毛利塔尼亚",
+    "code": "222",
+    "spell": "maolitaniya"
+  },
+  {
+    "name": "毛里求斯",
+    "code": "230",
+    "spell": "maoliqiusi"
+  },
+  {
+    "name": "墨西哥",
+    "code": "52",
+    "spell": "moxige"
+  },
+  {
+    "name": "摩尔多瓦",
+    "code": "373",
+    "spell": "moerduowa"
+  },
+  {
+    "name": "摩纳哥",
+    "code": "377",
+    "spell": "monage"
+  },
+  {
+    "name": "蒙古",
+    "code": "976",
+    "spell": "menggu"
+  },
+  {
+    "name": "黑山共和国",
+    "code": "382",
+    "spell": "heishangongheguo"
+  },
+  {
+    "name": "摩洛哥",
+    "code": "212",
+    "spell": "moluoge"
+  },
+  {
+    "name": "莫桑比克",
+    "code": "258",
+    "spell": "mosangbike"
+  },
+  {
+    "name": "缅甸",
+    "code": "95",
+    "spell": "miandian"
+  },
+  {
+    "name": "纳米比亚",
+    "code": "264",
+    "spell": "namibiya"
+  },
+  {
+    "name": "尼泊尔",
+    "code": "977",
+    "spell": "niboer"
+  },
+  {
+    "name": "荷兰",
+    "code": "31",
+    "spell": "helan"
+  },
+  {
+    "name": "新西兰",
+    "code": "64",
+    "spell": "xinxilan"
+  },
+  {
+    "name": "尼加拉瓜",
+    "code": "505",
+    "spell": "nijialagua"
+  },
+  {
+    "name": "尼日尔",
+    "code": "227",
+    "spell": "nirier"
+  },
+  {
+    "name": "尼日利亚",
+    "code": "234",
+    "spell": "niriliya"
+  },
+  {
+    "name": "朝鲜",
+    "code": "850",
+    "spell": "chaoxian"
+  },
+  {
+    "name": "挪威",
+    "code": "47",
+    "spell": "nuowei"
+  },
+  {
+    "name": "阿曼",
+    "code": "968",
+    "spell": "aman"
+  },
+  {
+    "name": "巴基斯坦",
+    "code": "92",
+    "spell": "bajisitan"
+  },
+  {
+    "name": "巴拿马",
+    "code": "507",
+    "spell": "banama"
+  },
+  {
+    "name": "巴拉圭",
+    "code": "595",
+    "spell": "balagui"
+  },
+  {
+    "name": "秘鲁",
+    "code": "51",
+    "spell": "milu"
+  },
+  {
+    "name": "菲律宾",
+    "code": "63",
+    "spell": "feilvbin"
+  },
+  {
+    "name": "波兰",
+    "code": "48",
+    "spell": "bolan"
+  },
+  {
+    "name": "葡萄牙",
+    "code": "351",
+    "spell": "putaoya"
+  },
+  {
+    "name": "波多黎各",
+    "code": "1787",
+    "spell": "boduolige"
+  },
+  {
+    "name": "卡塔尔",
+    "code": "974",
+    "spell": "kataer"
+  },
+  {
+    "name": "留尼旺",
+    "code": "262",
+    "spell": "liuniwang"
+  },
+  {
+    "name": "罗马尼亚",
+    "code": "40",
+    "spell": "luomaniya"
+  },
+  {
+    "name": "俄罗斯",
+    "code": "7",
+    "spell": "eluosi"
+  },
+  {
+    "name": "卢旺达",
+    "code": "250",
+    "spell": "luwangda"
+  },
+  {
+    "name": "圣马力诺",
+    "code": "378",
+    "spell": "shengmalinuo"
+  },
+  {
+    "name": "沙特阿拉伯",
+    "code": "966",
+    "spell": "shatealabo"
+  },
+  {
+    "name": "塞内加尔",
+    "code": "221",
+    "spell": "saineijiaer"
+  },
+  {
+    "name": "塞尔维亚",
+    "code": "381",
+    "spell": "saierweiya"
+  },
+  {
+    "name": "塞拉利昂",
+    "code": "232",
+    "spell": "sailaliang"
+  },
+  {
+    "name": "新加坡",
+    "code": "65",
+    "spell": "xinjiapo"
+  },
+  {
+    "name": "斯洛伐克",
+    "code": "421",
+    "spell": "siluofake"
+  },
+  {
+    "name": "斯洛文尼亚",
+    "code": "386",
+    "spell": "siluowenniya"
+  },
+  {
+    "name": "索马里",
+    "code": "252",
+    "spell": "suomali"
+  },
+  {
+    "name": "南非",
+    "code": "27",
+    "spell": "nanfei"
+  },
+  {
+    "name": "西班牙",
+    "code": "34",
+    "spell": "xibanya"
+  },
+  {
+    "name": "斯里兰卡",
+    "code": "94",
+    "spell": "sililanka"
+  },
+  {
+    "name": "苏丹",
+    "code": "249",
+    "spell": "sudan"
+  },
+  {
+    "name": "苏里南",
+    "code": "597",
+    "spell": "sulinan"
+  },
+  {
+    "name": "斯威士兰",
+    "code": "268",
+    "spell": "siweishilan"
+  },
+  {
+    "name": "瑞典",
+    "code": "46",
+    "spell": "ruidian"
+  },
+  {
+    "name": "瑞士",
+    "code": "41",
+    "spell": "ruishi"
+  },
+  {
+    "name": "叙利亚",
+    "code": "963",
+    "spell": "xuliya"
+  },
+  {
+    "name": "中国台湾",
+    "code": "886",
+    "spell": "zhongguotaiwan"
+  },
+  {
+    "name": "塔吉克斯坦",
+    "code": "992",
+    "spell": "tajikesitan"
+  },
+  {
+    "name": "坦桑尼亚",
+    "code": "255",
+    "spell": "tansangniya"
+  },
+  {
+    "name": "泰国",
+    "code": "66",
+    "spell": "taiguo"
+  },
+  {
+    "name": "多哥",
+    "code": "228",
+    "spell": "duoge"
+  },
+  {
+    "name": "汤加",
+    "code": "676",
+    "spell": "tangjia"
+  },
+  {
+    "name": "特立尼达和多巴哥",
+    "code": "1868",
+    "spell": "telinidaheduobage"
+  },
+  {
+    "name": "突尼斯",
+    "code": "216",
+    "spell": "tunisi"
+  },
+  {
+    "name": "土耳其",
+    "code": "90",
+    "spell": "tuerqi"
+  },
+  {
+    "name": "土库曼斯坦",
+    "code": "993",
+    "spell": "tukumansitan"
+  },
+  {
+    "name": "美属维尔京群岛",
+    "code": "1340",
+    "spell": "meishuweierjingqundao"
+  },
+  {
+    "name": "乌干达",
+    "code": "256",
+    "spell": "wuganda"
+  },
+  {
+    "name": "乌克兰",
+    "code": "380",
+    "spell": "wukelan"
+  },
+  {
+    "name": "阿拉伯联合酋长国",
+    "code": "971",
+    "spell": "alabolianheqiuzhangguo"
+  },
+  {
+    "name": "美国",
+    "code": "1",
+    "spell": "meiguo"
+  },
+  {
+    "name": "英国",
+    "code": "44",
+    "spell": "yingguo"
+  },
+  {
+    "name": "乌拉圭",
+    "code": "598",
+    "spell": "wulagui"
+  },
+  {
+    "name": "乌兹别克斯坦",
+    "code": "998",
+    "spell": "wuzibiekesitan"
+  },
+  {
+    "name": "梵蒂冈城",
+    "code": "379",
+    "spell": "fandigangcheng"
+  },
+  {
+    "name": "委内瑞拉",
+    "code": "58",
+    "spell": "weineiruila"
+  },
+  {
+    "name": "越南",
+    "code": "84",
+    "spell": "yuenan"
+  },
+  {
+    "name": "也门",
+    "code": "967",
+    "spell": "yemen"
+  },
+  {
+    "name": "南斯拉夫",
+    "code": "381",
+    "spell": "nansilafu"
+  },
+  {
+    "name": "扎伊尔",
+    "code": "243",
+    "spell": "zhayier"
+  },
+  {
+    "name": "赞比亚",
+    "code": "260",
+    "spell": "zanbiya"
+  },
+  {
+    "name": "津巴布韦",
+    "code": "263",
+    "spell": "jinbabuwei"
+  }
+]

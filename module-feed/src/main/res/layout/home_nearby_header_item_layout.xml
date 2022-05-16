@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/common_item_bg_white_radius_8"
+    android:layout_marginEnd="8dp"
+    android:paddingEnd="12dp"
+    android:layout_height="52dp">
+
+    <ImageView
+        android:id="@+id/location_icon_iv"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginStart="8dp"
+        android:src="@drawable/ic_location_icon"
+        app:layout_constraintBottom_toBottomOf="@id/name_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/name_tv" />
+
+    <TextView
+        android:id="@+id/name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="12dp"
+        android:ellipsize="end"
+        android:maxWidth="132dp"
+        android:maxLines="1"
+        tools:text="adfafa"
+        android:textColor="@color/color_text_black2"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@id/location_icon_iv"
+        app:layout_constraintBottom_toTopOf="@id/count_tv"
+        app:layout_constraintStart_toEndOf="@id/location_icon_iv"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/count_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        tools:text="13条动态"
+        android:textColor="@color/color_text_black4"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/name_tv"
+        app:layout_constraintTop_toBottomOf="@id/name_tv" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_next_small_icon"
+        app:layout_constraintBottom_toBottomOf="@id/count_tv"
+        app:layout_constraintStart_toEndOf="@id/count_tv"
+        app:layout_constraintTop_toTopOf="@id/count_tv"
+        android:tint="@color/color_text_black4" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

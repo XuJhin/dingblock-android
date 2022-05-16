@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/goods_layer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="20dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginEnd="20dp">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/ll_vip_pay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/vip_lin_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/vip_center_choice_fra_selector"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/vip_tag_1_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="16dp"
+                    android:layout_gravity="end"
+                    android:background="@drawable/vip_center_choice_tag_bg"
+                    android:gravity="center"
+                    android:paddingStart="7dp"
+                    android:paddingEnd="7dp"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:visibility="invisible"
+                    tools:text="6.7折" />
+
+                <TextView
+                    android:id="@+id/vip_1_month_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="16dp"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/vip_center_month_color_selector"
+                    android:textSize="@dimen/text_size4"
+                    tools:text="12个月" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="13dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="¥"
+                        android:textColor="@color/vip_center_total_price_color_selector"
+                        android:textSize="@dimen/text_size4" />
+
+                    <TextView
+                        android:id="@+id/vip_1_total_price_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:includeFontPadding="false"
+                        android:textColor="@color/vip_center_total_price_color_selector"
+                        android:textSize="26sp"
+                        android:textStyle="bold"
+                        tools:text="198" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/vip_1_old_price_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="13dp"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/vip_center_average_price_color_selector"
+                    android:textSize="13sp"
+                    tools:text="20.67/月" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/view_day_vip"
+                android:layout_width="83.15dp"
+                android:layout_height="39.03dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="6.5dp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/vip_lin_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="9dp"
+            android:layout_marginEnd="9dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/vip_center_choice_fra_selector"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/vip_tag_2_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="16dp"
+                    android:layout_gravity="end"
+                    android:background="@drawable/vip_center_choice_tag_bg"
+                    android:gravity="center"
+                    android:paddingStart="7dp"
+                    android:paddingEnd="7dp"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:visibility="invisible"
+                    tools:text="6.7折" />
+
+                <TextView
+                    android:id="@+id/vip_2_month_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="16dp"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/vip_center_month_color_selector"
+                    android:textSize="@dimen/text_size4"
+                    tools:text="12个月" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="13dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="¥"
+                        android:textColor="@color/vip_center_total_price_color_selector"
+                        android:textSize="@dimen/text_size4" />
+
+                    <TextView
+                        android:id="@+id/vip_2_total_price_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:includeFontPadding="false"
+                        android:textColor="@color/vip_center_total_price_color_selector"
+                        android:textSize="26sp"
+                        android:textStyle="bold"
+                        tools:text="198" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/vip_2_old_price_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="13dp"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/vip_center_average_price_color_selector"
+                    android:textSize="13sp"
+                    tools:text="20.67/月" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/view_month_vip"
+                android:layout_width="83.15dp"
+                android:layout_height="39.03dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="6.5dp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/vip_lin_3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/vip_center_choice_fra_selector"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/vip_tag_3_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="16dp"
+                    android:layout_gravity="end"
+                    android:background="@drawable/vip_center_choice_tag_bg"
+                    android:gravity="center"
+                    android:paddingStart="7dp"
+                    android:paddingEnd="7dp"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:visibility="invisible"
+                    tools:text="6.7折" />
+
+                <TextView
+                    android:id="@+id/vip_3_month_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="16dp"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/vip_center_month_color_selector"
+                    android:textSize="@dimen/text_size4"
+                    tools:text="12个月" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="13dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="¥"
+                        android:textColor="@color/vip_center_total_price_color_selector"
+                        android:textSize="@dimen/text_size4" />
+
+                    <TextView
+                        android:id="@+id/vip_3_total_price_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:includeFontPadding="false"
+                        android:textColor="@color/vip_center_total_price_color_selector"
+                        android:textSize="26sp"
+                        android:textStyle="bold"
+                        tools:text="198" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/vip_3_old_price_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="13dp"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/vip_center_average_price_color_selector"
+                    android:textSize="13sp"
+                    tools:text="20.67/月" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/view_year_vip"
+                android:layout_width="83.15dp"
+                android:layout_height="39.03dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="6.5dp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_vip_music_hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/ll_vip_pay"
+        tools:visibility="visible">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/vip_music_power_bg"
+            android:padding="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_vip_music_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FBE3C6"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="送12个月音乐会员" />
+
+            <TextView
+                android:id="@+id/tv_vip_music_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:textColor="#757679"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_vip_music_title"
+                tools:text="QQ音乐、网易云音乐会员每月免费送（二选一）" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="66dp"
+                android:layout_marginTop="9dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_vip_music_desc">
+
+                <ImageView
+                    android:id="@+id/iv_first_prize"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@+id/iv_second_prize"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="14dp"
+                    android:layout_weight="1" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/view_arrow_day"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="1.5dp"
+            android:background="@drawable/vip_music_power_arrow_bg"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/view_arrow_month"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="1.5dp"
+            android:background="@drawable/vip_music_power_arrow_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/view_arrow_year"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="1.5dp"
+            android:layout_marginEnd="50dp"
+            android:background="@drawable/vip_music_power_arrow_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

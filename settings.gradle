@@ -1,0 +1,115 @@
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
+    repositories {
+        maven {
+            allowInsecureProtocol = true
+            url 'https://jitpack.io'
+        }
+        maven {
+            allowInsecureProtocol = true
+            url 'https://repo1.maven.org/maven2/'
+        }
+        maven {
+            allowInsecureProtocol = true
+            url 'https://maven.aliyun.com/nexus/content/repositories/releases/'
+        }
+        // 配置HMS Core SDK的Maven仓地址。
+        maven {
+            url 'https://developer.huawei.com/repo/'
+            allowInsecureProtocol = true
+        }
+        maven {
+            url 'https://maven.aliyun.com/repository/public/'
+            allowInsecureProtocol = true
+        }
+        maven {
+            url 'https://maven.aliyun.com/repository/google'
+            allowInsecureProtocol = true
+        }
+        maven {
+            url 'https://maven.aliyun.com/repository/gradle-plugin'
+            allowInsecureProtocol = true
+        }
+        maven {
+            allowInsecureProtocol = true
+            url 'https://maven.aliyun.com/repository/central'
+        }
+
+        maven {
+            allowInsecureProtocol = true
+            url "https://mvn.mob.com/android"
+        }
+        maven {
+            allowInsecureProtocol = true
+            url 'https://artifact.bytedance.com/repository/AwemeOpenSDK'
+        }
+        //融云IM
+        maven {
+            allowInsecureProtocol = true
+            url "https://maven.rongcloud.cn/repository/maven-releases/"
+        }
+        google()
+        mavenLocal()
+        mavenCentral()
+    }
+}
+
+include ':ui_common'
+//module
+include ':account_share',
+        ':dc-foundation',
+        ':appbase',
+        ':debug',
+        ':imagepicker'
+include ':lib-pay'
+//aar包
+include ':repo',
+        ':repo:aar-ali-pay',
+        ':repo:aar-tencent-captcha'
+
+include ":lib-launch"
+include ':module-tide',
+        ':module-feed',
+        ':module-setting',
+        ':module-profile',
+        ':module-home', ':module-calendar'
+include ':app'
+include ':module-market'
+include ':dc-uikit'
+
+
+
+long beginOfSetting = System.currentTimeMillis()
+gradle.projectsLoaded {
+    println '初始化阶段，耗时：' + (System.currentTimeMillis() - beginOfSetting) + 'ms'
+}
+def beginOfConfig
+def configHasBegin = false
+def beginOfProjectConfig = new HashMap()
+gradle.beforeProject { project ->
+    if (!configHasBegin) {
+        configHasBegin = true
+        beginOfConfig = System.currentTimeMillis()
+    }
+    beginOfProjectConfig.put(project, System.currentTimeMillis())
+}
+gradle.afterProject { project ->
+    def begin = beginOfProjectConfig.get(project)
+    println '配置阶段，' + project + '耗时：' + (System.currentTimeMillis() - begin) + 'ms'
+}
+def beginOfProjectExecute
+gradle.taskGraph.whenReady {
+    println '配置阶段，总共耗时：' + (System.currentTimeMillis() - beginOfConfig) + 'ms'
+    beginOfProjectExecute = System.currentTimeMillis()
+}
+gradle.taskGraph.beforeTask { task ->
+    task.doFirst {
+        task.ext.beginOfTask = System.currentTimeMillis()
+    }
+    task.doLast {
+        println '执行阶段，' + task + '耗时：' + (System.currentTimeMillis() - task.beginOfTask) + 'ms'
+    }
+}
+gradle.buildFinished {
+    println '执行阶段，耗时：' + (System.currentTimeMillis() - beginOfProjectExecute) + 'ms'
+}

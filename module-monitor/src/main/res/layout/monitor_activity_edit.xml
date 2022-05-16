@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:titleBar="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_gray"
+    android:fitsSystemWindows="true">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/monitor_activity_edit_layer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/monitor_edit_titleBar">
+
+    </androidx.fragment.app.FragmentContainerView>
+
+    <cool.dingstock.appbase.widget.TitleBar
+        android:id="@+id/monitor_edit_titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_top_height"
+        android:layout_alignParentTop="true"
+        android:background="@color/color_gray"
+        titleBar:leftIconColor="@color/color_text_black1"
+        titleBar:titleText="@string/monitor_activity_channel_subscribe_title"
+        titleBar:titleTextColor="@color/color_text_black1" />
+</RelativeLayout>

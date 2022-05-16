@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="15dp"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/post_deal_new_item_bg">
+
+    <cool.dingstock.imagepicker.views.AvatarView
+        android:id="@+id/avatar_iv"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/user_name_layer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toEndOf="@+id/avatar_iv"
+        app:layout_constraintTop_toTopOf="@id/avatar_iv">
+
+        <TextView
+            android:id="@+id/user_name_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textSize="@dimen/text_size5"
+            tools:text="盯链盯链小能手盯链小能" />
+
+        <ImageView
+            android:id="@+id/iv_medal"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="0.5dp"
+            android:src="@drawable/mine_medal" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/publish_time_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_text_black3"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@id/avatar_iv"
+        app:layout_constraintStart_toStartOf="@id/user_name_layer"
+        tools:text="发布于03-16 13:00" />
+
+    <TextView
+        android:id="@+id/location_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:textColor="@color/color_text_black3"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@id/publish_time_tv"
+        app:layout_constraintStart_toEndOf="@id/publish_time_tv"
+        app:layout_constraintTop_toTopOf="@id/publish_time_tv"
+        tools:text="重庆市" />
+
+    <TextView
+        android:id="@+id/price_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="74dp"
+        android:text="¥1699"
+        android:textColor="@color/color_blue"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/avatar_iv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/avatar_iv" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/contact_iv"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_marginEnd="15dp"
+        android:src="@drawable/post_deal_contact_icon"
+        app:layout_constraintBottom_toBottomOf="@id/avatar_iv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/avatar_iv" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="15dp"
+        android:background="@color/color_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/user_name_layer"
+        app:layout_constraintTop_toBottomOf="@id/avatar_iv" />
+
+    <TextView
+        android:id="@+id/desc_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="8dp"
+        android:layout_marginEnd="15dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/color_text_black1"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/user_name_layer"
+        app:layout_constraintTop_toBottomOf="@id/line"
+        tools:text="我这里买打8折包邮" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

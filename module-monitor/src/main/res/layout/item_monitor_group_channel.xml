@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/monitor_channel_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="16dp">
+
+    <cool.dingstock.imagepicker.views.roundImageView.RoundImageView
+        android:id="@+id/round_iv_channel"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        app:border_color="@color/color_line"
+        app:border_conner="8dp"
+        app:border_width="1px"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:view_type="type_round" />
+
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/rule_effect_tv"
+        app:layout_constraintEnd_toStartOf="@+id/layout_monitor_unsub"
+        app:layout_constraintStart_toEndOf="@+id/round_iv_channel"
+        app:layout_constraintTop_toTopOf="@+id/round_iv_channel">
+
+        <TextView
+            android:id="@+id/recommend_channel_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/color_text_black1"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/round_iv_channel"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="国区 SNKRS 上新" />
+
+        <ImageView
+            android:id="@+id/monitor_channel_state"
+            android:layout_width="27dp"
+            android:layout_height="12dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="15dp"
+            android:src="@drawable/monitor_ic_recommend_hot"
+            app:layout_constraintBottom_toBottomOf="@+id/recommend_channel_title"
+            app:layout_constraintEnd_toStartOf="@+id/recommend_channel_status"
+            app:layout_constraintTop_toTopOf="@+id/recommend_channel_title" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/rule_effect_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:gravity="center_vertical"
+        android:text="已自定义规则"
+        android:textColor="#1DBA5C"
+        android:textSize="9sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/round_iv_channel"
+        app:layout_constraintStart_toStartOf="@+id/content"
+        app:layout_constraintTop_toBottomOf="@+id/content" />
+
+    <TextView
+        android:id="@+id/tv_monitor_channel_desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="15dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@color/color_text_black4"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@+id/layout_monitor_unsub"
+        app:layout_constraintStart_toStartOf="@+id/content"
+        app:layout_constraintTop_toBottomOf="@+id/content"
+        tools:text="国区SNKRS精选补货选补货,国区SNKRS精选补货选补货,S精选补…" />
+
+    <LinearLayout
+        android:id="@+id/layout_monitor_unsub"
+        android:layout_width="72dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/monitor_channel_selector_stock_20"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/round_iv_channel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/round_iv_channel">
+
+        <ImageView
+            android:id="@+id/iv_vip_tag"
+            android:layout_width="13dp"
+            android:layout_height="11dp"
+            android:layout_marginEnd="2dp"
+            android:src="@drawable/icon_monitor_channel_vip"
+            android:visibility="gone" />
+
+        <cool.dingstock.monitor.widget.DrawableCenterTextView
+            android:id="@+id/recommend_channel_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="监控"
+            android:textColor="@color/monitor_channel_selected"
+            android:textSize="@dimen/text_size2" />
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

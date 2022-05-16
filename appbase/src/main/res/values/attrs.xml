@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <attr name="leftIcon" format="string" />
+    <attr name="leftIconColor" format="color" />
+    <attr name="leftIconSize" format="dimension" />
+
+    <attr name="hideLine" format="boolean" />
+    <attr name="lineColor" format="color" />
+    <attr name="textSize" format="dimension" />
+
+    <declare-styleable name="IconTextView">
+        <attr name="android:textStyle" />
+        <attr name="iconColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="SvgTextView">
+        <attr name="android:textStyle" />
+        <attr name="svgColor" format="color" />
+        <attr name="svgColorRes" format="reference" />
+        <attr name="svgRes" format="reference" />
+        <attr name="svgWidth" format="dimension" />
+        <attr name="svgHeight" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="TitleBar">
+        <attr name="android:background" />
+        <attr name="leftIcon" />
+        <attr name="leftIconColor" />
+        <attr name="leftIconSize" />
+        <attr name="hideLine" />
+        <attr name="titleText" format="string" />
+        <attr name="titleTextColor" format="color" />
+        <attr name="titleStyle">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+            <flag name="bold_italic" value="3" />
+        </attr>
+        <attr name="titleTextSize" format="dimension" />
+        <attr name="rightText" format="string" />
+        <attr name="rightTextSize" format="dimension" />
+        <attr name="rightTextColor" format="color" />
+        <attr name="rightTextStyle">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+            <flag name="bold_italic" value="3" />
+        </attr>
+        <attr name="rightTextDisableColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="BottomBar">
+        <attr name="android:background" />
+        <attr name="leftIcon" />
+        <attr name="leftIconColor" />
+        <attr name="leftIconSize" />
+        <attr name="hideLine" />
+        <attr name="background" />
+        <attr name="centerIcon" format="string" />
+        <attr name="centerIconColor" format="color" />
+        <attr name="centerIconSize" format="dimension" />
+        <attr name="rightIcon" format="string" />
+        <attr name="rightIconColor" format="color" />
+        <attr name="rightIconSize" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="MultiEditText">
+        <attr name="android:background" />
+        <attr name="android:hint" />
+        <attr name="hideLine" />
+        <attr name="lineColor" />
+        <attr name="hintColor" format="color" />
+        <attr name="titleColor" format="color" />
+        <attr name="title" format="string" />
+        <attr name="showPasswordIcon" format="boolean" />
+        <attr name="passwordIconColor" format="color" />
+        <attr name="showClearIcon" format="boolean" />
+        <attr name="clearIconColor" format="color" />
+        <attr name="textColor" format="color" />
+        <attr name="textSize" />
+        <attr name="maxLines" format="integer" />
+        <attr name="inputType">
+            <flag name="text" value="0" />
+            <flag name="number" value="1" />
+            <flag name="textPassword" value="2" />
+            <flag name="numberPassword" value="3" />
+            <flag name="numberDecimal" value="4" />
+        </attr>
+    </declare-styleable>
+
+
+    <declare-styleable name="SubsamplingScaleImageView">
+        <attr name="src" format="reference" />
+        <attr name="assetName" format="string" />
+        <attr name="panEnabled" format="boolean" />
+        <attr name="zoomEnabled" format="boolean" />
+        <attr name="quickScaleEnabled" format="boolean" />
+        <attr name="tileBackgroundColor" format="color" />
+    </declare-styleable>
+
+
+    <declare-styleable name="PopLayout" tools:ignore="ResourceName">
+        <attr name="radiusSize" format="dimension" />
+        <attr name="bulgeSize" format="dimension" />
+        <attr name="offsetSize" format="dimension" />
+        <attr name="siteMode" format="enum">
+            <enum name="top" value="0" />
+            <enum name="left" value="1" />
+            <enum name="right" value="2" />
+            <enum name="bottom" value="3" />
+        </attr>
+    </declare-styleable>
+
+
+    <declare-styleable name="SwipeMenuLayout">
+        <attr name="swipeEnable" format="boolean" />
+        <attr name="ios" format="boolean" />
+        <attr name="leftSwipe" format="boolean" />
+    </declare-styleable>
+
+
+    <attr name="position">
+        <enum name="left_top" value="0" />
+        <enum name="left_bottom" value="1" />
+        <enum name="right_top" value="2" />
+        <enum name="right_bottom" value="3" />
+    </attr>
+    <attr name="radius" format="dimension" />
+    <declare-styleable name="ArcMenu">
+        <attr name="position" />
+        <attr name="radius" />
+    </declare-styleable>
+    <declare-styleable name="ConsecutiveScrollerLayout_Layout">
+        <attr name="layout_isConsecutive" format="boolean" />
+        <attr name="layout_isNestedScroll" format="boolean" />
+        <attr name="layout_isSticky" format="boolean" />
+        <attr name="layout_isTriggerScroll" format="boolean" />
+        <attr name="layout_isSink" format="boolean" />
+        <attr name="layout_align" format="enum">
+            <enum name="LEFT" value="1" />
+            <enum name="RIGHT" value="2" />
+            <enum name="CENTER" value="3" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="ConsecutiveScrollerLayout">
+        <attr name="isPermanent" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="NineGridLayout">
+        <attr name="layout_space" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="RatioImageView">
+        <attr name="ratio" format="float" />
+    </declare-styleable>
+
+    <declare-styleable name="SwitchButton" tools:ignore="ResourceName">
+        <attr name="kswThumbDrawable" format="reference" />
+        <attr name="kswThumbColor" format="color|reference" />
+        <attr name="kswThumbMargin" format="dimension|reference" />
+        <attr name="kswThumbMarginTop" format="dimension|reference" />
+        <attr name="kswThumbMarginBottom" format="dimension|reference" />
+        <attr name="kswThumbMarginLeft" format="dimension|reference" />
+        <attr name="kswThumbMarginRight" format="dimension|reference" />
+        <attr name="kswThumbWidth" format="dimension|reference" />
+        <attr name="kswThumbHeight" format="dimension|reference" />
+        <attr name="kswThumbRadius" format="dimension|reference" />
+        <attr name="kswBackRadius" format="dimension|reference" />
+        <attr name="kswBackDrawable" format="reference" />
+        <attr name="kswBackColor" format="color|reference" />
+        <attr name="kswFadeBack" format="boolean" />
+        <attr name="kswThumbRangeRatio" format="float" />
+        <attr name="kswAnimationDuration" format="integer" />
+        <attr name="kswTintColor" format="color|reference" />
+        <attr name="kswTextOn" format="string" />
+        <attr name="kswTextOff" format="string" />
+        <attr name="kswTextThumbInset" format="dimension" />
+        <attr name="kswTextExtra" format="dimension" />
+        <attr name="kswTextAdjust" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="BubbleLayout">
+        <attr name="background_color" format="color" />
+        <attr name="shadow_color" format="color" />
+        <attr name="shadow_size" format="dimension" />
+        <attr name="radius" />
+        <attr name="direction" format="enum">
+            <enum name="left" value="1" />
+            <enum name="top" value="2" />
+            <enum name="right" value="3" />
+            <enum name="bottom" value="4" />
+        </attr>
+        <attr name="offset" format="dimension" />
+    </declare-styleable>
+    <attr name="numberPickerStyle" format="reference" />
+
+    <declare-styleable name="NumberPicker">
+        <!-- @hide Color for the solid color background if such for optimized rendering. -->
+        <attr name="solidColor" format="color|reference" />
+        <!-- @hide The divider for making the selection area. -->
+        <attr name="selectionDivider" format="color|reference" />
+        <!-- @hide The height of the selection divider. -->
+        <attr name="selectionDividerHeight" format="dimension" />
+        <!-- @hide The distance between the two selection dividers. -->
+        <attr name="selectionDividersDistance" format="dimension" />
+        <!-- @hide The min height of the NumberPicker. -->
+        <attr name="internalMinHeight" format="dimension" />
+        <!-- @hide The max height of the NumberPicker. -->
+        <attr name="internalMaxHeight" format="dimension" />
+        <!-- @hide The min width of the NumberPicker. -->
+        <attr name="internalMinWidth" format="dimension" />
+        <!-- @hide The max width of the NumberPicker. -->
+        <attr name="internalMaxWidth" format="dimension" />
+        <!-- @hide The layout of the number picker. -->
+        <attr name="internalLayout" format="reference" />
+        <!-- @hide The drawable for pressed virtual (increment/decrement) buttons. -->
+        <attr name="virtualButtonPressedDrawable" format="color|reference" />
+
+        <attr name="divider" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="DateTimePicker">
+        <attr name="showLabel" format="boolean" />
+        <attr name="themeColor" format="color" />
+        <attr name="textSize" />
+    </declare-styleable>
+
+
+    <!-- 垂直方向的虚线 -->
+    <declare-styleable name="DividerView">
+        <!-- 虚线颜色 -->
+        <attr name="divider_line_color" format="color" />
+        <!-- 虚线宽度 -->
+        <attr name="dashThickness" format="dimension" />
+        <!-- 虚线dash宽度 -->
+        <attr name="dashLength" format="dimension" />
+        <!-- 虚线dash间隔 -->
+        <attr name="dashGap" format="dimension" />
+        <!-- 虚线朝向 -->
+        <attr name="divider_orientation" format="enum">
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+    </declare-styleable>
+
+
+    <declare-styleable name="VoteView">
+        <attr name="vote_item_height" format="dimension" />
+        <attr name="animate_duration" format="float" />
+        <attr name="vote_item_selected_drawable" format="reference" />
+        <attr name="vote_item_unselected_drawable" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="FocusSideBar">
+        <attr name="sidebar_lazy_respond" format="boolean" />
+        <attr name="sidebar_show_center_tips" format="boolean" />
+        <attr name="sidebar_text_size" format="dimension" />
+        <attr name="sidebar_text_color" format="color" />
+        <attr name="sidebar_focus_bg_color" format="color" />
+        <attr name="sidebar_center_tips_bg_color" format="color" />
+        <attr name="sidebar_center_tips_text_color" format="color" />
+        <attr name="sidebar_center_tips_size" format="dimension" />
+        <attr name="sidebar_position" format="enum">
+            <enum name="right" value="0" />
+            <enum name="left" value="1" />
+        </attr>
+        <attr name="sidebar_text_alignment" format="enum">
+            <enum name="center" value="0" />
+            <enum name="left" value="1" />
+            <enum name="right" value="2" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="IndicatorGroup">
+        <attr name="distance" format="dimension" />
+        <attr name="defaultRadius" format="dimension" />
+        <attr name="selectRadius" format="dimension" />
+        <attr name="selectColor" format="color" />
+        <attr name="defaultColor" format="color" />
+    </declare-styleable>
+
+</resources>

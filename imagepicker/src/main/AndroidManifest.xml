@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cool.dingstock.imagepicker">
+    <!-- 读取媒体文件 -->
+    <uses-permission android:name="com.android.providers.media.MediaProvider" /> <!-- 往SDCard写入数据权限,将更新的APK临时存在SD卡里 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- 访问Internet权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:networkSecurityConfig="@xml/network_config"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
+
+        <activity
+            android:name="cool.dingstock.imagepre.view.ImagePreviewActivity"
+            android:exported="true"
+            android:theme="@style/Theme.ImagePreview" />
+        <activity
+            android:name="cool.dingstock.imagepicker.activity.crop.MultiImageCropActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity
+            android:name="cool.dingstock.imagepicker.activity.preview.MultiImagePreviewActivity"
+            android:exported="true"
+            android:multiprocess="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity
+            android:name="cool.dingstock.imagepicker.activity.singlecrop.SingleCropActivity"
+            android:exported="true"
+            android:multiprocess="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity
+            android:name="cool.dingstock.imagepicker.activity.multi.MultiImagePickerActivity"
+            android:exported="true"
+            android:multiprocess="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+
+        <provider
+            android:name="cool.dingstock.imagepicker.utils.PickerFileProvider"
+            android:authorities="${applicationId}.picker.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/picker_file_paths" />
+        </provider>
+    </application>
+
+</manifest>

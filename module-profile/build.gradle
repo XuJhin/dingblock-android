@@ -1,0 +1,71 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-parcelize'
+    id 'kotlin-kapt'
+}
+apply from: '../dc_config.gradle'
+apply from: '../version_config.gradle'
+def ext = rootProject.ext
+android {
+
+    compileSdkVersion ext.compileSdkVersion
+
+
+    buildFeatures {
+        viewBinding true
+    }
+    defaultConfig {
+        if (isPart) {
+            applicationId "net.dingblock.mobile"
+        }
+        versionCode ext.versionCode
+        versionName ext.versionName
+        minSdkVersion ext.minSdkVersion
+        targetSdkVersion ext.targetSdkVersion
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    sourceSets {
+        main {
+            assets {
+                srcDirs 'src/main/release/assets', 'src/main/assets'
+            }
+            if (isPart) {
+                manifest.srcFile 'src/main/debug/AndroidManifest.xml'
+            } else {
+                manifest.srcFile 'src/main/release/AndroidManifest.xml'
+            }
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_11
+        sourceCompatibility JavaVersion.VERSION_11
+    }
+
+    kotlinOptions {
+        jvmTarget = "11"
+    }
+
+}
+
+dependencies {
+    if (isPart) {
+        debugImplementation project(':debug')
+    }
+    implementation project(':appbase')
+    implementation project(':ui_common')
+    implementation project(':module-feed')
+    implementation project(':account_share')
+    implementation project(':module-setting')
+    kapt "com.google.dagger:dagger-compiler:$rootProject.ext.dagger2"
+    kapt "io.github.meituan-dianping:compiler:$rootProject.ext.wm_router"
+
+}

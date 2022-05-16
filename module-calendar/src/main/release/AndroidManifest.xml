@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cool.dingstock.calendar">
+
+    <application android:theme="@style/DcAppTheme">
+        <activity android:name="cool.dingstock.calendar.sms.SmsRegistrationActivity" />
+
+        <activity
+            android:name=".sneaker.sms.edit.SmsPersonEditActivity"
+            android:exported="true" />
+        <activity
+            android:name=".sneaker.heavy.HeavySneakersActivity"
+            android:exported="true" />
+        <activity
+            android:name=".sneaker.product.HomeProductDetailActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/DcAppThemeBlack" />
+        <activity
+            android:name=".sms.HomeSmsEditActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/DcAppThemeBlack"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".ui.raffle.HeavyReleaseActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+
+        <!-- autoSize 适配 start -->
+        <meta-data
+            android:name="design_width_in_dp"
+            android:value="375" />
+        <meta-data
+            android:name="design_height_in_dp"
+            android:value="812" />
+    </application>
+
+</manifest>

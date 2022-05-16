@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/achievement_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="18dp"
+        android:textSize="@dimen/text_size7"
+        android:textColor="@color/color_text_absolutely_white"
+        android:textStyle="bold"/>
+
+    <ImageView
+        android:id="@+id/title_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/achievement_title_tv"
+        app:layout_constraintBottom_toBottomOf="@+id/achievement_title_tv"
+        app:layout_constraintEnd_toStartOf="@+id/achievement_title_tv"
+        android:layout_marginEnd="4dp"
+        android:src="@drawable/ic_medal_title"/>
+
+    <ImageView
+        android:id="@+id/titile_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/achievement_title_tv"
+        app:layout_constraintBottom_toBottomOf="@+id/achievement_title_tv"
+        app:layout_constraintStart_toEndOf="@+id/achievement_title_tv"
+        android:layout_marginStart="4dp"
+        android:scaleX="-1"
+        android:src="@drawable/ic_medal_title"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/medal_rv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/achievement_title_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:nestedScrollingEnabled="false"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

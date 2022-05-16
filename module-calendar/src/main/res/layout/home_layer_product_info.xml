@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="15dp"
+    android:layout_marginEnd="15dp"
+    android:orientation="vertical">
+
+    <cool.dingstock.lib_base.widget.tv.font.PoppinsBoldTv
+        android:id="@+id/home_product_detail_product_name_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:lineSpacingExtra="-4dp"
+        android:lineSpacingMultiplier="1"
+        android:maxLines="2"
+        android:textColor="@color/color_text_black1"
+        android:textSize="@dimen/text_size8"
+        android:textStyle="bold"
+        tools:text="Air Jordan 1 Retro High OG ObsidianObsidianObsidianObObsidianObsidianObsidianObObsidianObsidianObsidianOb" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/product_details_desc_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="15dp"
+        android:paddingEnd="0dp">
+
+        <FrameLayout
+            android:id="@+id/fl_good_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="90">
+
+            <LinearLayout
+                android:id="@+id/home_product_detail_product_sku_layer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="货号"
+                    android:textColor="@color/color_text_white_a70"
+                    android:textSize="@dimen/text_size1" />
+
+                <cool.dingstock.lib_base.widget.tv.font.PoppinsBoldTv
+                    android:id="@+id/home_product_detail_product_sku_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:maxWidth="100dp"
+                    android:singleLine="true"
+                    android:textColor="@color/color_text_absolutely_white"
+                    android:textSize="@dimen/text_size3"
+                    tools:text="PingFang SC" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_sale_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="70">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="发售价"
+                    android:textColor="@color/color_text_white_a70"
+                    android:textSize="@dimen/text_size1" />
+
+                <cool.dingstock.lib_base.widget.tv.font.PoppinsBoldTv
+                    android:id="@+id/home_product_detail_product_price_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:maxWidth="100dp"
+                    android:singleLine="true"
+                    android:textColor="@color/color_text_absolutely_white"
+                    android:textSize="@dimen/text_size3"
+                    android:textStyle="bold"
+                    tools:text="¥24242" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/onekey_search_price_layer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="85">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="市场价"
+                        android:textColor="@color/color_text_white_a70"
+                        android:textSize="@dimen/text_size1" />
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <cool.dingstock.lib_base.widget.tv.font.PoppinsBoldTv
+                        android:id="@+id/market_price_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        android:maxWidth="100dp"
+                        android:singleLine="true"
+                        android:textColor="@color/color_text_absolutely_white"
+                        android:textSize="@dimen/text_size3"
+                        android:textStyle="bold"
+                        app:tint="@color/white"
+                        tools:text="$24,2343" />
+
+                    <ImageView
+                        android:id="@+id/market_price_left_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_next_small_icon_white"
+                        app:tint="@color/white" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:id="@+id/deal_number_layer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="50">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="交易"
+                        android:textColor="@color/color_text_white_a70"
+                        android:textSize="@dimen/text_size1" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+                    <cool.dingstock.lib_base.widget.tv.font.PoppinsBoldTv
+                        android:id="@+id/deal_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        android:maxWidth="100dp"
+                        android:singleLine="true"
+                        android:textColor="@color/color_text_absolutely_white"
+                        android:textSize="@dimen/text_size3"
+                        android:textStyle="bold"
+                        app:tint="@color/white"
+                        tools:text="14条" />
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_next_small_icon_white"
+                        app:tint="@color/white" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+</LinearLayout>

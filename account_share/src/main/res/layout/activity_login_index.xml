@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.login.index.LoginIndexActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/login_window_bg" />
+
+
+    <cool.dingstock.lib_base.view.jbox2d.JBoxCollisionView
+        android:id="@+id/jbox_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/login_iv_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/login_icon_1" />
+
+        <ImageView
+            android:id="@+id/login_iv_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/login_icon_2" />
+
+        <ImageView
+            android:id="@+id/login_iv_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/login_icon_3" />
+
+        <ImageView
+            android:id="@+id/login_iv_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="110dp"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/login_icon_4" />
+
+        <ImageView
+            android:id="@+id/login_iv_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="140dp"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/login_icon_5" />
+
+        <ImageView
+            android:id="@+id/login_iv_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="190dp"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/login_icon_6" />
+
+        <ImageView
+            android:id="@+id/login_iv_7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="140dp"
+            android:src="@drawable/login_icon_7" />
+
+        <ImageView
+            android:id="@+id/login_iv_8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="120dp"
+            android:src="@drawable/login_icon_8" />
+
+        <ImageView
+            android:id="@+id/login_iv_9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="80dp"
+            android:src="@drawable/login_icon_9" />
+
+        <ImageView
+            android:id="@+id/login_iv_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="40dp"
+            android:src="@drawable/login_icon_10" />
+
+        <ImageView
+            android:id="@+id/login_iv_11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="40dp"
+            android:src="@drawable/login_icon_11" />
+
+        <ImageView
+            android:id="@+id/login_iv_12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="40dp"
+            android:src="@drawable/login_icon_12" />
+
+        <ImageView
+            android:id="@+id/login_iv_13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="40dp"
+            android:src="@drawable/login_icon_13" />
+
+    </cool.dingstock.lib_base.view.jbox2d.JBoxCollisionView>
+
+    <View
+        android:id="@+id/fake_status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/statusbar_view_height"
+        android:background="@color/transparent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

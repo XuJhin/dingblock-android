@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="50dp">
+
+    <RelativeLayout
+        android:id="@+id/tab_group"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <net.lucode.hackware.magicindicator.MagicIndicator
+            android:id="@+id/monitor_title_tab"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp" />
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/icon_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="12dp"
+        android:paddingStart="8dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="25dp"
+        android:paddingBottom="4dp"
+        android:src="@drawable/ic_icon_menu"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/color_text_black1" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/my_monitor_manager_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:padding="8dp"
+        android:src="@drawable/monitor_svg_add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/monitor_setting_iv"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/color_text_absolutely_white" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/monitor_setting_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginEnd="12dp"
+        android:padding="8dp"
+        android:src="@drawable/monitor_svg_setting"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/color_text_black1" />
+
+    <View
+        android:id="@+id/view_hint_point"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/common_red_c_bg"
+        app:layout_constraintEnd_toEndOf="@+id/monitor_setting_iv"
+        app:layout_constraintTop_toTopOf="@+id/monitor_setting_iv" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

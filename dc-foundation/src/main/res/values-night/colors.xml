@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="home_card_bg_level_1">#414141</color>
+    <color name="home_card_bg_level_2">#272727</color>
+    <color name="home_card_bg_level_3">#1D1D1D</color>
+</resources>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_gray"
+    android:orientation="vertical"
+    tools:context=".ui.topic.MonitorTopicActivity">
+
+    <com.scwang.smart.refresh.layout.SmartRefreshLayout
+        android:id="@+id/monitor_topic_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/app_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                app:elevation="0dp"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:statusBarForeground="@color/transparent">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="275dp"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="275dp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/topic_iv_bg"
+                            android:layout_width="match_parent"
+                            android:layout_height="275dp"
+                            android:scaleType="centerCrop"
+                            android:src="@color/color_orange" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="71dp"
+                            android:layout_gravity="bottom"
+                            android:background="@drawable/shape_monitor_topic" />
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="100dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/recommend_monitor_subject_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@id/recommend_monitor_subject_desc"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="20dp"
+                            android:textColor="@color/color_text_absolutely_white"
+                            android:textSize="26sp"
+                            android:textStyle="bold"
+                            tools:text="鞋狗必备" />
+
+                        <TextView
+                            android:id="@+id/recommend_monitor_subject_desc"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="9dp"
+                            android:lines="3"
+                            android:textColor="@color/color_text_absolutely_white"
+                            android:textSize="13sp"
+                            tools:text="凭本好礼，您可以在中国大陆地区 的指定星巴克门店" />
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/monitor_topic_rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="-70dp"
+                android:layout_marginEnd="12dp"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/fake_layout"
+            layout="@layout/view_fake_status_bar" />
+
+        <cool.dingstock.appbase.widget.TitleBar
+            android:id="@+id/title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout_top_height"
+            android:background="@color/transparent"
+            android:text="话题详情"
+            app:leftIconColor="@color/color_text_black1"
+            app:titleTextColor="@color/color_text_black1" />
+
+    </LinearLayout>
+
+</FrameLayout>

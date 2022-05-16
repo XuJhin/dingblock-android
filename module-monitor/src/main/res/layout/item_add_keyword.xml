@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="5dp"
+    android:paddingEnd="5dp">
+    
+    <TextView
+        android:id="@+id/add_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="29dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/monitor_add_keyword_bg"
+        android:gravity="center"
+        android:paddingHorizontal="10dp"
+        android:textColor="@color/color_blue"
+        android:textSize="@dimen/text_size4"
+        android:text="添加"
+        app:drawableStartCompat="@drawable/monitor_icon_add"
+        app:drawableTint="@color/color_blue"
+        android:drawablePadding="4dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

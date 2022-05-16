@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.scwang.smart.refresh.layout.SmartRefreshLayout
+        android:id="@+id/refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="40dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_gray"
+                android:orientation="vertical">
+
+                <cool.dingstock.lib_base.widget.tabs.DcTabLayout
+                    android:id="@+id/tab_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    app:tabIndicatorHeight="0dp"
+                    app:tabMaxWidth="70dp"
+                    app:tabMinWidth="50dp"
+                    app:tabMode="scrollable"
+                    app:tabPaddingEnd="0dp"
+                    app:tabPaddingStart="0dp"
+                    app:tabRippleColor="@color/transparent" />
+
+                <FrameLayout
+                    android:id="@+id/tab_layer"
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:layout_marginHorizontal="12dp"
+                    android:visibility="gone">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="36dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/tide_tab_layer_bg"
+                        android:orientation="horizontal"
+                        android:padding="2dp">
+
+                        <TextView
+                            android:id="@+id/tab_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/tide_tab_title_bg"
+                            android:gravity="center"
+                            android:text="实物潮玩"
+                            android:textColor="@color/tide_tab_txt_color"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tab_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="数字藏品"
+                            android:textColor="@color/tide_tab_txt_color"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </FrameLayout>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:id="@+id/coordinator"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.appbar.AppBarLayout
+                    android:id="@+id/layout_app_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    android:elevation="0dp"
+                    app:elevation="0dp">
+
+                    <com.google.android.material.appbar.CollapsingToolbarLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:expandedTitleMarginBottom="0dp"
+                        app:layout_scrollFlags="scroll|enterAlways"
+                        app:title="">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <!--                        这里保证appBar 不会完全消失 不然会下拉刷新监听会出问题-->
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp" />
+
+                            <LinearLayout
+                                android:id="@+id/recent_recommend_line"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="7dp"
+                                android:orientation="vertical"
+                                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/tide_banner_card"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="70dp"
+                                    android:layout_marginHorizontal="15dp"
+                                    android:layout_marginVertical="8dp"
+                                    android:visibility="gone"
+                                    app:cardCornerRadius="8dp"
+                                    app:cardElevation="0dp">
+
+                                    <com.youth.banner.Banner
+                                        android:id="@+id/tide_banner"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        app:delay_time="4000"
+                                        app:image_scale_type="fit_xy"
+                                        app:scroll_time="1200"
+                                        tools:background="@color/colorTextRed" />
+
+                                </androidx.cardview.widget.CardView>
+
+                                <LinearLayout
+                                    android:id="@+id/hot_title_ll"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="32dp"
+                                    android:layout_marginStart="12dp"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/sneakers_calendar_hot_icon" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="5dp"
+                                        android:text="近期热门"
+                                        android:textColor="@color/color_text_black1"
+                                        android:textSize="@dimen/text_size5"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/rv_recommend_goods"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="76dp"
+                                    android:layout_marginStart="12dp"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginEnd="12dp"
+                                    android:layout_marginBottom="4dp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+                </com.google.android.material.appbar.AppBarLayout>
+
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/tide_rv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:overScrollMode="always"
+                        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+                    <FrameLayout
+                        android:id="@+id/empty_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="100dp"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <cool.dingstock.appbase.widget.CommonEmptyView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:layout_gravity="end"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/only_subscribe_layer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="32dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/only_subscribe_iv"
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:background="@drawable/tide_filter_selector" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="5dp"
+                                android:text="只看订阅"
+                                android:textColor="@color/color_text_black3"
+                                android:textSize="12sp" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <View
+                            android:id="@+id/line1"
+                            android:layout_width="1dp"
+                            android:layout_height="12dp"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginEnd="12dp"
+                            android:background="@color/color_line" />
+
+                        <LinearLayout
+                            android:id="@+id/filter_layer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="32dp"
+                            android:layout_gravity="end"
+                            android:layout_marginEnd="15dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/filter_iv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/filter_sel_selector" />
+
+                            <TextView
+                                android:id="@+id/filter_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="2dp"
+                                android:text="筛选"
+                                android:textColor="@color/filter_txt_color" />
+
+                        </LinearLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/platform_layer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="32dp"
+                            android:layout_gravity="end"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingStart="20dp"
+                            android:paddingEnd="0dp"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/platform_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="平台"
+                                android:textColor="@color/filter_txt_color_gray"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/platform_iv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:src="@drawable/ic_subscript"
+                                app:layout_constraintBottom_toBottomOf="@+id/platform_tv"
+                                app:layout_constraintStart_toEndOf="@+id/platform_tv" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/deal_info_layer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="32dp"
+                            android:layout_gravity="end"
+                            android:layout_marginEnd="15dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingStart="20dp"
+                            android:paddingEnd="0dp"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/deal_info_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="交易信息"
+                                android:textColor="@color/filter_txt_color_gray"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/deal_info_iv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:src="@drawable/ic_subscript"
+                                app:layout_constraintBottom_toBottomOf="@+id/deal_info_tv"
+                                app:layout_constraintStart_toEndOf="@+id/deal_info_tv" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </LinearLayout>
+
+
+                </FrameLayout>
+
+                <!--        </androidx.appcompat.widget.LinearLayoutCompat>-->
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        </LinearLayout>
+
+    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
+</FrameLayout>

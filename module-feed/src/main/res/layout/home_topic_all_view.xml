@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="32dp"
+    android:layout_height="62dp"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="12dp"
+        android:layout_height="30dp"
+        android:text="全\n部"
+        android:textSize="12sp"
+        android:textColor="@color/color_text_black5"
+        />
+
+    <ImageView
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:src="@drawable/ic_post_home_topic_all_icon"
+        android:layout_marginTop="4dp"
+        />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="12dp"
+    android:layout_marginTop="12dp"
+    android:background="@drawable/shape_white_8">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginVertical="15dp"
+        android:layout_marginStart="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="12dp"
+        android:src="@drawable/ic_icon_overlay_svg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/post_overlay_color" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="10dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/color_text_black1"
+        android:textSize="@dimen/text_size4"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/more"
+        app:layout_constraintStart_toEndOf="@+id/icon"
+        app:layout_constraintTop_toTopOf="@+id/icon"
+        tools:text="Peaceminusone x Nike Kw" />
+
+    <ImageView
+        android:id="@+id/shop_icon"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:layout_marginTop="6dp"
+        app:layout_constraintStart_toStartOf="@+id/title"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <TextView
+        android:id="@+id/shop_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="10dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/color_text_black2"
+        android:textSize="@dimen/text_size3"
+        app:layout_constraintBottom_toBottomOf="@+id/shop_icon"
+        app:layout_constraintEnd_toStartOf="@+id/lottery_state_cl"
+        app:layout_constraintStart_toEndOf="@+id/shop_icon"
+        app:layout_constraintTop_toTopOf="@+id/shop_icon"
+        app:layout_goneMarginEnd="46dp"
+        tools:text="长沙 滔博体育 Topsports" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/have_not_lottery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="failed,succeed" />
+
+    <TextView
+        android:id="@+id/failed"
+        android:layout_width="0dp"
+        android:layout_height="26dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/shape_lottery_failed_bg"
+        android:gravity="center"
+        android:text="未中签"
+        android:textColor="@color/color_text_absolutely_white"
+        android:textSize="@dimen/text_size3"
+        app:layout_constraintBottom_toBottomOf="@+id/icon"
+        app:layout_constraintEnd_toStartOf="@+id/succeed"
+        app:layout_constraintStart_toStartOf="@+id/title" />
+
+    <TextView
+        android:id="@+id/succeed"
+        android:layout_width="0dp"
+        android:layout_height="26dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/shape_lottery_success_bg"
+        android:gravity="center"
+        android:text="已中签"
+        android:textColor="@color/color_text_absolutely_white"
+        android:textSize="@dimen/text_size3"
+        app:layout_constraintBottom_toBottomOf="@+id/icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/failed" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/had_lottery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="lottery_state_cl,jump_to_deal" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lottery_state_cl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="14dp"
+        android:rotation="-30"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/lottery_state_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/mine_svg_lottery_success"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/state_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="1dp"
+            android:textColor="#F26363"
+            android:textSize="7sp"
+            app:layout_constraintEnd_toEndOf="@+id/lottery_state_icon"
+            app:layout_constraintStart_toStartOf="@+id/lottery_state_icon"
+            app:layout_constraintTop_toTopOf="@+id/lottery_state_icon"
+            tools:text="2021" />
+
+        <TextView
+            android:id="@+id/state_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:textColor="#F26363"
+            android:textSize="7sp"
+            app:layout_constraintBottom_toBottomOf="@+id/lottery_state_icon"
+            app:layout_constraintEnd_toEndOf="@+id/lottery_state_icon"
+            app:layout_constraintStart_toStartOf="@+id/lottery_state_icon"
+            tools:text="12.14" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/jump_to_deal"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:background="@drawable/shape_color_bg_4dp"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="6dp"
+        android:text="发布到交易区"
+        android:textColor="@color/color_blue"
+        android:textSize="@dimen/text_size3"
+        app:layout_constraintBottom_toBottomOf="@+id/icon"
+        app:layout_constraintStart_toStartOf="@+id/title" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@drawable/home_post_tab_bg"
+            android:orientation="horizontal"
+            android:clipChildren="false">
+
+            <net.lucode.hackware.magicindicator.MagicIndicator
+                android:id="@+id/home_post_tab"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginStart="3dp"
+                android:layout_marginEnd="3dp"
+                android:elevation="0dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/shape_white_16"
+                android:paddingStart="8dp"
+                android:paddingEnd="0dp"
+                android:layout_marginEnd="12dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size3"
+                    android:textColor="@color/color_blue"
+                    android:textStyle="bold"
+                    android:text="正在使用基础功能"/>
+
+                <TextView
+                    android:id="@+id/change_to_whole"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/shape_blue_16dp"
+                    android:textSize="@dimen/text_size3"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/white"
+                    android:text="切换完整功能"
+                    android:textStyle="bold"
+                    android:paddingHorizontal="6dp"
+                    android:layout_marginStart="4dp"
+                    android:drawablePadding="5dp"
+                    android:drawableEnd="@drawable/icon_arrow_right"
+                    android:drawableTint="@color/white" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <cool.dingstock.appbase.widget.NoScrollViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_gray" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

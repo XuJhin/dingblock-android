@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:paddingBottom="7dp"
+    android:background="@color/color_gray"
+    android:gravity="bottom"
+    android:orientation="horizontal">
+
+    <cool.dingstock.lib_base.widget.tv.font.PoppinsBoldTv
+        android:id="@+id/day_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="21"
+        android:textColor="@color/color_text_black2"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="/"
+        android:textColor="@color/color_text_black2"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/month_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4"
+        android:textColor="@color/color_text_black2"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/week_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:text="(周三)"
+        android:textColor="@color/color_text_black2"
+        android:textSize="10sp" />
+
+</LinearLayout>

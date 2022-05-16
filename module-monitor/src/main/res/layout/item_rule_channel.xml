@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <cool.dingstock.imagepicker.views.roundImageView.RoundImageView
+        android:id="@+id/channel_iv"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="12dp"
+        android:src="@mipmap/ic_launcher"
+        app:border_color="@color/common_image_gray"
+        app:border_conner="4dp"
+        app:border_width="0.5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:view_type="type_round"
+        android:layout_marginVertical="14dp"/>
+
+    <TextView
+        android:id="@+id/channel_name_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/channel_iv"
+        app:layout_constraintEnd_toStartOf="@+id/iv_arrow"
+        app:layout_constraintTop_toTopOf="@+id/channel_iv"
+        android:layout_marginHorizontal="10dp"
+        android:textSize="@dimen/text_size6"
+        android:textColor="@color/color_text_black1"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:text="SNKRS精选补货"/>
+
+    <TextView
+        android:id="@+id/keyword_rule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/channel_name_tv"
+        app:layout_constraintTop_toBottomOf="@+id/channel_name_tv"
+        android:layout_marginTop="6dp"
+        android:textSize="@dimen/text_size1"
+        android:textColor="@color/color_text_black3"
+        android:text="关键字规则："/>
+
+    <TextView
+        android:id="@+id/keyword_rule_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/keyword_rule"
+        app:layout_constraintTop_toTopOf="@+id/keyword_rule"
+        app:layout_constraintBottom_toBottomOf="@+id/keyword_rule"
+        android:layout_marginStart="6dp"
+        android:textSize="@dimen/text_size1"
+        android:textColor="@color/color_text_black3"
+        android:text="未设置"/>
+
+    <TextView
+        android:id="@+id/size_rule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/keyword_rule_state"
+        app:layout_constraintTop_toTopOf="@+id/keyword_rule"
+        app:layout_constraintBottom_toBottomOf="@+id/keyword_rule"
+        android:layout_marginStart="22dp"
+        android:textSize="@dimen/text_size1"
+        android:textColor="@color/color_text_black3"
+        android:text="尺码规则："/>
+
+    <TextView
+        android:id="@+id/size_rule_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/size_rule"
+        app:layout_constraintTop_toTopOf="@+id/keyword_rule"
+        app:layout_constraintBottom_toBottomOf="@+id/keyword_rule"
+        android:layout_marginStart="6dp"
+        android:textSize="@dimen/text_size1"
+        android:textColor="@color/color_text_black3"
+        android:text="未设置"/>
+
+    <ImageView
+        android:id="@+id/iv_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:src="@drawable/icon_arrow_right"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

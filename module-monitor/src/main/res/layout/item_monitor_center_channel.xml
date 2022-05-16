@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="12dp"
+    android:layout_marginEnd="12dp"
+    android:layout_marginBottom="12dp"
+    android:background="@drawable/monitor_shape_white_8dp"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/channelInfoContainer"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <cool.dingstock.imagepicker.views.roundImageView.RoundImageView
+            android:id="@+id/monitor_item_product_chanel_iv"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="15dp"
+            android:src="@mipmap/ic_launcher"
+            app:border_color="@color/common_image_gray"
+            app:border_conner="4dp"
+            app:border_width="0.5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:view_type="type_round" />
+
+        <TextView
+            android:id="@+id/monitor_item_product_channel_txt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:gravity="start"
+            android:textColor="@color/color_text_black1"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/monitor_item_product_chanel_iv"
+            app:layout_constraintEnd_toStartOf="@+id/iv_arrow"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/monitor_item_product_chanel_iv"
+            app:layout_constraintTop_toTopOf="@id/monitor_item_product_chanel_iv"
+            tools:text="天猫极速补货" />
+
+        <TextView
+            android:id="@+id/monitor_item_product_date_txt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:text="2019/2/12"
+            android:textColor="@color/color_text_black4"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="@id/monitor_item_product_chanel_iv"
+            app:layout_constraintEnd_toStartOf="@+id/iv_arrow"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintTop_toTopOf="@id/monitor_item_product_chanel_iv"
+            app:layout_goneMarginEnd="11dp" />
+
+        <ImageView
+            android:id="@+id/iv_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:paddingStart="6dp"
+            android:src="@drawable/icon_arrow_right"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/color_text_black4" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:background="@color/color_line" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="12dp">
+
+        <cool.dingstock.imagepicker.views.roundImageView.RoundImageView
+            android:id="@+id/monitor_item_product_iv"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/common_gary_bg_radius_2"
+            app:border_conner="6dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:view_type="type_round" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_toRightOf="@+id/monitor_item_product_iv"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/monitor_item_product_iv"
+            app:layout_constraintTop_toTopOf="@+id/monitor_item_product_iv">
+
+            <cool.dingstock.lib_base.widget.tv.font.PoppinsBoldTv
+                android:id="@+id/monitor_item_product_name_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:lineSpacingExtra="-4dp"
+                android:lineSpacingMultiplier="1"
+                android:maxLines="2"
+                android:minLines="2"
+                android:textColor="@color/color_text_black2"
+                android:textSize="@dimen/text_size4"
+                android:textStyle="bold"
+                tools:text="LebronV11 chinaMOON" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/monitor_item_product_detail_layer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/monitor_item_product_action_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="end|bottom"
+                    android:layout_marginTop="-40dp"
+                    android:gravity="center"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:text="更多"
+                    android:textColor="#4D9FF6"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/monitor_item_product_amount_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="12dp"
+                        android:background="@drawable/shape_monitor_amount"
+                        android:gravity="center"
+                        android:text="货量"
+                        android:textColor="@color/color_blue"
+                        android:textSize="12sp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/search_price_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/monitor_item_product_amount_txt"
+                        android:background="@drawable/shape_monitor_amount"
+                        android:gravity="center"
+                        android:text="查价"
+                        android:textColor="@color/color_blue"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/monitor_item_product_shielding_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="26dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/monitor_shielding_txt_bg"
+                    android:gravity="center"
+                    android:paddingHorizontal="14dp"
+                    android:text="屏蔽该商品"
+                    android:textColor="@color/monitor_shielding_txt_color"
+                    android:textSize="@dimen/text_size3" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
+

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/common_capture_action_iv"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/dc_capture" />
+
+
+    <LinearLayout
+        android:id="@+id/common_capture_done_layer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <cool.dingstock.appbase.widget.IconTextView
+            android:id="@+id/common_capture_back_txt"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/common_banner_dot_focused"
+            android:gravity="center"
+            android:text="@string/icon_back"
+            android:textSize="20dp" />
+
+        <cool.dingstock.appbase.widget.IconTextView
+            android:id="@+id/common_capture_done_txt"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="80dp"
+            android:background="@drawable/common_banner_dot_focused"
+            android:gravity="center"
+            android:text="@string/icon_tick"
+            android:textSize="20dp" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

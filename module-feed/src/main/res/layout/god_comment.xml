@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/good_comment_layer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:visibility="visible"
+    android:background="@drawable/god_common_bg"
+    android:paddingTop="6dp"
+    android:paddingStart="12dp"
+    android:paddingEnd="12dp"
+    android:paddingBottom="12dp"
+    android:layout_marginTop="10dp"
+    >
+    <cool.dingstock.post.view.GodCommentTextView
+        android:id="@+id/god_comment_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <FrameLayout
+        android:id="@+id/god_comment_img_layer"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/god_comment_img_border_bg"
+        android:padding="0.5dp"
+        >
+
+        <ImageView
+            android:id="@+id/god_comment_iv"
+            android:layout_width="69.5dp"
+            android:layout_height="69.5dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            />
+
+        <ImageView
+            android:id="@+id/god_comment_gif_tag"
+            android:layout_width="20dp"
+            android:layout_height="12dp"
+            android:layout_gravity="end|bottom"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="3dp"
+            android:src="@drawable/gif_tag_icon" />
+
+    </FrameLayout>
+
+</LinearLayout>
+
+

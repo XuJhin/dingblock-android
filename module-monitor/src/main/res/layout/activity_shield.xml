@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.shield.ShieldActivity">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title_bar">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_shield"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <cool.dingstock.appbase.widget.TitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_top_height"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        app:hideLine="false"
+        app:leftIcon="@string/icon_back"
+        app:leftIconColor="@color/color_text_black1"
+        app:titleText="@string/monitor_title_setting"
+        app:titleTextColor="@color/color_text_black1" />
+</RelativeLayout>
+

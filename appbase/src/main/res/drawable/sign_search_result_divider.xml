@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:height="0.5dp">
+        <inset
+            android:insetLeft="6dp"
+            android:insetRight="6dp">
+            <shape>
+                <solid android:color="@color/color_line" />
+            </shape>
+        </inset>
+    </item>
+</layer-list>

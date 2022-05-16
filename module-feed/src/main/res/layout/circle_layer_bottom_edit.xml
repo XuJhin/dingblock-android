@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:background="@color/transparent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/close_layer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingTop="8dp"
+        android:paddingBottom="10dp">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/edit_layer"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/common_gary_2_bg_radius_6"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toStartOf="@+id/courier_btn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/courier_btn">
+
+            <TextView
+                android:id="@+id/edit_hint_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_weight="1"
+                android:text="说点什么吧"
+                android:textColor="@color/color_text_black5"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/circle_dynamic_detail_comment_emoji_iv"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_gravity="bottom"
+                android:paddingStart="12dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="10dp"
+                android:src="@drawable/ic_emoji_gray" />
+
+            <ImageView
+                android:id="@+id/circle_dynamic_detail_comment_img_iv"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_gravity="bottom"
+                android:paddingStart="12dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="10dp"
+                android:src="@drawable/comment_img" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/courier_preferential_layer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@id/contact_btn"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/courier_preferential_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/post_preferential_txt_bg"
+                android:paddingVertical="1dp"
+                android:paddingStart="6dp"
+                android:paddingEnd="4dp"
+                android:text="6折优惠"
+                android:textColor="@color/color_text_absolutely_white"
+                android:textSize="11sp" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:src="@drawable/ic_post_red_down_vector" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/courier_btn"
+            android:layout_width="87dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/post_courier_btn_bg"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@+id/contact_btn"
+            app:layout_constraintStart_toEndOf="@+id/edit_layer"
+            app:layout_constraintTop_toBottomOf="@+id/courier_preferential_layer"
+            app:layout_goneMarginTop="0dp">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_common_courier_icon"
+                app:tint="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="寄快递"
+                android:textColor="#FFFFFFFF"
+                android:textSize="14sp" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/contact_btn"
+            android:layout_width="87dp"
+            android:layout_height="38dp"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/post_contact_btn_bg"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/courier_btn"
+            app:layout_constraintTop_toTopOf="@+id/courier_btn">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_common_im_icon"
+                app:tint="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="联系Ta"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

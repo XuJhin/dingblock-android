@@ -1,0 +1,147 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-parcelize'
+    id 'kotlin-kapt'
+    id 'WMRouter'
+    id 'com.huawei.agconnect'
+    id 'org.jetbrains.kotlin.plugin.serialization' version '1.6.20'
+
+}
+apply from: '../version_config.gradle'
+def ext = rootProject.ext
+android {
+    compileSdkVersion ext.compileSdkVersion
+
+    buildFeatures {
+        viewBinding true
+    }
+    lintOptions {
+        disable "Instantiatable"
+    }
+    productFlavors {
+        // 测试、内部调试 渠道包
+        beta {
+            minSdkVersion 23
+            resValue "string", "app_name", "盯链 内测"
+            //versionNameSuffix ".Beta"
+        }
+        // 官方渠道包
+        dc {
+
+        }
+        xiaomi {
+
+        }
+
+    }
+    signingConfigs {
+        release {
+            storeFile file('block_release.keystore')
+            storePassword 'dc2022'
+            keyAlias 'dingblock'
+            keyPassword 'dc2022'
+        }
+        debug {
+            storeFile file('block_release.keystore')
+            storePassword 'dc2022'
+            keyAlias 'dingblock'
+            keyPassword 'dc2022'
+        }
+    }
+    defaultConfig {
+        applicationId "net.dingblock.mobile"
+        versionCode ext.versionCode
+        versionName ext.versionName
+        minSdkVersion ext.minSdkVersion
+        targetSdkVersion ext.targetSdkVersion
+        multiDexEnabled = true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        flavorDimensions "versionCode"
+        resValue "string", "app_name", "盯链"
+        ndk {
+            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a'
+        }
+        vectorDrawables.useSupportLibrary = true
+        renderscriptTargetApi 28
+        renderscriptSupportModeEnabled true
+        manifestPlaceholders = [
+                XG_ACCESS_ID : "1580007549",
+                XG_ACCESS_KEY: "AOVWSF8TZNK4",
+                VIVO_APPID   : "14958",
+                VIVO_APPKEY  : "d8864432-4fb3-45ef-9f3d-a0873f1818f0"
+        ]
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        preRelease {
+            initWith debug
+            matchingFallbacks = ['debug']
+        }
+        debug {
+
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            debuggable true
+            minifyEnabled false
+            //增加debug编译速度
+            splits.abi.enable = false
+            splits.density.enable = false
+            crunchPngs false //default
+            project.gradle.startParameter.excludedTaskNames.add('lint')  // 屏蔽lint耗时检查
+        }
+    }
+    productFlavors.all {
+        flavor -> flavor.manifestPlaceholders = [CHANNEL_VALUE: name]
+    }
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            def outputFile = output.outputFile
+            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                def fileName = "../../apks/dingchao_${variant.productFlavors[0].name}_${defaultConfig.versionName}" +
+                        "_${defaultConfig.versionCode}_${variant.buildType.name}.apk"
+                outputFileName = fileName
+            }
+        }
+    }
+    compileOptions {
+        encoding "UTF-8"
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_11
+        sourceCompatibility JavaVersion.VERSION_11
+    }
+
+    kotlinOptions {
+        jvmTarget = "11"
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation project(':appbase')
+    implementation "com.huawei.hms:push:$rootProject.ext.app_version_huawei_hms_push"
+    implementation project(':module-home')
+    implementation project(':module-profile')
+    implementation project(':module-market')
+    implementation project(':account_share')
+    implementation project(':module-setting')
+    implementation project(':module-calendar')
+    implementation project(':module-tide')
+    debugImplementation project(':debug')
+    preReleaseImplementation project(':debug')
+    kapt "com.google.dagger:dagger-compiler:$rootProject.ext.dagger2"
+    kapt "io.github.meituan-dianping:compiler:$rootProject.ext.wm_router"
+}
+

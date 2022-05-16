@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/layout_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_white_8"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="15dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/iv_topic_cover"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:scaleType="centerInside"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearance="@style/r8ImageStyle"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/tv_topic_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/color_text_black2"
+                android:textSize="@dimen/text_size5"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/iv_arrow"
+                app:layout_constraintStart_toEndOf="@+id/iv_topic_cover"
+                app:layout_constraintTop_toTopOf="@+id/iv_topic_cover"
+                tools:text="#最近值得买的球鞋" />
+
+            <TextView
+                android:id="@+id/tv_topic_desc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/color_text_black4"
+                android:textSize="@dimen/text_size3"
+                app:layout_constraintEnd_toEndOf="@+id/tv_topic_title"
+                app:layout_constraintStart_toStartOf="@+id/tv_topic_title"
+                app:layout_constraintTop_toBottomOf="@+id/tv_topic_title"
+                tools:text="今天SNKRS突袭" />
+
+            <ImageView
+                android:id="@+id/iv_arrow"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginEnd="15dp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_topic_cover"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/iv_topic_cover"
+                app:srcCompat="@drawable/icon_arrow_right" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

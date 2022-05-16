@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:titleBar="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/vip_bg"
+    android:orientation="vertical"
+    tools:context=".ui.vip.VipCenterActivity">
+
+    <include
+        android:id="@+id/fake_status_bar"
+        layout="@layout/view_fake_status_bar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <cool.dingstock.appbase.widget.TitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/fake_status_bar"
+        android:background="@color/transparent"
+        app:leftIconColor="@color/color_text_absolutely_white"
+        app:titleTextColor="@color/color_text_absolutely_white"
+        titleBar:titleText="@string/dc_cip" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/title_bar"
+        android:layout_weight="1">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/layout_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/vip_sec_black_card_bg"
+                    android:orientation="vertical">
+
+                    <include
+                        android:id="@+id/vip_card_layer"
+                        layout="@layout/vip_card_layout" />
+
+                    <include
+                        android:id="@+id/vip_privilege_layer"
+                        layout="@layout/vip_privilege_layout" />
+
+                </LinearLayout>
+
+                <include
+                    android:id="@+id/vip_center_choicer_layer"
+                    layout="@layout/vip_center_choicer_layout" />
+
+                <include
+                    android:id="@+id/vip_center_promotion_layer"
+                    layout="@layout/vip_center_promotion_layout" />
+
+                <include
+                    android:id="@+id/vip_center_pay_type_layer"
+                    layout="@layout/vip_center_pay_type_layout" />
+
+                <include
+                    android:id="@+id/vip_center_rule_dec_layer"
+                    layout="@layout/vip_center_rule_dec_layout" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="20dp" />
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/vip_center_buy_btn"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/vip_center_renewal_btn_bg"
+            android:gravity="center"
+            android:text="@string/immediately_renewal"
+            android:textColor="@color/vip_renewal_color"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/bottom_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

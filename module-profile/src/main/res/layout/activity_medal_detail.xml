@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#191B20"
+    tools:context=".ui.medal.MedalDetailActivity">
+
+    <View
+        android:id="@+id/fake_status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/statusbar_view_height"
+        android:alpha="0"
+        android:background="@color/transparent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <cool.dingstock.appbase.widget.TitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/transparent"
+        app:layout_constraintTop_toBottomOf="@+id/fake_status_bar"
+        app:leftIcon="@drawable/icon_back_dark"
+        app:leftIconColor="@color/color_text_absolutely_white" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:overScrollMode="never"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_bar" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie_open_medal"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:background="@color/transparent"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_bar"
+        app:lottie_autoPlay="false"
+        app:lottie_fileName="medal_open.json"
+        app:lottie_imageAssetsFolder="medal_open_images/" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie_get_medal"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:background="@color/transparent"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_bar"
+        app:lottie_autoPlay="false"
+        app:lottie_fileName="get_medal.json"
+        app:lottie_imageAssetsFolder="get_medal_images/" />
+
+    <TextView
+        android:id="@+id/tv_medal_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="360dp"
+        android:gravity="center"
+        android:textColor="@color/color_text_absolutely_white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="众星捧月" />
+
+    <TextView
+        android:id="@+id/tv_task"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:textColor="@color/color_text_absolutely_white"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_medal_name"
+        tools:text="拥有500个粉丝拥有个粉丝拥有500个粉丝（0/500）" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:background="@drawable/mine_medal_light"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_condition"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:textColor="#8C8D8F"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_task"
+        tools:text="有效期：购买后立即生效，有效期60天，失效后可重新购买" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_suit_preview"
+        android:layout_width="wrap_content"
+        android:layout_height="46dp"
+        android:layout_marginTop="22dp"
+        android:background="@drawable/mine_medal_preview"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_condition">
+
+
+        <TextView
+            android:id="@+id/tv_suit_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="佩戴\n效果"
+            android:textColor="#80FFFFFF"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/view_line"
+            android:layout_width="0.5dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="10dp"
+            android:background="#80FFFFFF"
+            app:layout_constraintStart_toEndOf="@+id/tv_suit_hint"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <cool.dingstock.imagepicker.views.roundImageView.RoundImageView
+            android:id="@+id/iv_head"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/logo_dc_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/view_line"
+            app:layout_constraintTop_toTopOf="parent"
+            app:view_type="type_circle" />
+
+        <TextView
+            android:id="@+id/tv_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:text="咁咁咁"
+            android:textColor="#D1D1D2"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/iv_head"
+            app:layout_constraintTop_toTopOf="@+id/iv_head" />
+
+        <TextView
+            android:id="@+id/tv_user_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:text="1分钟前"
+            android:textColor="#8E909A"
+            android:textSize="10sp"
+            app:layout_constraintStart_toEndOf="@+id/iv_head"
+            app:layout_constraintTop_toBottomOf="@+id/tv_user_name" />
+
+        <ImageView
+            android:id="@+id/iv_medal_preview"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="3dp"
+            android:src="@drawable/logo_dc_icon"
+            app:layout_constraintStart_toEndOf="@+id/tv_user_name"
+            app:layout_constraintTop_toTopOf="@+id/tv_user_name" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <cool.dingstock.appbase.customerview.indicator.IndicatorGroup
+        android:id="@+id/indicatorGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="6dp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginTop="66dp"
+        app:defaultColor="#47494D"
+        app:defaultRadius="3dp"
+        app:distance="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl_suit_preview"
+        app:selectColor="@color/color_text_absolutely_white"
+        app:selectRadius="3dp" />
+
+    <TextView
+        android:id="@+id/tv_get_btn"
+        android:layout_width="180dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/mine_medal_btn_bg"
+        android:gravity="center"
+        android:textColor="@color/color_text_absolutely_white"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/indicatorGroup"
+        tools:text="领取" />
+
+    <TextView
+        android:id="@+id/tv_check_my_medal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="查看我的勋章"
+        android:textColor="#8C8D8F"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_get_btn" />
+
+
+    <TextView
+        android:id="@+id/tv_get_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="24dp"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textColor="#8C8D8F"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="- 于2021.12.22获得 -" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

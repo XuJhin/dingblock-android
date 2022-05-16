@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_goods_info"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="6dp"
+    app:cardElevation="0dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/tv_good_title">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="15dp"
+        android:paddingEnd="0dp">
+
+        <LinearLayout
+            android:id="@+id/home_product_detail_product_sku_layer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="90"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="货号"
+                android:textColor="@color/color_text_black1"
+                android:textSize="@dimen/text_size1" />
+
+            <cool.dingstock.lib_base.widget.tv.font.PoppinsBoldTv
+                android:id="@+id/home_product_detail_product_sku_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:ellipsize="end"
+                android:lines="1"
+                android:maxWidth="100dp"
+                android:singleLine="true"
+                android:textColor="@color/color_text_black1"
+                android:textSize="@dimen/text_size3"
+                tools:text="PingFang SC" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="70"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="发售价"
+                android:textColor="@color/color_text_black1"
+                android:textSize="@dimen/text_size1" />
+
+            <cool.dingstock.lib_base.widget.tv.font.PoppinsBoldTv
+                android:id="@+id/home_product_detail_product_price_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:ellipsize="end"
+                android:lines="1"
+                android:maxWidth="100dp"
+                android:singleLine="true"
+                android:textColor="@color/color_text_black1"
+                android:textSize="@dimen/text_size3"
+                android:textStyle="bold"
+                tools:text="¥24242" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/raffle_info_layer_market_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="85"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="市场价"
+                android:textColor="@color/color_text_black1"
+                android:textSize="@dimen/text_size1" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <cool.dingstock.lib_base.widget.tv.font.PoppinsBoldTv
+                    android:id="@+id/market_price_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:maxWidth="100dp"
+                    android:singleLine="true"
+                    android:textColor="@color/color_text_black1"
+                    android:textSize="@dimen/text_size3"
+                    android:textStyle="bold"
+                    app:tint="@color/white"
+                    tools:text="$24,2343" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/market_price_left_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_next_small_icon_white"
+                    app:tint="@color/color_text_black4" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layer_deal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="交易"
+                android:textColor="@color/color_text_black1"
+                android:textSize="@dimen/text_size1" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <cool.dingstock.lib_base.widget.tv.font.PoppinsBoldTv
+                    android:id="@+id/deal_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:maxWidth="100dp"
+                    android:singleLine="true"
+                    android:textColor="@color/color_text_black1"
+                    android:textSize="@dimen/text_size3"
+                    android:textStyle="bold"
+                    app:tint="@color/white"
+                    tools:text="14条" />
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/deal_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_next_small_icon_white"
+                    app:tint="@color/color_text_black3" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

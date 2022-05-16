@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/product_details_bottom_bg"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingBottom="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/home_product_detail_price_layer"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            tools:ignore="NestedWeights">
+
+            <cool.dingstock.appbase.widget.IconTextView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:text="@string/icon_chat"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="3dp"
+                android:text="比价"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                tools:ignore="RtlSymmetry" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/home_product_detail_comment_layer"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="17dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:src="@drawable/bottom_icon_comment" />
+
+            <cool.dingstock.lib_base.widget.tv.font.PoppinsSemiBoldTv
+                android:id="@+id/home_product_detail_comment_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="5dp"
+                android:textColor="@color/color_text_absolutely_white"
+                android:textSize="13sp"
+                tools:ignore="RtlSymmetry"
+                tools:text="999" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/home_product_detail_dislike_layer"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="17dp">
+
+            <ImageView
+                android:id="@+id/home_product_detail_dislike_icon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:src="@drawable/bottom_selected_dislike" />
+
+            <cool.dingstock.lib_base.widget.tv.font.PoppinsSemiBoldTv
+                android:id="@+id/home_product_detail_dislike_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="5dp"
+                android:layout_marginTop="@dimen/popin_margin_top"
+                android:textColor="@color/color_text_absolutely_white"
+                android:textSize="13sp"
+                tools:ignore="RtlSymmetry"
+                tools:text="999" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/home_product_detail_like_layer"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="17dp">
+
+            <ImageView
+                android:id="@+id/home_product_detail_like_icon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:src="@drawable/bottom_selected_like"
+                tools:text="999" />
+
+            <cool.dingstock.lib_base.widget.tv.font.PoppinsSemiBoldTv
+                android:id="@+id/home_product_detail_like_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="5dp"
+                android:layout_marginTop="@dimen/popin_margin_top"
+                android:textColor="@color/color_text_absolutely_white"
+                android:textSize="13sp"
+                tools:ignore="RtlSymmetry"
+                tools:text="999" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

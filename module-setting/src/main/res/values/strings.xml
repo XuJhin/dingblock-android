@@ -1,0 +1,7 @@
+<resources>
+    <string name="setting_about_dingstock">关于盯链</string>
+    <string name="setting_title_account">账户设置</string>
+    <string name="setting_text_account_unsubscribe">账户注销</string>
+    <string name="setting_binding_wechat">绑定微信</string>
+    <string name="setting_text_binding_mobile">绑定手机</string>
+</resources>

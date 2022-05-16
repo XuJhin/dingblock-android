@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/rootView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/card_out_distance"
+        android:layout_marginEnd="@dimen/card_out_distance"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/content_Layer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:orientation="vertical">
+                <!--用户信息-->
+                <include
+                    android:id="@+id/circle_item_dynamic_user_head_layer"
+                    layout="@layout/circle_item_dynamic_user_head"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp" />
+
+                <!--内容-->
+                <cool.dingstock.appbase.customerview.betterlinktv.BetterLinkTv
+                    android:id="@+id/circle_item_dynamic_content_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:bufferType="spannable"
+                    android:ellipsize="end"
+                    android:lineSpacingExtra="3dp"
+                    android:textColor="@color/color_text_black1"
+                    android:textColorLink="@color/color_blue"
+                    android:textSize="15sp"
+                    android:visibility="visible"
+                    tools:text="我是内容我是内容" />
+
+                <TextView
+                    android:id="@+id/circle_item_dynamic_all_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/common_all"
+                    android:textColor="@color/color_blue"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+
+                <!--图片-->
+                <cool.dingstock.post.view.PostImgView
+                    android:id="@+id/post_img_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:visibility="gone" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/webPage_video_layer"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:layout_marginTop="8dp"
+                    android:visibility="gone"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="0dp">
+
+                    <cool.dingstock.post.view.DcVideoPlayer
+                        android:id="@+id/detail_player"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:id="@+id/trading_layer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical">
+
+
+                    <cool.dingstock.appbase.customerview.betterlinktv.BetterLinkTv
+                        android:id="@+id/trading_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:bufferType="spannable"
+                        android:ellipsize="end"
+                        android:lineSpacingExtra="3dp"
+                        android:textColor="@color/color_text_black1"
+                        android:textColorLink="@color/color_blue"
+                        android:textSize="15sp"
+                        android:visibility="visible"
+                        tools:text="我是内容我是内容" />
+
+                    <TextView
+                        android:id="@+id/trading_all_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="全部"
+                        android:textColor="@color/color_blue"
+                        android:textSize="14sp" />
+
+
+                    <LinearLayout
+                        android:id="@+id/item_size_layer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+                        <RelativeLayout
+                            android:id="@+id/single_price_layer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <cool.dingstock.lib_base.widget.tv.font.PoppinsBoldTv
+                                android:id="@+id/single_price_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="20dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginEnd="10dp"
+                                android:text="1299"
+                                android:textColor="@color/color_blue"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/single_price_symbol_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBaseline="@id/single_price_tv"
+                                android:text="¥"
+                                android:textColor="@color/color_blue"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <!-- 代码会动态设置样式 -->
+                        <TextView
+                            android:id="@+id/trading_tag_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:background="@drawable/post_trading_tag_tv_bg"
+                            android:paddingHorizontal="3dp"
+                            android:paddingVertical="1dp"
+                            android:text="全新无瑕"
+                            android:textColor="@color/color_green"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/single_size_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/post_trading_tag_tv_bg"
+                            android:gravity="center"
+                            android:paddingVertical="1dp"
+                            android:paddingStart="3dp"
+                            android:paddingEnd="3dp"
+                            android:text="43码"
+                            android:textColor="@color/color_green"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:id="@+id/many_size_layer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" />
+
+                    </LinearLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/list_trading_product_layer"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="18dp"
+                        android:background="@drawable/common_gary_2_bg_radius_6"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/post_trading_details_send_address_tv">
+
+                        <ImageView
+                            android:id="@+id/trading_product_iv"
+                            android:layout_width="45dp"
+                            android:layout_height="34dp"
+                            android:layout_marginStart="9dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:src="@mipmap/ic_launcher" />
+
+                        <TextView
+                            android:id="@+id/trading_product_name_tv"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="40dp"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="Air Jordan 1 Retro High OGOGOGOGOGOGOGOGOGOGOGOG"
+                            android:textColor="@color/color_text_black1"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toTopOf="@id/product_desc_layer"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/trading_product_iv"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_chainStyle="packed" />
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/product_desc_layer"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="3dp"
+                            android:orientation="horizontal"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/trading_product_iv"
+                            app:layout_constraintTop_toBottomOf="@id/trading_product_name_tv">
+
+                            <TextView
+                                android:id="@+id/trading_product_publish_count_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/color_blue"
+                                android:textSize="12sp"
+                                tools:text="23" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="2dp"
+                                android:text="条交易信息"
+                                android:textColor="@color/color_text_black4"
+                                android:textSize="10sp" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="10dp"
+                            android:src="@drawable/common_svg_right_arrow"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:tint="@color/color_text_black4" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+                <!--投票-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <include
+                        android:id="@+id/layout_dynamic_vote"
+                        layout="@layout/item_circle_vote"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <!--链接-->
+                <include
+                    layout="@layout/post_item_link_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="70dp"
+                    android:visibility="gone" />
+
+                <FrameLayout
+                    android:id="@+id/lottery_details_layer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <FrameLayout
+                    android:id="@+id/trading_details_layer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:alignItems="center"
+                    app:flexWrap="wrap"
+                    app:justifyContent="flex_start">
+                    <!-- 热议 -->
+                    <LinearLayout
+                        android:id="@+id/hot_rank_layer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/post_topic_bg"
+                        android:paddingVertical="5dp"
+                        android:visibility="gone"
+                        tools:visibility="visible">
+
+                        <ImageView
+                            android:id="@+id/iv_hot_rank_logo"
+                            android:layout_width="33dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="6dp"
+                            android:src="@drawable/icon_hot_rank" />
+
+                        <TextView
+                            android:id="@+id/tv_hot_rank_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="3dp"
+                            android:layout_marginEnd="6dp"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:maxEms="9"
+                            android:text="热议热议热议热议热议热议"
+                            android:textColor="@color/color_text_black1"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <!-- 活动-->
+                    <LinearLayout
+                        android:id="@+id/party_layer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/post_topic_bg"
+                        android:gravity="center_vertical"
+                        android:paddingHorizontal="7dp"
+                        android:paddingVertical="5dp"
+                        android:visibility="visible"
+                        app:layout_constrainedWidth="true">
+
+                        <ImageView
+                            android:id="@+id/party_iv"
+                            android:layout_width="14dp"
+                            android:layout_height="14dp"
+                            tools:src="@mipmap/ic_launcher" />
+
+                        <TextView
+                            android:id="@+id/party_name_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="3dp"
+                            android:ellipsize="end"
+                            android:maxEms="9"
+                            android:maxLines="1"
+                            android:textColor="#FFFF3B47"
+                            android:textSize="12sp"
+                            tools:text="活动活动活动活动活动" />
+
+                    </LinearLayout>
+
+                    <!--抽奖-->
+                    <LinearLayout
+                        android:id="@+id/lottery_state_layer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/post_topic_bg"
+                        android:paddingHorizontal="7dp"
+                        android:paddingVertical="5dp"
+                        android:visibility="visible">
+
+                        <ImageView
+                            android:layout_width="14dp"
+                            android:layout_height="14dp"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/gift_icon" />
+
+                        <TextView
+                            android:id="@+id/lottery_state_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="3dp"
+                            android:text="抽奖中"
+                            android:textColor="#FFFF3B47"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <!--话题-->
+                    <include
+                        android:id="@+id/layout_circle_post_talk"
+                        layout="@layout/post_item_topic_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:visibility="visible" />
+
+                </com.google.android.flexbox.FlexboxLayout>
+
+                <!--球鞋图鉴评分-->
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/details_score_layer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="26dp"
+                    android:layout_gravity="end"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/certification_score_dynamic_bg"
+                    android:gravity="center_vertical|end"
+                    android:orientation="horizontal"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="8.5dp"
+                    android:visibility="gone"
+                    tools:visibility="visible">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="评分"
+                        android:textColor="@color/color_text_black3"
+                        android:textSize="13sp" />
+
+                    <com.willy.ratingbar.ScaleRatingBar
+                        android:id="@+id/details_score_rating_bar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4.5dp"
+                        android:gravity="center"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/rating_title"
+                        app:srb_clearRatingEnabled="false"
+                        app:srb_clickable="false"
+                        app:srb_drawableEmpty="@drawable/ic_small_rating_empty"
+                        app:srb_drawableFilled="@drawable/ic_small_rating_fill"
+                        app:srb_isIndicator="false"
+                        app:srb_numStars="5"
+                        app:srb_rating="3"
+                        app:srb_scrollable="false"
+                        app:srb_starHeight="11dp"
+                        app:srb_starPadding="1.5dp"
+                        app:srb_starWidth="11dp"
+                        app:srb_stepSize="1" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <TextView
+                    android:id="@+id/tv_view_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:textColor="@color/color_text_black4"
+                    android:textSize="12sp"
+                    android:visibility="visible"
+                    tools:text="222浏览" />
+
+                <!--神评-->
+                <include
+                    layout="@layout/god_comment"
+                    android:visibility="gone" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="13dp" />
+
+                    <!--评论-->
+                    <include
+                        android:id="@+id/bottom_layer"
+                        layout="@layout/item_post_footer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:id="@+id/bottom_space"
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            android:background="@color/color_gray" />
+
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/bottom_lin"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="15dp"
+        android:background="@color/color_line"
+        app:layout_constraintTop_toBottomOf="@+id/rootView" />
+
+    <View
+        android:id="@+id/basic_btn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/rootView"
+        app:layout_constraintEnd_toEndOf="@+id/rootView"
+        app:layout_constraintStart_toStartOf="@+id/rootView"
+        app:layout_constraintTop_toTopOf="@+id/rootView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

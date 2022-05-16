@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_gray"
+    android:orientation="vertical"
+    tools:context=".setting.MonitorSettingActivity">
+
+
+    <cool.dingstock.appbase.widget.TitleBar
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_top_height"
+        android:gravity="center"
+        app:hideLine="false"
+        app:leftIcon="@string/icon_back"
+        app:titleText="@string/monitor_title_setting"
+        app:titleTextColor="@color/color_text_black1" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="6dp"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/all_monitor_filter_setting_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/all_monitor_filter_setting"
+                            style="@style/SettingItemTextStyle"
+                            android:layout_marginTop="21dp"
+                            android:text="@string/all_monitor_filter_setting"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <cool.dingstock.appbase.widget.IconTextView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginEnd="15dp"
+                            android:gravity="center"
+                            android:text="@string/icon_more"
+                            android:textColor="@color/color_text_black5"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/all_monitor_filter_setting"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/all_monitor_filter_setting" />
+
+                        <TextView
+                            android:id="@+id/filter_explain_tv"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="16dp"
+                            android:layout_marginVertical="14dp"
+                            android:textColor="@color/color_text_black4"
+                            android:textSize="@dimen/text_size4"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/all_monitor_filter_setting" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <FrameLayout
+                        android:id="@+id/shieldFra"
+                        style="@style/SettingItemGroupStyle">
+
+                        <TextView
+                            style="@style/SettingItemTextStyle"
+                            android:text="@string/shield" />
+
+                        <cool.dingstock.appbase.widget.IconTextView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_gravity="center_vertical|end"
+                            android:layout_marginEnd="15dp"
+                            android:gravity="center"
+                            android:text="@string/icon_more"
+                            android:textColor="@color/color_text_black5"
+                            android:textSize="12dp" />
+                    </FrameLayout>
+
+
+                    <FrameLayout
+                        android:id="@+id/remingFra"
+                        style="@style/SettingItemGroupStyle">
+
+                        <TextView
+                            style="@style/SettingItemTextStyle"
+                            android:text="提醒设置" />
+
+                        <cool.dingstock.appbase.widget.IconTextView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_gravity="center_vertical|end"
+                            android:layout_marginEnd="15dp"
+                            android:gravity="center"
+                            android:text="@string/icon_more"
+                            android:textColor="@color/color_text_black5"
+                            android:textSize="12dp" />
+                    </FrameLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_msg_remind"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="12dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="6dp"
+                app:cardElevation="0dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_msg_remind_title"
+                        style="@style/SettingItemTextStyle"
+                        android:layout_marginTop="21dp"
+                        android:text="重磅短信提醒"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <cool.dingstock.appbase.widget.switchbutton.SwitchButton
+                        android:id="@+id/switch_btn_msg_remind"
+                        android:layout_width="51dp"
+                        android:layout_height="31dp"
+                        android:layout_gravity="center_vertical|end"
+                        android:layout_marginEnd="15dp"
+                        app:kswAnimationDuration="300"
+                        app:kswBackDrawable="@drawable/ios_back_drawable"
+                        app:kswThumbColor="@color/color_text_absolutely_white"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_msg_remind_title"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/tv_msg_remind_title" />
+
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/ll_msg_remind"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_msg_remind_desc"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/tv_msg_remind_desc">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="设置"
+                            android:textColor="@color/color_text_deep_gray"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <cool.dingstock.appbase.widget.IconTextView
+                            android:layout_width="15dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|end"
+                            android:layout_marginTop="1dp"
+                            android:gravity="center"
+                            android:text="@string/icon_more"
+                            android:textColor="@color/color_text_deep_gray"
+                            android:textSize="12dp" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                    <TextView
+                        android:id="@+id/tv_msg_remind_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginBottom="20dp"
+                        android:text="剩余2条(付费会员每月赠送10条短信)"
+                        android:textColor="@color/color_text_deep_gray"
+                        android:textSize="13sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/tv_msg_remind_title"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_msg_remind_title" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="12dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="6dp"
+                app:cardElevation="0dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_do_not_disturb"
+                        style="@style/SettingItemTextStyle"
+                        android:layout_marginTop="21dp"
+                        android:text="免打扰模式"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <cool.dingstock.appbase.widget.switchbutton.SwitchButton
+                        android:id="@+id/doNotDisturbSwitch"
+                        android:layout_width="51dp"
+                        android:layout_height="31dp"
+                        android:layout_gravity="center_vertical|end"
+                        android:layout_marginEnd="15dp"
+                        app:kswAnimationDuration="300"
+                        app:kswBackDrawable="@drawable/ios_back_drawable"
+                        app:kswThumbColor="@color/color_text_absolutely_white"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_do_not_disturb"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/tv_do_not_disturb" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_disturb_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="28dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintStart_toStartOf="@+id/tv_do_not_disturb"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_do_not_disturb">
+
+                        <TextView
+                            android:id="@+id/tv_start_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="start|center_vertical"
+                            android:text="00:00"
+                            android:textColor="@color/color_text_deep_gray"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="  至  "
+                            android:textColor="@color/color_text_deep_gray"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_end_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="start|center_vertical"
+                            android:text="00:00"
+                            android:textColor="@color/color_text_deep_gray"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/ll_un_disturb_mode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/ll_disturb_time"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/ll_disturb_time">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="设置"
+                            android:textColor="@color/color_text_deep_gray"
+                            android:textStyle="bold" />
+
+                        <cool.dingstock.appbase.widget.IconTextView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_gravity="center_vertical|end"
+                            android:layout_marginTop="1dp"
+                            android:gravity="center"
+                            android:text="@string/icon_more"
+                            android:textColor="@color/setting_next_icon_color"
+                            android:textSize="12dp" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="20dp"
+                        android:text="开启免打扰模式，在设置时间内无法接收推送提醒"
+                        android:textColor="@color/color_text_black4"
+                        android:textSize="13sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/tv_do_not_disturb"
+                        app:layout_constraintTop_toBottomOf="@+id/ll_disturb_time" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="12dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="6dp"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <FrameLayout style="@style/SettingItemGroupStyle">
+
+                        <TextView
+                            style="@style/SettingItemTextStyle"
+                            android:text="@string/directLink" />
+
+                        <cool.dingstock.appbase.widget.switchbutton.SwitchButton
+                            android:id="@+id/directLinkSwitch"
+                            android:layout_width="51dp"
+                            android:layout_height="31dp"
+                            android:layout_gravity="center_vertical|end"
+                            android:layout_marginEnd="15dp"
+                            app:kswAnimationDuration="300"
+                            app:kswBackDrawable="@drawable/ios_back_drawable"
+                            app:kswThumbColor="@color/color_text_absolutely_white" />
+
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/monitor_feedback_btn"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="12dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="6dp"
+                app:cardElevation="0dp">
+
+                <TextView
+                    style="@style/SettingItemTextStyle"
+                    android:text="监控反馈" />
+
+                <cool.dingstock.appbase.widget.IconTextView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center_vertical|end"
+                    android:layout_marginEnd="15dp"
+                    android:gravity="center"
+                    android:text="@string/icon_more"
+                    android:textColor="@color/setting_next_icon_color"
+                    android:textSize="12dp" />
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

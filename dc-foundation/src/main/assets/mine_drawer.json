@@ -1,0 +1,76 @@
+[
+  {
+    "head": "海外购",
+    "items": [
+      {
+        "resId": "icon_svg_order",
+        "name": "我的订单",
+        "type": "oversea",
+        "actionType": "native",
+        "value": "oversea_order",
+        "link": "https://app.dingstock.net/shop/order_list"
+      },
+      {
+        "resId": "icon_svg_coupon",
+        "name": "我的优惠券",
+        "type": "oversea",
+        "actionType": "native",
+        "value": "oversea_coupon",
+        "link": "https://app.dingstock.net/shop/coupon_list"
+      },
+      {
+        "resId": "icon_svg_rights",
+        "name": "正品保障/官网直邮",
+        "type": "oversea",
+        "actionType": "h5",
+        "value": "publicity",
+        "link": ""
+      },
+      {
+        "resId": "icon_svg_procotol",
+        "name": "委托协议及免责声明",
+        "type": "oversea",
+        "actionType": "h5",
+        "value": "disclaimers",
+        "link": ""
+      }
+    ]
+  },
+  {
+    "head": "更多",
+    "items": [
+      {
+        "resId": "icon_svg_profile",
+        "name": "编辑资料",
+        "type": "setting",
+        "actionType": "native",
+        "value": "setting_profile",
+        "link": "https://app.dingstock.net/setting/userEdit"
+      },
+      {
+        "resId": "icon_svg_monitor_zone",
+        "name": "已监控地区/频道",
+        "type": "setting",
+        "actionType": "native",
+        "value": "setting_monitor",
+        "link": "https://app.dingstock.net/monitor/manage"
+      },
+      {
+        "resId": "icon_svg_qian",
+        "name": "每日一签",
+        "type": "setting",
+        "actionType": "native",
+        "value": "setting_score",
+        "link": "https://app.dingstock.net/score/index"
+      },
+      {
+        "resId": "icon_svg_code",
+        "name": "会员激活码",
+        "type": "setting",
+        "actionType": "vip_code",
+        "value": "setting_code",
+        "link": "https://app.dingstock.net/score/index"
+      }
+    ]
+  }
+]

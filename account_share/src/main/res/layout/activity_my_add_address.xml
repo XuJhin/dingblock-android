@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_gray"
+    android:orientation="vertical"
+    tools:context=".ui.address.MyAddAddressActivity">
+
+    <cool.dingstock.appbase.widget.TitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/ll_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/common_item_bg_radius_8"
+            android:orientation="vertical"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title_bar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_country"
+                    android:layout_width="110dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="国家/地区"
+                    android:textColor="@color/color_text_black1"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_show_country"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="中国大陆"
+                    android:textColor="@color/color_text_black1"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_province"
+                    android:layout_width="110dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="省、市、区"
+                    android:textColor="@color/color_text_black1"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/ed_province"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="请选择"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_address"
+                    android:layout_width="110dp"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:text="详细地址"
+                    android:textColor="@color/color_text_black1"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/ed_address"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="请填写您的地址"
+                    android:maxLines="2"
+                    android:textColor="@color/color_text_black1"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/iv_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/icon_icon_delete"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="110dp"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:text="收件人姓名"
+                    android:textColor="@color/color_text_black1"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/ed_name"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="请填写"
+                    android:maxLength="20"
+                    android:maxLines="2"
+                    android:textColor="@color/color_text_black1"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/iv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/icon_icon_delete"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_number"
+                    android:layout_width="110dp"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:text="电话号码"
+                    android:textColor="@color/color_text_black1"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_show_zone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="+86"
+                    android:textColor="@color/color_text_black1"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/ed_number"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="7dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="国内手机号码"
+                    android:inputType="number"
+                    android:maxLength="11"
+                    android:textColor="@color/color_text_black1"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/iv_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/icon_icon_delete"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:id="@+id/ll_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_save"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/common_btn_r8_black"
+            android:gravity="center"
+            android:text="保存"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size7" />
+    </LinearLayout>
+
+</LinearLayout>

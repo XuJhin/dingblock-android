@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="horizontal">
+
+    <View
+        android:layout_width="26dp"
+        android:layout_height="0dp" />
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="7dp"
+        android:text="我会我会我会玩"
+        android:textSize="14sp" />
+
+    <FrameLayout
+        android:layout_width="26dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tip_txt"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:gravity="center"
+            android:layout_gravity="start"
+            android:background="@drawable/common_blue_c_bg"
+            android:textColor="#FFFFFFFF"
+            android:textSize="10sp"
+            android:visibility="gone"
+            tools:visibility="visible"
+            tools:text="99+" />
+
+
+        <View
+            android:id="@+id/view_hint_point"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:visibility="gone"
+            android:background="@drawable/common_blue_c_bg" />
+
+
+    </FrameLayout>
+
+</LinearLayout>

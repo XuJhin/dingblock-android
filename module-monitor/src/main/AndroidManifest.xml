@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cool.dingstock.monitor">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true">
+        <activity android:name=".ui.topic.MonitorTopicActivity">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="dc.action.router" />
+
+                <data
+                    android:host="app.dingstock.net"
+                    android:path="/monitor/topic"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.stock.MonitorStockActivity"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="dc.action.router" />
+
+                <data
+                    android:host="app.dingstock.net"
+                    android:path="/monitor/share"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.shield.ShieldActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="dc.action.router" />
+
+                <data
+                    android:host="app.dingstock.net"
+                    android:path="/monitor/shield"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".regions.MonitorCenterRegionsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.ActivityDialogStyle">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="dc.action.router" />
+
+                <data
+                    android:host="app.dingstock.net"
+                    android:path="/region/list"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity android:name="cool.dingstock.monitor.ui.detail.MonitorDetailActivity">
+            <intent-filter>
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <action android:name="dc.action.router" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="app.dingstock.net"
+                    android:path="/monitor/detail"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".setting.MonitorSettingActivity">
+            <intent-filter>
+                <action android:name="dc.action.router" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="app.dingstock.net"
+                    android:path="/monitor/setting"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cool.dingstock.monitor.ui.manager.MonitorManagerActivity"
+            android:theme="@style/DcAppTheme">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="dc.action.router" />
+
+                <data
+                    android:host="app.dingstock.net"
+                    android:path="/monitor/manage"
+                    android:scheme="https" />
+            </intent-filter>
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="dc.action.router" />
+
+                <data
+                    android:host="app.dingstock.net"
+                    android:path="/region/manage"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".dialog.MonitorVIPDialog"
+            android:theme="@style/Theme.PopDialog">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="dc.action.router" />
+
+                <data
+                    android:host="app.dingstock.net"
+                    android:path="/monitor/vip"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

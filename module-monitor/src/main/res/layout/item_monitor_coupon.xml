@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="12dp"
+    android:layout_marginEnd="12dp"
+    android:layout_marginBottom="12dp"
+    android:background="@drawable/common_item_bg_white_radius_8"
+    android:paddingStart="15dp"
+    android:paddingTop="10dp"
+    android:paddingEnd="15dp"
+    android:paddingBottom="15dp">
+
+    <LinearLayout
+        android:id="@+id/ll_channel_bar"
+        android:layout_width="match_parent"
+        android:layout_height="26dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <cool.dingstock.imagepicker.views.roundImageView.RoundImageView
+            android:id="@+id/iv_coupon_icon"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:background="@drawable/common_item_radius_8"
+            android:src="@mipmap/ic_launcher"
+            app:border_color="@color/common_image_gray"
+            app:border_conner="4dp"
+            app:border_width="0.5dp"
+            app:view_type="type_round" />
+
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="4dp"
+            android:gravity="center"
+            android:text="优惠券"
+            android:textColor="@color/color_text_black1"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="12-06 16:43"
+            android:textColor="@color/color_text_black4"
+            android:textSize="11sp" />
+
+
+        <ImageView
+            android:id="@+id/iv_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingStart="6dp"
+            android:src="@drawable/icon_arrow_right"
+            android:visibility="visible"
+            app:tint="@color/color_text_black4" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line_view"
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/color_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_channel_bar" />
+
+
+    <!--    <com.google.android.material.imageview.ShapeableImageView-->
+    <!--        android:id="@+id/iv_coupon_good_img"-->
+    <!--        android:layout_width="80dp"-->
+    <!--        android:layout_height="80dp"-->
+    <!--        android:layout_marginTop="16dp"-->
+    <!--        android:background="@drawable/common_item_radius_8"-->
+    <!--        android:src="@drawable/icon_logistics"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/line_view">-->
+
+    <!--    </com.google.android.material.imageview.ShapeableImageView>-->
+
+    <cool.dingstock.imagepicker.views.roundImageView.RoundImageView
+        android:id="@+id/iv_coupon_good_img"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/common_item_radius_8"
+        android:src="@color/black"
+        app:border_color="@color/common_image_gray"
+        app:border_conner="4dp"
+        app:border_width="0.5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line_view"
+        app:view_type="type_round" />
+
+    <TextView
+        android:id="@+id/tv_coupon_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="AIR JORDAN 6 RETRO (GS)
+        杭州西湖龙湖紫荆天街KLAIR JORDAN 6 RETRO
+        (GS)杭州西湖龙湖紫荆天街KL"
+        android:textColor="@color/color_text_black2"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/ll_coupon"
+        app:layout_constraintStart_toEndOf="@+id/iv_coupon_good_img"
+        app:layout_constraintTop_toTopOf="@+id/iv_coupon_good_img" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_coupon"
+        android:layout_width="78dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="12dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_coupon_good_img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_coupon_name"
+        app:layout_constraintTop_toTopOf="@+id/iv_coupon_good_img">
+
+
+        <TextView
+            android:id="@+id/tv_condition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:autoSizeMaxTextSize="12sp"
+            android:autoSizeMinTextSize="4sp"
+            android:autoSizeTextType="uniform"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="满40元可用"
+            android:textColor="#E5FF6F26"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_denomination"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoSizeMaxTextSize="18sp"
+            android:autoSizeMinTextSize="4sp"
+            android:autoSizeTextType="uniform"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="$30"
+            android:textColor="@color/color_orange"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:src="@drawable/item_coupon_slice" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="立即领劵"
+            android:textColor="@color/color_orange"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_buy_good"
+        android:layout_width="50dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_exchange_record_button"
+        android:gravity="center"
+        android:text="抢购"
+        android:textColor="@color/color_blue"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_coupon_name" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

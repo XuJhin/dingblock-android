@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/monitor_channel_root"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:layout_marginStart="15dp"
+    android:layout_marginEnd="15dp"
+    android:paddingStart="15dp"
+    android:paddingEnd="15dp">
+
+    <cool.dingstock.imagepicker.views.roundImageView.RoundImageView
+        android:id="@+id/round_iv_channel"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        app:border_color="@color/color_line"
+        app:border_conner="8dp"
+        app:border_width="1px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:view_type="type_round" />
+
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_toStartOf="@id/layout_monitor_unsub"
+        android:layout_toEndOf="@id/round_iv_channel"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/round_iv_channel"
+        app:layout_constraintEnd_toStartOf="@+id/layout_monitor_unsub"
+        app:layout_constraintStart_toEndOf="@+id/round_iv_channel"
+        app:layout_constraintTop_toTopOf="@+id/round_iv_channel">
+
+        <TextView
+            android:id="@+id/recommend_channel_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/color_text_black2"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/round_iv_channel"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="国区 SNKRS 上新" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/monitor_channel_state"
+            android:layout_width="27dp"
+            android:layout_height="12dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="15dp"
+            android:src="@drawable/monitor_ic_recommend_hot"
+            app:layout_constraintBottom_toBottomOf="@+id/recommend_channel_title"
+            app:layout_constraintEnd_toStartOf="@+id/recommend_channel_status"
+            app:layout_constraintTop_toTopOf="@+id/recommend_channel_title" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_monitor_unsub"
+        android:layout_width="52dp"
+        android:layout_height="24dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/monitor_channel_selector_stock_20"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/round_iv_channel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/round_iv_channel">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_vip_tag"
+            android:layout_width="13dp"
+            android:layout_height="11dp"
+            android:layout_marginEnd="2dp"
+            android:src="@drawable/icon_monitor_channel_vip"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/recommend_channel_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="监控"
+            android:textColor="@color/monitor_channel_selected"
+            android:textSize="11sp" />
+
+
+    </LinearLayout>
+</RelativeLayout>

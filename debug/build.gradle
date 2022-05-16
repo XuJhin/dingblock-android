@@ -1,0 +1,49 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-parcelize'
+apply plugin: 'kotlin-kapt'
+apply from: '../version_config.gradle'
+def ext = rootProject.ext
+android {
+
+    compileSdkVersion ext.compileSdkVersion
+
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    defaultConfig {
+        versionCode ext.versionCode
+        versionName ext.versionName
+        minSdkVersion ext.minSdkVersion
+        targetSdkVersion ext.targetSdkVersion
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_11
+        sourceCompatibility JavaVersion.VERSION_11
+    }
+
+    kotlinOptions {
+        jvmTarget = "11"
+    }
+
+}
+
+dependencies {
+    implementation project(':appbase')
+    kapt "io.github.meituan-dianping:compiler:$rootProject.ext.wm_router"
+    debugImplementation "me.ele:uetool:$rootProject.ext.debug_version_ele_uetool"
+    releaseImplementation "me.ele:uetool-no-op:$rootProject.ext.debug_version_ele_uetool_no_op"
+    debugImplementation "me.ele:uetool-fresco:$rootProject.ext.debug_version_ele_uetool_fresco"
+}

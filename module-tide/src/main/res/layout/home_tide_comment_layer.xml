@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="34dp"
+    android:layout_marginStart="15dp"
+    android:layout_marginEnd="15dp"
+    android:background="@drawable/calendar_product_bottom_btn_bg"
+    android:orientation="horizontal">
+
+    <View
+        android:layout_width="15dp"
+        android:layout_height="0dp" />
+
+    <LinearLayout
+        android:id="@+id/clock_layer"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/clock_iv"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:src="@drawable/ic_tide_clock_icon"
+            android:tint="@color/color_text_black4" />
+
+        <TextView
+            android:id="@+id/clock_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="3dp"
+            android:gravity="center_vertical"
+            android:text="提醒"
+            android:textColor="@color/color_text_black4"
+            android:textSize="@dimen/text_size3" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:id="@+id/comment_layer"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/product_comment_gray" />
+
+        <TextView
+            android:id="@+id/comment_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="3dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/color_text_black4"
+            android:textSize="@dimen/text_size3"
+            tools:text="999" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:id="@+id/dislike_layer"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:id="@+id/dislike_icon"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:gravity="center"
+            android:src="@drawable/product_selected_dislike" />
+
+        <TextView
+            android:id="@+id/dislike_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="3dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/product_dislik_selector_color"
+            android:textSize="@dimen/text_size3"
+            tools:text="999" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:id="@+id/like_layer"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/like_icon"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:gravity="center"
+            android:src="@drawable/product_selected_like" />
+
+
+        <TextView
+            android:id="@+id/like_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="3dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/product_lik_selector_color"
+            android:textSize="@dimen/text_size3"
+            tools:text="999" />
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="15dp"
+        android:layout_height="0dp" />
+
+</LinearLayout>

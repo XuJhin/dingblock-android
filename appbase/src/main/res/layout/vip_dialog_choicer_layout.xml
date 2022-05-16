@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/goods_layer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/vip_lin_1"
+        android:layout_width="94dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="21dp"
+        android:background="@drawable/vip_choice_fra_selector"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/vip_tag_1_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:layout_gravity="end"
+            android:background="@drawable/vip_choice_tag_bg"
+            android:gravity="center"
+            android:paddingStart="7dp"
+            android:paddingEnd="7dp"
+            android:textColor="#ffffffff"
+            android:textSize="12sp"
+            tools:text="6.7折" />
+
+        <TextView
+            android:id="@+id/vip_1_month_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="4dp"
+            android:includeFontPadding="false"
+            android:textColor="@color/color_text_black1"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="12个月" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¥"
+                android:textColor="#ffc79270"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/vip_1_current_price_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:textColor="#ffc79270"
+                android:textSize="28sp"
+                tools:text="198" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/vip_1_old_price_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:includeFontPadding="false"
+            android:textColor="@color/vip_old_price_color_selector"
+            android:textSize="13sp"
+            tools:text="¥360" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:id="@+id/vip_lin_2"
+        android:layout_width="94dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/vip_choice_fra_selector"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/vip_tag_2_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:layout_gravity="end"
+            android:background="@drawable/vip_choice_tag_bg"
+            android:gravity="center"
+            android:paddingStart="7dp"
+            android:paddingEnd="7dp"
+            android:textColor="@color/color_text_absolutely_white"
+            android:textSize="12sp"
+            tools:text="6.7折" />
+
+        <TextView
+            android:id="@+id/vip_2_month_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="4dp"
+            android:includeFontPadding="false"
+            android:textColor="@color/color_text_black1"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="3个月" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¥"
+                android:textColor="#ffc79270"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/vip_2_current_price_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:textColor="#ffc79270"
+                android:textSize="28sp"
+                tools:text="198" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/vip_2_old_price_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:includeFontPadding="false"
+            android:textColor="@color/vip_old_price_color_selector"
+            android:textSize="13sp"
+            tools:text="¥360" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:id="@+id/vip_lin_3"
+        android:layout_width="94dp"
+        android:layout_height="120dp"
+        android:layout_marginEnd="21dp"
+        android:background="@drawable/vip_choice_fra_selector"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/vip_tag_3_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:layout_gravity="end"
+            android:background="@drawable/vip_choice_tag_bg"
+            android:gravity="center"
+            android:paddingStart="7dp"
+            android:paddingEnd="7dp"
+            android:textColor="#ffffffff"
+            android:textSize="12sp"
+            tools:text="6.7折" />
+
+        <TextView
+            android:id="@+id/vip_3_month_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="4dp"
+            android:includeFontPadding="false"
+            android:textColor="@color/color_text_black1"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="1个月" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¥"
+                android:textColor="#ffc79270"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/vip_3_current_price_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:textColor="#ffc79270"
+                android:textSize="28sp"
+                tools:text="198" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/vip_3_old_price_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:includeFontPadding="false"
+            android:textColor="@color/vip_old_price_color_selector"
+            android:textSize="13sp"
+            tools:text="¥360" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

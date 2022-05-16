@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingStart="15dp"
+    android:paddingTop="15dp"
+    android:paddingEnd="15dp">
+
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tv_desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:textColor="@color/color_text_black3"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv"
+        app:layout_constraintTop_toTopOf="@+id/iv"
+        tools:text="国区SNKRS上新 已调整监控策略，添加了更多精品商品，同时移除了一些服饰类商品" />
+
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/color_text_black4"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv"
+        app:layout_constraintTop_toBottomOf="@+id/tv_desc"
+        tools:text="09/15 08:50" />
+
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/color_line"
+        app:layout_constraintEnd_toEndOf="@+id/tv_desc"
+        app:layout_constraintStart_toStartOf="@id/tv_desc"
+        app:layout_constraintTop_toBottomOf="@+id/tv_time" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

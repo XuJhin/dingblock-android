@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:orientation="horizontal"
+    android:padding="16dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_img"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/logo_dc_icon" />
+
+    <TextView
+        android:id="@+id/tv_msg"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="12dp"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:textColor="@color/color_text_black1"
+        android:textSize="@dimen/text_size5"
+        tools:text="添加到提醒事项" />
+
+    <ImageView
+        android:id="@+id/iv_is_default"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginStart="15dp"
+        android:paddingStart="6dp"
+        android:paddingEnd="6dp"
+        android:src="@drawable/checkbox_ding" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

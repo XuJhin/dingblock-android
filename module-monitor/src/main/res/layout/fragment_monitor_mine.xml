@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mine.monitor.MonitorMineFragment">
+
+    <com.scwang.smart.refresh.layout.SmartRefreshLayout
+        android:id="@+id/monitor_fragment_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <cool.dingstock.appbase.widget.consecutivescroller.ConsecutiveScrollerLayout
+                android:id="@+id/layout_parent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:overScrollMode="never">
+
+                <TextView
+                    android:id="@+id/offline_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="44dp"
+                    android:layout_marginStart="12dp"
+                    android:gravity="center_vertical"
+                    android:text="关注地区"
+                    android:textColor="@color/color_text_absolutely_white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/layout_monitor_region"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_recommend"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        android:overScrollMode="never"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="MissingDefaultResource" />
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/filter_layer"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginEnd="50dp"
+                        android:gravity="center_vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/manager_tv"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/filter_iv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:src="@drawable/filter_unsel"
+                            android:tint="@color/color_text_absolutely_white"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/channel_name_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="全部频道"
+                            android:textColor="@color/color_text_absolutely_white"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:layout_constrainedWidth="true"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/rule_tv"
+                            app:layout_constraintHorizontal_bias="0"
+                            app:layout_constraintHorizontal_chainStyle="packed"
+                            app:layout_constraintStart_toEndOf="@+id/filter_iv"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/rule_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:background="@drawable/monitor_shape_custom_rule"
+                            android:gravity="center_vertical"
+                            android:paddingHorizontal="3dp"
+                            android:paddingVertical="1dp"
+                            android:text="已自定义规则"
+                            android:textColor="@color/color_text_absolutely_white"
+                            android:textSize="10sp"
+                            android:visibility="visible"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/maintain_tv"
+                            app:layout_constraintStart_toEndOf="@+id/channel_name_tv"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/maintain_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="14dp"
+                            android:layout_marginStart="4dp"
+                            android:background="@drawable/monitor_shape_yellow_2dp"
+                            android:paddingHorizontal="3dp"
+                            android:text="维护中"
+                            android:textColor="#664300"
+                            android:textSize="10sp"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/rule_tv"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/manager_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginEnd="12dp"
+                        android:drawablePadding="3dp"
+                        android:gravity="center_vertical"
+                        android:paddingEnd="0dp"
+                        android:text="频道管理"
+                        android:textColor="@color/color_text_absolutely_white"
+                        android:textSize="14sp"
+                        app:drawableStartCompat="@drawable/monitor_icon_add"
+                        app:drawableTint="@color/color_text_absolutely_white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/monitor_fragment_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+
+            </cool.dingstock.appbase.widget.consecutivescroller.ConsecutiveScrollerLayout>
+
+            <LinearLayout
+                android:id="@+id/all_empty_lin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="三步学会使用盯链监控"
+                    android:textColor="@color/color_text_black1"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <org.libpag.PAGView
+                    android:id="@+id/pag_empty_anim"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_weight="8.3" />
+
+                <TextView
+                    android:id="@+id/all_empty_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginHorizontal="74dp"
+                    android:layout_marginTop="21dp"
+                    android:background="@drawable/shape_round_24292f"
+                    android:gravity="center"
+                    android:paddingStart="27dp"
+                    android:paddingEnd="27dp"
+                    android:text="添加监控"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.64" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/not_login_lin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:fillViewport="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:visibility="invisible">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/monitor_empty_icon" />
+
+                <TextView
+                    android:id="@+id/login_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_round_24292f"
+                    android:paddingStart="26dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="26dp"
+                    android:paddingBottom="10dp"
+                    android:text="请登录"
+                    android:textColor="@color/text_white"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_empty_tips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="23dp"
+                    android:text="添加监控，发售补货第一时间提醒"
+                    android:textColor="@color/color_text_black2"
+                    android:textSize="13sp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
+</FrameLayout>

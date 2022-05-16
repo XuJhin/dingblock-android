@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_gray"
+    android:orientation="vertical">
+
+    <cool.dingstock.appbase.widget.TitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        app:titleText="" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:text="账户注销"
+        android:textColor="@color/color_text_black1"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="盯链账户注销的重要提醒："
+                android:textColor="@color/color_text_black2"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="1.注销帐号为不可恢复的操作，帐号一旦注销，您将无法再登录及使用帐号，也无法找回或者处置该账号中的任何内容信息或资产权益，即便重新注册也是一个全新的账号，您应自行备份帐号相关信息及数据。
+\n\n2.您对账号的注销行为将视为自愿、主动放弃包括帐号的个人资料及历史信息（包括但不限于昵称、头像、消息记录、发帖记录、回帖记录、收藏记录、支付记录、帐号资产权益等）都将全部删除且无法恢复。
+\n\n3.帐号注销前，请您务必确认已清空或领取帐号全部资产及权益等，且不存在任何争议；帐号一经注销，即视为您放弃对本帐号内的全部资产及权益的所有权，且无法恢复或找回；账号资产及权益包括但不限于：
+\n\t3.1您已购买尚未到期的VIP权益
+\n\t3.2尚未使用的积分、优惠券、盯币、背包物品等
+\n\t3.3参与活动或用户身份所带来的未来收益权益
+\n\n4.若本帐号于注销时正被采取限制措施（包括但不限于禁言、拉黑等），注销帐号的操作并不能使该设备消除该限制措施，若您使用同一设备重新注册新帐号（无论是否使用相同手机），该帐号均需接受与本帐号相同的限制措施。
+\n\n5.注销账户并不代表注销前账号中的行为和相关责任得到豁免或减轻；注销完成后，我们将依法删除您的个人信息或对其进行匿名化处理。"
+                android:textColor="@color/color_text_black2"
+                android:textSize="13sp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/cancellation_confirm_btn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/cancellation_confirm_bg"
+            android:gravity="center"
+            android:text="同意并注销"
+            android:textColor="@color/color_text_absolutely_white"
+            android:textSize="14sp" />
+
+    </FrameLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,35 @@
+<resources>
+
+    <style name="horizontal_gray_divider">
+        <item name="android:layout_height">1px</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:background">#d9d9d9</item>
+    </style>
+
+    <!--  这个是加入的代码 -->
+    <style name="Theme.ImagePreview" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:background">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <declare-styleable name="AvatarView">
+        <attr name="ava_src" format="reference|color" />
+        <attr name="pen_src" format="reference|color" />
+    </declare-styleable>
+
+    <!--圆角图片-->
+    <declare-styleable name="RoundImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+        <attr name="border_overlay" format="boolean" />
+        <attr name="border_conner" format="dimension" />
+        <attr name="view_type">
+            <enum name="type_round" value="1" />
+            <enum name="type_circle" value="2" />
+        </attr>
+    </declare-styleable>
+</resources>

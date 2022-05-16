@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.scwang.smart.refresh.layout.SmartRefreshLayout
+        android:id="@+id/monitor_recommend_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <cool.dingstock.appbase.widget.consecutivescroller.ConsecutiveScrollerLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include
+                android:id="@+id/layout_monitor_recommend_header_layer"
+                layout="@layout/layout_monitor_recommend_header" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="12dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/monitor_recommend_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </cool.dingstock.appbase.widget.consecutivescroller.ConsecutiveScrollerLayout>
+
+    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
+</FrameLayout>

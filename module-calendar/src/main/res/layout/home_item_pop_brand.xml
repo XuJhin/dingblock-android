@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="36dp">
+
+    <TextView
+        android:id="@+id/home_item_pop_brand_txt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/home_pop_brand_selector"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textColor="@color/filter_brand_txt_sel_color"
+        android:textSize="13sp"
+        tools:text="sfafa" />
+
+</RelativeLayout>

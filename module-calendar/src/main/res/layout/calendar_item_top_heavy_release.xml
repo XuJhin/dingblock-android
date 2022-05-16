@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/siv_top_cover"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:padding="1dp"
+        app:shapeAppearance="@style/r8ImageStyle"
+        app:strokeColor="#438FFF"
+        app:strokeWidth="2dp" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_selected_flag"
+        android:layout_width="14dp"
+        android:layout_height="6dp"
+        android:layout_below="@id/siv_top_cover"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-2dp"
+        android:src="@drawable/calendar_heavy_raffle_triangle"
+        android:visibility="visible" />
+</RelativeLayout>
+

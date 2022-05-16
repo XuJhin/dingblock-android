@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/circle_item_dynamic_edit_add_bg"
+    android:layout_gravity="center"
+    android:layout_height="106dp">
+
+    <ImageView
+        android:id="@+id/add_iv"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:scaleType="centerCrop"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textSize="10dp"
+        android:src="@drawable/monitor_svg_add"
+        />
+
+
+</FrameLayout>

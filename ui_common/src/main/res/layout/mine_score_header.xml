@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_header"
+    android:layout_width="match_parent"
+    android:layout_height="264dp"
+    android:background="@color/white"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <View
+        android:id="@+id/mine_score_iv_bg"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/score_index_top_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/head_v"
+        android:layout_width="match_parent"
+        android:layout_height="176dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/avatar_iv"
+        android:layout_width="17dp"
+        android:layout_height="17dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="29dp"
+        android:src="@drawable/default_avatar"
+        app:layout_constraintStart_toStartOf="@id/head_v"
+        app:layout_constraintTop_toTopOf="@id/head_v" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:text="我的积分"
+        android:textColor="@color/color_text_black1"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/avatar_iv"
+        app:layout_constraintStart_toEndOf="@id/avatar_iv"
+        app:layout_constraintTop_toTopOf="@id/avatar_iv" />
+
+
+    <cool.dingstock.lib_base.widget.tv.font.PoppinsBoldTv
+        android:id="@+id/score_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="0"
+        android:textColor="@color/color_text_black1"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/avatar_iv"
+        app:layout_constraintTop_toBottomOf="@+id/avatar_iv" />
+
+    <ImageView
+
+        android:id="@+id/score_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginBottom="12dp"
+        android:src="@drawable/ic_next_small_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/score_tv"
+        app:layout_constraintStart_toEndOf="@+id/score_tv"
+        app:tint="@color/color_text_black1" />
+
+    <TextView
+        android:id="@+id/exchange_tv"
+        android:layout_width="86dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/c_black2_bg"
+        android:gravity="center"
+        android:text="马上兑换"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/head_v"
+        app:layout_constraintStart_toStartOf="@id/avatar_iv" />
+
+    <FrameLayout
+        android:layout_width="210dp"
+        android:layout_height="176dp"
+        app:layout_constraintBottom_toBottomOf="@+id/mine_score_iv_bg"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/sign_lottie_v"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="un_sign.json"
+            app:lottie_imageAssetsFolder="unsign_images/" />
+
+        <ImageView
+            android:id="@+id/sign_result_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

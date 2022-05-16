@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_gray"
+    tools:context=".ui.score.index.ScoreIndexActivity">
+
+    <View
+        android:id="@+id/mine_score_iv_bg"
+        android:layout_width="match_parent"
+        android:layout_height="354dp"
+        android:layout_marginTop="-100dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/mine_check_in_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.scwang.smart.refresh.layout.SmartRefreshLayout
+        android:id="@+id/mine_score_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scroll_parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="256dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <View
+                        android:id="@+id/head_v"
+                        android:layout_width="match_parent"
+                        android:layout_height="176dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/avatar_iv"
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="29dp"
+                        android:src="@drawable/default_avatar"
+                        app:layout_constraintStart_toStartOf="@id/head_v"
+                        app:layout_constraintTop_toTopOf="@id/head_v" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3dp"
+                        android:text="我的积分"
+                        android:textColor="@color/color_text_black1"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@id/avatar_iv"
+                        app:layout_constraintStart_toEndOf="@id/avatar_iv"
+                        app:layout_constraintTop_toTopOf="@id/avatar_iv" />
+
+
+                    <cool.dingstock.lib_base.widget.tv.font.PoppinsBoldTv
+                        android:id="@+id/score_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="0"
+                        android:textColor="@color/color_text_black1"
+                        android:textSize="34sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@+id/avatar_iv"
+                        app:layout_constraintTop_toBottomOf="@+id/avatar_iv" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+
+                        android:id="@+id/score_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="30dp"
+                        android:paddingBottom="10dp"
+                        android:src="@drawable/ic_next_small_icon"
+                        app:layout_constraintBottom_toBottomOf="@+id/score_tv"
+                        app:layout_constraintStart_toEndOf="@+id/score_tv"
+                        app:layout_constraintTop_toTopOf="@+id/score_tv"
+                        app:tint="@color/color_text_black1" />
+
+                    <TextView
+                        android:id="@+id/exchange_tv"
+                        android:layout_width="86dp"
+                        android:layout_height="30dp"
+                        android:layout_marginBottom="24dp"
+                        android:background="@drawable/profile_shape_button"
+                        android:gravity="center"
+                        android:text="马上兑换"
+                        android:textColor="@color/text_white"
+                        app:layout_constraintBottom_toBottomOf="@id/head_v"
+                        app:layout_constraintStart_toStartOf="@id/avatar_iv" />
+
+                    <FrameLayout
+                        android:layout_width="210dp"
+                        android:layout_height="176dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/head_v"
+                        app:layout_constraintEnd_toEndOf="parent">
+
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:id="@+id/sign_lottie_v"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:lottie_autoPlay="true"
+                            app:lottie_fileName="un_sign.json"
+                            app:lottie_imageAssetsFolder="unsign_images/" />
+
+                        <ImageView
+                            android:id="@+id/sign_result_img"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="gone" />
+
+                    </FrameLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/layer_continued_clock_in"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="12dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/layout_continued_clock_in"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="15dp"
+                            android:paddingTop="14dp"
+                            android:paddingEnd="15dp"
+                            android:paddingBottom="14dp">
+
+                            <TextView
+                                android:id="@+id/mine_score_index_sign_day"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:textColor="@color/color_text_black1"
+                                android:textSize="16sp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:text="已连续签到0天" />
+
+                            <TextView
+                                android:id="@+id/mine_score_index_sign_info"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="6dp"
+                                android:gravity="center_vertical"
+                                android:textColor="@color/color_text_black3"
+                                android:textSize="11sp"
+                                app:layout_constraintStart_toStartOf="@+id/mine_score_index_sign_day"
+                                app:layout_constraintTop_toBottomOf="@+id/mine_score_index_sign_day"
+                                tools:text="再连签6天，得2天VIP" />
+
+                            <LinearLayout
+                                android:id="@+id/layout_alert_clock_in"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toTopOf="@+id/mine_score_index_sign_info"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/mine_score_index_sign_day">
+
+                                <TextView
+                                    android:id="@+id/signInHintTv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="4dp"
+                                    android:text="签到提醒"
+                                    android:textColor="@color/color_text_black1"
+                                    android:textSize="12sp"
+                                    app:layout_constraintBottom_toBottomOf="@+id/signInHintSwb"
+                                    app:layout_constraintEnd_toStartOf="@+id/signInHintSwb"
+                                    app:layout_constraintTop_toTopOf="@+id/signInHintSwb"
+                                    app:layout_constraintVertical_bias="0.551" />
+
+                                <cool.dingstock.appbase.widget.switchbutton.SwitchButton
+                                    android:id="@+id/signInHintSwb"
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:paddingTop="4.5dp"
+                                    android:paddingBottom="4.5dp"
+                                    app:kswAnimationDuration="300"
+                                    app:kswBackDrawable="@drawable/sing_in_hint_bg"
+                                    app:kswThumbColor="@color/sin_in_swbtn_color"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+                            </LinearLayout>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_continue_clock_in"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginBottom="5dp"
+                            android:nestedScrollingEnabled="false" />
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/daily_task_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="12dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="0dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp"
+                        android:layout_marginStart="15dp"
+                        android:gravity="center_vertical"
+                        android:text="日常任务"
+                        android:textColor="@color/color_text_black1"
+                        android:textSize="16sp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/daily_task_rv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="45dp"
+                        android:nestedScrollingEnabled="false" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/novice_task_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="12dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="0dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp"
+                        android:layout_marginStart="15dp"
+                        android:gravity="center_vertical"
+                        android:text="新手任务"
+                        android:textColor="@color/color_text_black1"
+                        android:textSize="16sp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/novice_task_rv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="45dp"
+                        android:nestedScrollingEnabled="false" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/exchange_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="12dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="45dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="积分兑换"
+                            android:textColor="@color/color_text_black1"
+                            android:textSize="16sp" />
+
+                        <LinearLayout
+                            android:id="@+id/exchange_recode_layer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:text="兑换记录"
+                                android:textColor="@color/color_text_black4"
+                                android:textSize="12dp" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginEnd="15dp"
+                                android:src="@drawable/ic_next_small_icon"
+                                app:tint="@color/color_text_black4" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/exchange_rv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginEnd="15dp"
+                        android:nestedScrollingEnabled="false"
+                        android:padding="0dp" />
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="30dp"
+                    android:text="更多玩法正在赶来"
+                    android:textColor="@color/color_text_black5"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:paddingTop="30dp"
+        android:visibility="visible">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_back"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="10dp"
+            android:padding="8dp"
+            android:src="@drawable/svg_common_back"
+            android:tint="@color/color_text_black1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="每日一签"
+            android:textColor="@color/color_text_black1"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/helper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5.5dp"
+            android:src="@drawable/mine_ic_score_index_helper_wihte"
+            app:layout_constraintBottom_toBottomOf="@id/tv_title"
+            app:layout_constraintStart_toEndOf="@id/tv_title"
+            app:layout_constraintTop_toTopOf="@id/tv_title"
+            app:tint="@color/color_text_black1" />
+
+        <TextView
+            android:id="@+id/tv_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="积分规则"
+            android:textColor="@color/color_text_black1"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

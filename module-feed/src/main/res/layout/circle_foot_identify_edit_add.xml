@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.percentlayout.widget.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:percent="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/common_item_bg_gray_radius_4">
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        percent:layout_aspectRatio="100%"
+        percent:layout_widthPercent="100%">
+
+        <cool.dingstock.appbase.widget.IconTextView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:scaleType="centerCrop"
+            android:text="@string/icon_add"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/circle_item_identify_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:gravity="center"
+            android:textColor="#6A6F80"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/circle_item_identify_select_iv"
+        android:layout_width="62dp"
+        android:layout_height="62dp"
+        android:background="@drawable/common_item_bg_dc_select_radius_4"
+        android:visibility="gone" />
+</androidx.percentlayout.widget.PercentRelativeLayout>

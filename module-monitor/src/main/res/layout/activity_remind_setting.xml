@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_gray"
+    android:orientation="vertical"
+    tools:context=".ui.remindSetting.RemindSettingActivity">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_top_height"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_back"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginStart="15dp"
+            android:paddingEnd="20dp"
+            android:src="@drawable/svg_common_back"
+            app:tint="@color/color_text_black1" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="提醒设置"
+            android:textColor="@color/color_text_black1"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_save"
+            android:layout_width="54dp"
+            android:layout_height="26dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="14dp"
+            android:background="@drawable/common_btn_black"
+            android:gravity="center"
+            android:text="保存"
+            android:textColor="@color/text_white"
+            android:textSize="13sp" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:background="@drawable/common_item_bg_white_radius_8"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_remind_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="15dp"
+            android:paddingTop="11dp"
+            android:paddingBottom="11dp"
+            android:text="提醒时间"
+            android:textColor="@color/color_text_black1"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_remind_time"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="10.5dp"
+            android:layout_weight="1"
+            android:paddingStart="10.5dp"
+            android:paddingEnd="10.5dp" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/common_item_bg_white_radius_8"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_remind_way"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="15dp"
+            android:paddingTop="11dp"
+            android:paddingBottom="11dp"
+            android:text="提醒方式"
+            android:textColor="@color/color_text_black1"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_remind_way"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <TextView
+        android:id="@+id/tv_remind_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="设置默认提醒方式，下次使用提醒时将按照默认设置提醒，通过监控-设置可修改设置。\n\n 在以下功能使用提醒功能时，将按照默认设置提醒：球鞋日历、热门发售、关注地区、短信抽签。"
+        android:textColor="@color/color_text_black3"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

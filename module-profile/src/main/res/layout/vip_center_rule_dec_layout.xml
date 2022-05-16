@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="20dp"
+    android:layout_marginEnd="20dp"
+    android:layout_marginTop="15dp"
+    android:paddingBottom="10dp"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*会员服务为虚拟商品，支付成功后不支持退款"
+        android:textColor="@color/vip_rule_txt_color"
+        android:textSize="@dimen/text_size1"
+        android:layout_marginTop="5dp"
+        android:includeFontPadding="false"
+        />
+
+
+
+
+
+</LinearLayout>

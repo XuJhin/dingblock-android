@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent_layer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/content_layer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/common_bottom_dialog_bg">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/close_iv"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/svg_close"
+            android:tint="@color/color_text_black1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="添加链接"
+            android:textColor="@color/color_text_black1"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/close_iv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/close_iv" />
+
+        <TextView
+            android:id="@+id/add_tv"
+            android:layout_width="54dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/post_pop_add_btn_bg"
+            android:enabled="false"
+            android:gravity="center"
+            android:text="添加"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/close_iv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/close_iv" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="27dp"
+            android:text="@string/dynamic_edit_add_link_dec"
+            android:textColor="@color/color_text_black4"
+            android:textSize="@dimen/text_size3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/add_tv" />
+
+        <EditText
+            android:id="@+id/link_edv"
+            android:layout_width="0dp"
+            android:layout_height="54dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/c_gray2_bg"
+            android:hint="@string/circle_dynamic_publish_dialog_title"
+            android:paddingStart="20dp"
+            android:textColor="@color/color_text_black1"
+            android:textColorHint="@color/color_text_black5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/add_tv"
+            tools:text="sdfafaf" />
+
+
+        <cool.dingstock.appbase.widget.BubbleLayout
+            android:id="@+id/layout_copy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="15dp"
+            android:paddingTop="15dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="10dp"
+            app:background_color="@color/link_bubble_bg"
+            app:direction="top"
+            app:layout_constraintTop_toBottomOf="@id/link_edv"
+            app:offset="-40dp"
+            app:radius="6dp"
+            app:shadow_color="#16000000"
+            app:shadow_size="10dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <TextView
+                    android:id="@+id/tv_paste"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="23dp"
+                    android:text="@string/link_paste"
+                    android:textColor="@color/dynamic_edit_pop_add_link_copy_btn_color"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_real_link"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textView" />
+
+                <View
+                    android:id="@+id/view_divider"
+                    android:layout_width="1dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="22dp"
+                    android:background="#FFD8D8D8"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_paste"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_paste"
+                    app:layout_constraintTop_toTopOf="@+id/tv_paste" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:text="@string/dynamic_edit_add_link_copy_hint_dec"
+                    android:textColor="@color/color_text_black4"
+                    android:textSize="13sp"
+                    app:layout_constraintEnd_toStartOf="@+id/view_divider"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_real_link"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/color_text_black1"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/view_divider"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView"
+                    tools:text="https://www.iconfont.cn/search/ind…" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </cool.dingstock.appbase.widget.BubbleLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

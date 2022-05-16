@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/monitor_edit_area_rv"
+        android:layout_width="88dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="14dp"
+        android:background="@drawable/monitor_shape_white_8dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toEndOf="@id/monitor_edit_area_rv">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/monitor_edit_channel_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="15dp"
+            android:paddingStart="12dp" />
+
+        <cool.dingstock.appbase.widget.index.IndexSideBar
+            android:id="@+id/monitor_index_bar"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:clickable="true"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:visibility="visible"
+            app:sidebar_center_tips_bg_color="#2D2D2D"
+            app:sidebar_center_tips_size="8sp"
+            app:sidebar_center_tips_text_color="@color/white"
+            app:sidebar_focus_bg_color="#2D2D2D"
+            app:sidebar_lazy_respond="false"
+            app:sidebar_position="right"
+            app:sidebar_show_center_tips="false"
+            app:sidebar_text_alignment="center"
+            app:sidebar_text_color="#2D2D2D"
+            app:sidebar_text_size="12sp" />
+
+        <ViewStub
+            android:id="@+id/view_empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout="@layout/common_recycler_empty" />
+
+        <ViewStub
+            android:id="@+id/view_error"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout="@layout/common_recycler_error" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

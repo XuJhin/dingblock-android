@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.AppCompatTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tv_calendar_item_detail"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="4dp"
+    android:textColor="@color/color_text_black3"
+    android:textSize="12sp"
+    tools:text="中华人民共和国案件的中华人民共和中华人民共和国案件的是否中华人民
+    共和国案件的是否中华人民共和国案件的是否中华人民共和国案件的是否中华人民共
+    和国案件的是否中华人民共和国案件的是否中华人民共和国案件的是否中华人民共和国
+    案件的是否中华人民共和国案件的是否国案件的是否是否" />
+

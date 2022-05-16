@@ -1,0 +1,32 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/circle_item_dynamic_link_layer"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="70dp"
+    android:background="@drawable/post_link_bg"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingStart="4dp"
+    android:paddingTop="5dp"
+    android:paddingEnd="6dp"
+    android:paddingBottom="5dp">
+
+    <ImageView
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:src="@drawable/post_link_icon" />
+
+    <cool.dingstock.appbase.customerview.betterlinktv.BetterLinkTv
+        android:id="@+id/link_dec_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:ellipsize="end"
+        android:lines="1"
+        android:textColor="@color/color_blue"
+        android:textSize="@dimen/text_size3"
+        tools:text="iconfont-" />
+
+
+</LinearLayout>
